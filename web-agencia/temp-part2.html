@@ -1,0 +1,21 @@
+            <form class="contact-form" action="mailto:info@elitejsr.com" method="post" enctype="text/plain">
+                <div class="form-group"><label for="nombre">Nombre</label><input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required></div>
+                <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="tu@email.com" required></div>
+                <div class="form-group"><label for="empresa">Empresa</label><input type="text" id="empresa" name="empresa" placeholder="Nombre de empresa"></div>
+                <div class="form-group"><label for="telefono">Teléfono</label><input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000"></div>
+                <div class="form-group"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu propuesta..." required></textarea></div>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 ELITE JSR. Todos los derechos reservados.</p></footer>
+
+    <script>
+        function openModal(piloto) { document.getElementById('modal-' + piloto).classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeModal(piloto) { document.getElementById('modal-' + piloto).classList.remove('active'); document.body.style.overflow = 'auto'; }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); }); });
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { document.querySelectorAll('.modal').forEach(modal => { modal.classList.remove('active'); }); document.body.style.overflow = 'auto'; } });
+    </script>
+</body>
+</html>

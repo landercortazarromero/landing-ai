@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "spotify-player": {
+      "version": "1.0.0",
+      "installedAt": 1774197622772
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1774197622792
+    },
+    "apple-reminders": {
+      "version": "1.0.0",
+      "installedAt": 1774197622957
+    }
+  }
+}

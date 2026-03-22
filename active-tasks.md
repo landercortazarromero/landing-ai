@@ -17,9 +17,7 @@
 - [x] Fase 4: Self-evolution + Testing (30 min) ✓
 
 ## 📋 PENDING
-- Instalar skills de alto ROI (apple-reminders, spotify-player, notion)
-- Setup auto-git commits
-- Crear delegation templates
+- Configurar cron para auto-git (opcional)
 
 ## ✅ COMPLETED (2026-03-22)
 - [x] Configurar C-Level Team Architecture → c-level-team.md

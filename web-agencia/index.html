@@ -163,14 +163,6 @@
             text-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
         }
 
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--gray);
-            margin-bottom: 20px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-        }
-
         .hero-tagline {
             font-size: 1.2rem;
             color: var(--neon);
@@ -369,23 +361,29 @@
             color: var(--light);
         }
 
-        .piloto-team {
-            color: var(--neon);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 12px;
-        }
-
         .piloto-dorsal {
             color: var(--gray);
             font-size: 0.9rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .piloto-dorsal span {
             color: var(--neon);
             font-weight: 700;
+        }
+
+        .piloto-palmares-mini {
+            list-style: none;
+            margin: 15px 0 20px;
+            padding: 0;
+            font-size: 0.75rem;
+            color: var(--gray);
+            text-align: left;
+        }
+
+        .piloto-palmares-mini li {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
         }
 
         .piloto-btn {
@@ -485,14 +483,6 @@
             font-size: 2.5rem;
             margin-bottom: 10px;
             color: var(--light);
-        }
-
-        .dossier-info .team {
-            color: var(--neon);
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
         }
 
         .dossier-stats {
@@ -790,7 +780,6 @@
             header { padding: 15px 20px; flex-direction: column; gap: 15px; }
             nav ul { gap: 20px; }
             .hero h1 { font-size: 2.5rem; }
-            .hero-subtitle { font-size: 1.2rem; letter-spacing: 4px; }
             .piloto-grid { grid-template-columns: 1fr; }
             .stats { grid-template-columns: repeat(2, 1fr); }
             .contact-grid { grid-template-columns: 1fr; }
@@ -852,7 +841,7 @@
     <!-- Pilotos -->
     <section class="pilotos" id="pilotos">
         <h2 class="section-title">Nuestros <span>Pilotos</span></h2>
-        <p class="section-subtitle">5 ÉLITES · PILOTOS DE BASQUE RIDERS</p>
+        <p class="section-subtitle">5 ÉLITES · COMPROMISO TOTAL</p>
         
         <div class="piloto-grid">
             <!-- Ian Traba -->
@@ -863,6 +852,14 @@
                 </div>
                 <h3 class="piloto-name">Ian Traba</h3>
                 <p class="piloto-dorsal">Dorsal: <span>#62</span></p>
+                <ul class="piloto-palmares-mini">
+                    <li>🏆 Campeón del Mundo Offshore (2025)</li>
+                    <li>🏆 Campeón de España Rallyjet (2024, 2025)</li>
+                    <li>🏆 Campeón de España Offshore (2023, 2025)</li>
+                    <li>🏆 Campeón de la Basque Country Cup (2023, 2025)</li>
+                    <li>🏆 Campeón de Euskadi (2024)</li>
+                    <li>🏆 Campeón de la Copa del Rey (2024)</li>
+                </ul>
                 <a href="#" class="piloto-btn" onclick="event.stopPropagation(); openModal('ian')">Ver Dosier</a>
             </div>
 
@@ -874,6 +871,13 @@
                 </div>
                 <h3 class="piloto-name">Lander Cortazar</h3>
                 <p class="piloto-dorsal">Dorsal: <span>#59</span></p>
+                <ul class="piloto-palmares-mini">
+                    <li>🥉 3º Clasificado Campeonato del Mundo (Palma Mallorca)</li>
+                    <li>🥇 Basque Country Cup GP3 F2 (2023)</li>
+                    <li>🥇 Basque Country Cup GP2 (2025)</li>
+                    <li>🥈 Campeonato España Rallyjet (2022)</li>
+                    <li>🥇 Campeón Nacional Offshore GP2 (2025)</li>
+                </ul>
                 <a href="#" class="piloto-btn" onclick="event.stopPropagation(); openModal('lander')">Ver Dosier</a>
             </div>
 
@@ -885,6 +889,12 @@
                 </div>
                 <h3 class="piloto-name">Andoni Gutierrez</h3>
                 <p class="piloto-dorsal">Dorsal: <span>#11</span></p>
+                <ul class="piloto-palmares-mini">
+                    <li>🏆 Campeón del Mundo de Motonáutica (Palma Mallorca)</li>
+                    <li>🏆 Campeón de Europa (2022)</li>
+                    <li>🏆 Campeón de España (2020)</li>
+                    <li>🏆 Líder ranking RFEM múltiples temporadas</li>
+                </ul>
                 <a href="#" class="piloto-btn" onclick="event.stopPropagation(); openModal('andoni')">Ver Dosier</a>
             </div>
 
@@ -896,6 +906,11 @@
                 </div>
                 <h3 class="piloto-name">Aitzol Arakistain</h3>
                 <p class="piloto-dorsal">Dorsal: <span>#41</span></p>
+                <ul class="piloto-palmares-mini">
+                    <li>🏆 Campeón de Europa Rallyjet Runabout GP3 (2019)</li>
+                    <li>🏆 Participación Corsica Cup 2023</li>
+                    <li>🇪🇸 Seleccionado RFEM para Mundial Sumatra</li>
+                </ul>
                 <a href="#" class="piloto-btn" onclick="event.stopPropagation(); openModal('aitzol')">Ver Dosier</a>
             </div>
 
@@ -907,6 +922,13 @@
                 </div>
                 <h3 class="piloto-name">Iñaki Traba</h3>
                 <p class="piloto-dorsal">Dorsal: <span>#28</span></p>
+                <ul class="piloto-palmares-mini">
+                    <li>🏆 Campeón España Rallyjet GP2 (2010)</li>
+                    <li>🏆 Campeón España Rallyjet GP1 Atmósfera (2022)</li>
+                    <li>🏆 Campeón España Rallyjet GP3 + GP1 Atmósfera (2023)</li>
+                    <li>🏆 Campeón España Offshore GP2 (2010)</li>
+                    <li>🏆 Campeón España Offshore GP1 Atmósfera (2022)</li>
+                </ul>
                 <a href="#" class="piloto-btn" onclick="event.stopPropagation(); openModal('inaki')">Ver Dosier</a>
             </div>
         </div>
@@ -928,12 +950,12 @@
                             <div class="dossier-stat-label">Años</div>
                         </div>
                         <div class="dossier-stat">
-                            <div class="dossier-stat-value">#18</div>
+                            <div class="dossier-stat-value">#62</div>
                             <div class="dossier-stat-label">Dorsal</div>
                         </div>
                         <div class="dossier-stat">
-                            <div class="dossier-stat-value">1</div>
-                            <div class="dossier-stat-label">Mundial</div>
+                            <div class="dossier-stat-value">6</div>
+                            <div class="dossier-stat-label">Títulos</div>
                         </div>
                     </div>
                 </div>
@@ -942,10 +964,12 @@
             <div class="dossier-section">
                 <h3>Palmarés</h3>
                 <ul class="palmares-list">
-                    <li>Campeón del Mundo Aquabike Offshore GP3 2025 (Italia)</li>
-                    <li>Campeón de España Aquabike 2025</li>
-                    <li>Doble campeón estatal 2025</li>
-                    <li>Hijo de leyenda: Iñaki Traba, campeón mundial veterano</li>
+                    <li>🏆 Campeón del Mundo Offshore (2025)</li>
+                    <li>🏆 Campeón de España Rallyjet (2024, 2025)</li>
+                    <li>🏆 Campeón de España Offshore (2023, 2025)</li>
+                    <li>🏆 Campeón de la Basque Country Cup (2023, 2025)</li>
+                    <li>🏆 Campeón de Euskadi (2024)</li>
+                    <li>🏆 Campeón de la Copa del Rey (2024)</li>
                 </ul>
             </div>
 
@@ -956,6 +980,51 @@
 
             <div class="dossier-cta">
                 <a href="#contacto" class="cta-btn" onclick="closeModal('ian')">Patrocinar a Ian</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Lander -->
+    <div class="modal" id="modal-lander">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('lander')">&times;</span>
+            <div class="dossier-header">
+                <div class="dossier-avatar">
+                    <img src="img/lander-cortazar.jpg" alt="Lander Cortazar" onerror="this.style.display='none'; this.parentElement.innerText='LC'">
+                </div>
+                <div class="dossier-info">
+                    <h2>Lander Cortazar</h2>
+                    <div class="dossier-stats">
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">#59</div>
+                            <div class="dossier-stat-label">Dorsal</div>
+                        </div>
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">5</div>
+                            <div class="dossier-stat-label">Títulos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dossier-section">
+                <h3>Palmarés</h3>
+                <ul class="palmares-list">
+                    <li>🥉 3º Clasificado Campeonato del Mundo (Palma Mallorca)</li>
+                    <li>🥇 Basque Country Cup GP3 F2 (2023)</li>
+                    <li>🥇 Basque Country Cup GP2 (2025)</li>
+                    <li>🥈 Campeonato España Rallyjet (2022)</li>
+                    <li>🥇 Campeón Nacional Offshore GP2 (2025)</li>
+                </ul>
+            </div>
+
+            <div class="dossier-section">
+                <h3>Por qué Lander</h3>
+                <p>Piloto en ascenso con múltiples victorias en Basque Country Cup. Doble campeón regional y subcampeón nacional. Representa la nueva generación de pilotos del País Vasco.</p>
+            </div>
+
+            <div class="dossier-cta">
+                <a href="#contacto" class="cta-btn" onclick="closeModal('lander')">Patrocinar a Lander</a>
             </div>
         </div>
     </div>
@@ -972,12 +1041,12 @@
                     <h2>Andoni Gutierrez</h2>
                     <div class="dossier-stats">
                         <div class="dossier-stat">
-                            <div class="dossier-stat-value">1</div>
-                            <div class="dossier-stat-label">Mundial</div>
+                            <div class="dossier-stat-value">#11</div>
+                            <div class="dossier-stat-label">Dorsal</div>
                         </div>
                         <div class="dossier-stat">
-                            <div class="dossier-stat-value">1</div>
-                            <div class="dossier-stat-label">Europa</div>
+                            <div class="dossier-stat-value">4</div>
+                            <div class="dossier-stat-label">Títulos</div>
                         </div>
                     </div>
                 </div>
@@ -986,9 +1055,10 @@
             <div class="dossier-section">
                 <h3>Palmarés</h3>
                 <ul class="palmares-list">
-                    <li>Campeón del Mundo de Motonáutica (Palma Mallorca)</li>
-                    <li>Campeón de Europa 2022</li>
-                    <li>Trayectoria: Abadiño → GP1 → Campeón del Mundo</li>
+                    <li>🏆 Campeón del Mundo de Motonáutica (Palma Mallorca)</li>
+                    <li>🏆 Campeón de Europa (2022)</li>
+                    <li>🏆 Campeón de España (2020)</li>
+                    <li>🏆 Líder ranking RFEM múltiples temporadas</li>
                 </ul>
             </div>
 
@@ -999,6 +1069,49 @@
 
             <div class="dossier-cta">
                 <a href="#contacto" class="cta-btn" onclick="closeModal('andoni')">Patrocinar a Andoni</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Aitzol -->
+    <div class="modal" id="modal-aitzol">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('aitzol')">&times;</span>
+            <div class="dossier-header">
+                <div class="dossier-avatar">
+                    <img src="img/aitzol-arakistain.jpg" alt="Aitzol Arakistain" onerror="this.style.display='none'; this.parentElement.innerText='AA'">
+                </div>
+                <div class="dossier-info">
+                    <h2>Aitzol Arakistain</h2>
+                    <div class="dossier-stats">
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">#41</div>
+                            <div class="dossier-stat-label">Dorsal</div>
+                        </div>
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">3</div>
+                            <div class="dossier-stat-label">Títulos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dossier-section">
+                <h3>Palmarés</h3>
+                <ul class="palmares-list">
+                    <li>🏆 Campeón de Europa Rallyjet Runabout GP3 (2019)</li>
+                    <li>🏆 Participación Corsica Cup 2023</li>
+                    <li>🇪🇸 Seleccionado RFEM para Mundial Sumatra</li>
+                </ul>
+            </div>
+
+            <div class="dossier-section">
+                <h3>Por qué Aitzol</h3>
+                <p>El puente entre Europa y los Mundiales. Campeón de Europa en 2019 y seleccionado para representar a España internacionalmente. En constante evolución para alcanzar el título mundial.</p>
+            </div>
+
+            <div class="dossier-cta">
+                <a href="#contacto" class="cta-btn" onclick="closeModal('aitzol')">Patrocinar a Aitzol</a>
             </div>
         </div>
     </div>
@@ -1019,8 +1132,12 @@
                             <div class="dossier-stat-label">Años</div>
                         </div>
                         <div class="dossier-stat">
-                            <div class="dossier-stat-value">#60</div>
+                            <div class="dossier-stat-value">#28</div>
                             <div class="dossier-stat-label">Dorsal</div>
+                        </div>
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">5</div>
+                            <div class="dossier-stat-label">Títulos</div>
                         </div>
                     </div>
                 </div>
@@ -1029,11 +1146,11 @@
             <div class="dossier-section">
                 <h3>Palmarés</h3>
                 <ul class="palmares-list">
-                    <li>Campeón de España Rallyjet GP2 (2010)</li>
-                    <li>Campeón de España Rallyjet GP1 Atmósfera (2022)</li>
-                    <li>Campeón de España Rallyjet GP3 + GP1 Atmósfera (2023)</li>
-                    <li>Campeón de España Offshore GP2 (2010)</li>
-                    <li>Campeón de España Offshore GP1 Atmósfera (2022)</li>
+                    <li>🏆 Campeón España Rallyjet GP2 (2010)</li>
+                    <li>🏆 Campeón España Rallyjet GP1 Atmósfera (2022)</li>
+                    <li>🏆 Campeón España Rallyjet GP3 + GP1 Atmósfera (2023)</li>
+                    <li>🏆 Campeón España Offshore GP2 (2010)</li>
+                    <li>🏆 Campeón España Offshore GP1 Atmósfera (2022)</li>
                 </ul>
             </div>
 
@@ -1044,83 +1161,6 @@
 
             <div class="dossier-cta">
                 <a href="#contacto" class="cta-btn" onclick="closeModal('inaki')">Patrocinar a Iñaki</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Aitzol -->
-    <div class="modal" id="modal-aitzol">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('aitzol')">&times;</span>
-            <div class="dossier-header">
-                <div class="dossier-avatar">
-                    <img src="img/aitzol-arakistain.jpg" alt="Aitzol Arakistain" onerror="this.style.display='none'; this.parentElement.innerText='AA'">
-                </div>
-                <div class="dossier-info">
-                    <h2>Aitzol Arakistain</h2>
-                    <div class="dossier-stats">
-                        <div class="dossier-stat">
-                            <div class="dossier-stat-value">1</div>
-                            <div class="dossier-stat-label">Europa</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="dossier-section">
-                <h3>Palmarés</h3>
-                <ul class="palmares-list">
-                    <li>Campeón de Europa Rallyjet Runabout GP3 (2019)</li>
-                    <li>Representando España en Sumatra 2023 (Endurance Aquabike, Lago Toba)</li>
-                </ul>
-            </div>
-
-            <div class="dossier-section">
-                <h3>Por qué Aitzol</h3>
-                <p>El puente entre Europa y los Mundiales. Campeón de Europa en 2019 y seleccionado para representar a España internacionalmente. En constante evolución para alcanzar el título mundial.</p>
-            </div>
-
-            <div class="dossier-cta">
-                <a href="#contacto" class="cta-btn" onclick="closeModal('aitzol')">Patrocinar a Aitzol</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Lander -->
-    <div class="modal" id="modal-lander">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('lander')">&times;</span>
-            <div class="dossier-header">
-                <div class="dossier-avatar">
-                    <img src="img/lander-cortazar.jpg" alt="Lander Cortazar" onerror="this.style.display='none'; this.parentElement.innerText='LC'">
-                </div>
-                <div class="dossier-info">
-                    <h2>Lander Cortazar</h2>
-                    <div class="dossier-stats">
-                        <div class="dossier-stat">
-                            <div class="dossier-stat-value">#7</div>
-                            <div class="dossier-stat-label">Dorsal</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="dossier-section">
-                <h3>Palmarés</h3>
-                <ul class="palmares-list">
-                    <li>Campeón Basque Country Cup GP3 F2 (2023)</li>
-                    <li>Campeón Basque Country Cup GP2 (2025)</li>
-                    <li>Subcampeón España Rallyjet (2022)</li>
-                </ul>
-            </div>
-
-            <div class="dossier-section">
-                <h3>Por qué Lander</h3>
-                <p>Piloto en ascenso con múltiples victorias en Basque Country Cup. Doble campeón regional y subcampeón nacional. Representa la nueva generación de pilotos del País Vasco.</p>
-            </div>
-
-            <div class="dossier-cta">
-                <a href="#contacto" class="cta-btn" onclick="closeModal('lander')">Patrocinar a Lander</a>
             </div>
         </div>
     </div>

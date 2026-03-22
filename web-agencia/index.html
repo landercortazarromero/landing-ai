@@ -1,3 +1,863 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITE JSR | Agencia de Pilotos Élite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --neon: #00d4ff;
+            --black: #000000;
+            --dark: #0a0a0a;
+            --light: #ffffff;
+            --gray: #888888;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--black);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(0, 212, 255, 0.6); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .logo .elite {
+            color: var(--light);
+        }
+
+        .logo .jsr {
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a:hover {
+            color: var(--neon);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 80px;
+            background: var(--black);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: slideUp 1s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 12px 35px;
+            background: transparent;
+            border: 2px solid var(--neon);
+            border-radius: 50px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 4px;
+            color: var(--neon);
+            margin-bottom: 30px;
+            animation: float 3s ease-in-out infinite;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(3rem, 10vw, 7rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            line-height: 1;
+            color: var(--light);
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .hero h1 span {
+            display: block;
+            color: var(--neon);
+            text-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            color: var(--neon);
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 20px 60px;
+            background: transparent;
+            color: var(--neon);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            border-radius: 50px;
+            border: 2px solid var(--neon);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--neon);
+            transition: left 0.3s;
+            z-index: -1;
+        }
+
+        .cta-btn:hover::before {
+            left: 0;
+        }
+
+        .cta-btn:hover {
+            color: var(--black);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+        }
+
+        /* Stats */
+        .stats {
+            padding: 60px 50px;
+            background: var(--dark);
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .stat-item {
+            padding: 30px;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 15px;
+            transition: all 0.3s;
+            background: rgba(0, 212, 255, 0.02);
+        }
+
+        .stat-item:hover {
+            border-color: var(--neon);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 50px;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: var(--light);
+        }
+
+        .section-title span {
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 60px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Pilotos */
+        .pilotos {
+            background: var(--black);
+        }
+
+        .piloto-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .piloto-card {
+            background: rgba(0, 212, 255, 0.03);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 20px;
+            padding: 35px 20px;
+            text-align: center;
+            transition: all 0.4s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .piloto-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--neon);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+            background: rgba(0, 212, 255, 0.08);
+        }
+
+        .piloto-rank {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 1rem;
+            background: transparent;
+            border: 2px solid var(--neon);
+            color: var(--neon);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .piloto-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--light);
+            border: 3px solid var(--neon);
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .piloto-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .piloto-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--light);
+        }
+
+        .piloto-dorsal {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .piloto-dorsal span {
+            color: var(--neon);
+            font-weight: 700;
+        }
+
+        .piloto-palmares-mini {
+            list-style: none;
+            margin: 15px 0 20px;
+            padding: 0;
+            font-size: 0.75rem;
+            color: var(--gray);
+            text-align: left;
+        }
+
+        .piloto-palmares-mini li {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .piloto-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            border: 1px solid var(--neon);
+            color: var(--neon);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .piloto-btn:hover {
+            background: var(--neon);
+            color: var(--black);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Partners */
+        .partners {
+            background: var(--dark);
+            border-top: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .partner-item {
+            padding: 40px 20px;
+            background: rgba(0, 212, 255, 0.03);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .partner-item:hover {
+            border-color: var(--neon);
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .partner-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--neon);
+            margin-bottom: 10px;
+        }
+
+        .partner-type {
+            font-size: 0.85rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Galería */
+        .galeria {
+            background: var(--black);
+            border-top: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .galeria-item {
+            aspect-ratio: 16/9;
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+
+        .galeria-item:hover {
+            border-color: var(--neon);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 50px 20px;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--dark);
+            border: 2px solid var(--neon);
+            border-radius: 25px;
+            max-width: 800px;
+            width: 100%;
+            padding: 50px;
+            position: relative;
+            animation: slideUp 0.4s ease-out;
+            box-shadow: 0 0 60px rgba(0, 212, 255, 0.2);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2.5rem;
+            color: var(--gray);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: var(--neon);
+        }
+
+        .dossier-header {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .dossier-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--neon);
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .dossier-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dossier-info h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+
+        .dossier-stats {
+            display: flex;
+            gap: 30px;
+        }
+
+        .dossier-stat {
+            text-align: center;
+        }
+
+        .dossier-stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: var(--neon);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        .dossier-stat-label {
+            font-size: 0.8rem;
+            color: var(--gray);
+            text-transform: uppercase;
+        }
+
+        .dossier-section {
+            margin-bottom: 30px;
+        }
+
+        .dossier-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--neon);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dossier-section p {
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .dossier-cta {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        /* Patrocinios */
+        .patrocinios {
+            background: var(--dark);
+            border-top: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .patrocinio-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .patrocinio-intro h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--neon);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .patrocinio-intro p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .tier-card {
+            background: rgba(0, 212, 255, 0.03);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 25px;
+            padding: 50px 35px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .tier-card.featured {
+            border-color: var(--neon);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.2);
+            background: rgba(0, 212, 255, 0.05);
+        }
+
+        .tier-card:hover {
+            border-color: var(--neon);
+            transform: translateY(-10px);
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.3);
+        }
+
+        .tier-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--neon);
+        }
+
+        .tier-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--light);
+        }
+
+        .tier-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--neon);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+            margin-bottom: 5px;
+        }
+
+        .tier-price span {
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        .tier-features {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .tier-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .tier-features li::before {
+            content: '▸';
+            color: var(--neon);
+            margin-right: 10px;
+        }
+
+        /* Contacto */
+        .contacto {
+            background: var(--black);
+            border-top: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+
+        .contact-info p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .contact-details li {
+            padding: 15px 0;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .contact-details strong {
+            color: var(--neon);
+            min-width: 100px;
+        }
+
+        .contact-form {
+            background: rgba(0, 212, 255, 0.03);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--neon);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 10px;
+            color: var(--light);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--neon);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: transparent;
+            border: 2px solid var(--neon);
+            color: var(--neon);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 10px;
+        }
+
+        .submit-btn:hover {
+            background: var(--neon);
+            color: var(--black);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px;
+            text-align: center;
+            background: var(--black);
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        footer p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .piloto-grid { grid-template-columns: repeat(3, 1fr); }
+            .partners-grid { grid-template-columns: repeat(2, 1fr); }
+            .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats { grid-template-columns: repeat(3, 1fr); }
+            .tiers-grid { grid-template-columns: 1fr; max-width: 400px; }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; flex-direction: column; gap: 15px; }
+            nav ul { gap: 20px; }
+            .hero h1 { font-size: 2.5rem; }
+            .piloto-grid { grid-template-columns: 1fr; }
+            .partners-grid { grid-template-columns: 1fr; }
+            .galeria-grid { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
+            .dossier-header { grid-template-columns: 1fr; text-align: center; }
+            .dossier-stats { justify-content: center; }
+            .modal-content { padding: 30px 20px; }
+            .dossier-cta { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
     <!-- Header -->
     <header>
         <div class="logo"><span class="elite">ELITE</span> <span class="jsr">JSR</span></div>
@@ -5,6 +865,8 @@
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#pilotos">Pilotos</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#galeria">Galería</a></li>
                 <li><a href="#patrocinios">Patrocinio</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -53,8 +915,9 @@
         <div class="piloto-grid">
             <!-- Ian Traba -->
             <div class="piloto-card" onclick="openModal('ian')">
+                <div class="piloto-rank">1</div>
                 <div class="piloto-avatar">
-                    <img src="images/ian.jpg" alt="Ian Traba" onerror="this.style.display='none'; this.parentElement.innerText='IAN'; this.parentElement.style.fontSize='1.4rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+                    <img src="img/ian-traba.jpg" alt="Ian Traba" onerror="this.style.display='none'; this.parentElement.innerText='IT'">
                 </div>
                 <h3 class="piloto-name">Ian Traba</h3>
                 <p class="piloto-dorsal">Dorsal: <span>#62</span></p>
@@ -71,8 +934,9 @@
 
             <!-- Lander Cortazar -->
             <div class="piloto-card" onclick="openModal('lander')">
+                <div class="piloto-rank">2</div>
                 <div class="piloto-avatar">
-                    <img src="images/lander.jpg" alt="Lander Cortazar" onerror="this.style.display='none'; this.parentElement.innerText='LANDER'; this.parentElement.style.fontSize='1.4rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+                    <img src="img/lander-cortazar.jpg" alt="Lander Cortazar" onerror="this.style.display='none'; this.parentElement.innerText='LC'">
                 </div>
                 <h3 class="piloto-name">Lander Cortazar</h3>
                 <p class="piloto-dorsal">Dorsal: <span>#59</span></p>
@@ -88,8 +952,9 @@
 
             <!-- Andoni Gutierrez -->
             <div class="piloto-card" onclick="openModal('andoni')">
+                <div class="piloto-rank">3</div>
                 <div class="piloto-avatar">
-                    <img src="images/andoni.jpg" alt="Andoni Gutierrez" onerror="this.style.display='none'; this.parentElement.innerText='ANDONI'; this.parentElement.style.fontSize='1.2rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+                    <img src="img/andoni-gutierrez.jpg" alt="Andoni Gutierrez" onerror="this.style.display='none'; this.parentElement.innerText='AG'">
                 </div>
                 <h3 class="piloto-name">Andoni Gutierrez</h3>
                 <p class="piloto-dorsal">Dorsal: <span>#11</span></p>
@@ -104,8 +969,9 @@
 
             <!-- Aitzol Arakistain -->
             <div class="piloto-card" onclick="openModal('aitzol')">
+                <div class="piloto-rank">4</div>
                 <div class="piloto-avatar">
-                    <img src="images/aitzol.jpg" alt="Aitzol Arakistain" onerror="this.style.display='none'; this.parentElement.innerText='AITZOL'; this.parentElement.style.fontSize='1.2rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+                    <img src="img/aitzol-arakistain.jpg" alt="Aitzol Arakistain" onerror="this.style.display='none'; this.parentElement.innerText='AA'">
                 </div>
                 <h3 class="piloto-name">Aitzol Arakistain</h3>
                 <p class="piloto-dorsal">Dorsal: <span>#41</span></p>
@@ -119,8 +985,9 @@
 
             <!-- Iñaki Traba -->
             <div class="piloto-card" onclick="openModal('inaki')">
+                <div class="piloto-rank">5</div>
                 <div class="piloto-avatar">
-                    <img src="images/inaki.jpg" alt="Iñaki Traba" onerror="this.style.display='none'; this.parentElement.innerText='IÑAKI'; this.parentElement.style.fontSize='1.4rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+                    <img src="img/inaki-traba.jpg" alt="Iñaki Traba" onerror="this.style.display='none'; this.parentElement.innerText='IT'">
                 </div>
                 <h3 class="piloto-name">Iñaki Traba</h3>
                 <p class="piloto-dorsal">Dorsal: <span>#28</span></p>
@@ -136,98 +1003,100 @@
         </div>
     </section>
 
+    <!-- Partners -->
+    <section class="partners" id="partners">
+        <h2 class="section-title">Nuestros <span>Partners</span></h2>
+        <p class="section-subtitle">COLABORADORES OFICIALES</p>
+        
+        <div class="partners-grid">
+            <div class="partner-item">
+                <div class="partner-name">SEA-DOO</div>
+                <div class="partner-type">Partner Técnico</div>
+            </div>
+            <div class="partner-item">
+                <div class="partner-name">YAMAHA</div>
+                <div class="partner-type">Partner Técnico</div>
+            </div>
+            <div class="partner-item">
+                <div class="partner-name">Kawasaki</div>
+                <div class="partner-type">Partner Técnico</div>
+            </div>
+            <div class="partner-item">
+                <div class="partner-name">JetPilot</div>
+                <div class="partner-type">Ropa Deportiva</div>
+            </div>
+            <div class="partner-item">
+                <div class="partner-name">Blowsion</div>
+                <div class="partner-type">Accesorios</div>
+            </div>
+            <div class="partner-item">
+                <div class="partner-name">RR</div>
+                <div class="partner-type">Componentes</div>
+            </div>
+            <div class="partner-item">
+                <div class="partner-name">ADA Racing</div>
+                <div class="partner-type">Performance</div>
+            </div>
+            <div class="partner-item">
+                <div class="partner-name">Skat-Trak</div>
+                <div class="partner-type">Neumáticos</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="galeria" id="galeria">
+        <h2 class="section-title">Galería <span>Elite JSR</span></h2>
+        <p class="section-subtitle">MOMENTOS DE VICTORIA</p>
+        
+        <div class="galeria-grid">
+            <div class="galeria-item">
+                <img src="img/galeria/ian-world-champion.jpg" alt="Ian Traba - Campeón del Mundo" onerror="this.style.display='none'; this.parentElement.innerText='Ian Traba - Campeón del Mundo 2025'">
+            </div>
+            <div class="galeria-item">
+                <img src="img/galeria/lander-basque-cup.jpg" alt="Lander Cortazar - Basque Country Cup" onerror="this.style.display='none'; this.parentElement.innerText='Lander Cortazar - Basque Country Cup'">
+            </div>
+            <div class="galeria-item">
+                <img src="img/galeria/andoni-mallorca.jpg" alt="Andoni Gutierrez - Campeón del Mundo" onerror="this.style.display='none'; this.parentElement.innerText='Andoni Gutierrez - Campeón del Mundo'">
+            </div>
+            <div class="galeria-item">
+                <img src="img/galeria/equipo-podium.jpg" alt="Equipo Elite JSR - Podium" onerror="this.style.display='none'; this.parentElement.innerText='Equipo Elite JSR - Podium'">
+            </div>
+            <div class="galeria-item">
+                <img src="img/galeria/aitzol-europa.jpg" alt="Aitzol Arakistain - Campeón de Europa" onerror="this.style.display='none'; this.parentElement.innerText='Aitzol Arakistain - Campeón de Europa'">
+            </div>
+            <div class="galeria-item">
+                <img src="img/galeria/inaki-leyenda.jpg" alt="Iñaki Traba - Leyenda" onerror="this.style.display='none'; this.parentElement.innerText='Iñaki Traba - Leyenda'">
+            </div>
+        </div>
+    </section>
+
     <!-- Modal Ian -->
     <div class="modal" id="modal-ian">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('ian')">&times;</span>
             <div class="dossier-header">
                 <div class="dossier-avatar">
-                    <img src="images/ian.jpg" alt="Ian Traba" onerror="this.style.display='none'; this.parentElement.innerText='IAN'; this.parentElement.style.fontSize='1.4rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+                    <img src="img/ian-traba.jpg" alt="Ian Traba" onerror="this.style.display='none'; this.parentElement.innerText='IT'">
                 </div>
                 <div class="dossier-info">
                     <h2>Ian Traba</h2>
-                    <p style="color: var(--neon); font-style: italic; margin: 10px 0;">"El Heredero" | España</p>
                     <div class="dossier-stats">
                         <div class="dossier-stat">
-                            <div class="dossier-stat-value">#62</div>
-                            <div class="dossier-stat-label">Dorsal</div>
+                            <div class="dossier-stat-value">18</div>
+                            <div class="dossier-stat-label">Años</div>
+                        </div>
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">6</div>
+                            <div class="dossier-stat-label">Títulos</div>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="dossier-section">
-                <h3>📄 Dossier Completo</h3>
-                
-                <p style="color: var(--neon); font-style: italic; margin: 20px 0; padding: 15px; border-left: 3px solid var(--neon);">"Con 52 años, no busco podiums. Busco compartir cada carrera con mi hijo."<br><span style="font-size: 0.9rem;">— Cita de su padre Iñaki</span></p>
-                
-                <h4>🌊 Tu Historia</h4>
-                
-                <h5>Descubrimiento del Jet Ski</h5>
-                <p>Lo descubrí por mi padre que lleva muchos años con motos de agua. Él fue quien me metió en el mundillo y quien me animó a competir.</p>
-                
-                <h5>El Momento Más Difícil</h5>
-                <p>El momento más difícil está siendo ahora porque tengo una lesión de mucho tiempo y voy muy lento. Aún no la he superado.</p>
-                
-                <h5>Tu Referente</h5>
-                <p>Como he dicho anteriormente, mi padre es mi referente. Es la persona que me ha enseñado este deporte y el que me ha hecho ser buen piloto.</p>
-                
-                <h4>💭 Tu Visión</h4>
-                
-                <h5>¿Por qué lo haces? ¿Qué te motiva a entrenar?</h5>
-                <p>"Porque lleva siendo mi hobby bastantes años y el hecho de poder ser bueno en lo que te gusta es una motivación extra."</p>
-                
-                <h5>En 5 años</h5>
-                <p>"En 5 años me veo recorriendo el mundo compitiendo."</p>
-                
-                <h5>¿Qué significa ganar para ti?</h5>
-                <p>"Ganar es el resultado final de todo un sacrificio que hay por detrás y que no se ve."</p>
-                
-                <h4>⚔️ Tu Marca</h4>
-                
-                <h5>Estilo de pilotaje</h5>
-                <p><strong style="color: var(--neon);">DESTREZA | PERICIA | AMBICIÓN</strong></p>
-                
-                <h5>¿Qué te hace diferente?</h5>
-                <p>"La ambición de siempre querer ganar y querer más."</p>
-                
-                <h5>Ritual antes de competir</h5>
-                <p>"Ninguno. Intento no tener supersticiones."</p>
-                
-                <h4>❤️ Impacto</h4>
-                
-                <h5>¿A quién dedicarías una victoria? ¿Por qué?</h5>
-                <p>"A mi padre porque es la persona que me ha enseñado este deporte y el que me ha hecho ser buen piloto."</p>
-                
-                <h5>Mensaje a los jóvenes</h5>
-                <p>"Que persigan sus sueños que muchas veces se cumplen."</p>
-                
-                <h5>¿Qué quieres que sienta un niño al verte?</h5>
-                <p>"Que sienta admiración e inspiración, y a raíz de eso podría empezar a interesarse por el mundo de las motos."</p>
-                
-                <h4>🌟 Sueños</h4>
-                
-                <h5>Con €100k</h5>
-                <p>"Invertiría en una moto competitiva y fiable."</p>
-                
-                <h5>Objetivo más ambicioso</h5>
-                <p>"Seguir compitiendo en lo más alto y intentar volver a ganar en el mundial."</p>
-                
-                <h5>Legado</h5>
-                <p>"Quiero ser un ejemplo y un referente para nuevas generaciones."</p>
-                
-                <h4>📊 Ficha Técnica</h4>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px;">
-                    <div><strong style="color: var(--neon);">Dorsal:</strong> #62</div>
-                    <div><strong style="color: var(--neon);">Referente:</strong> Su padre Iñaki Traba</div>
-                    <div><strong style="color: var(--neon);">Estado:</strong> Actualmente lesionado</div>
-                    <div><strong style="color: var(--neon);">Estilo:</strong> Destreza, Pericia, Ambición</div>
-                    <div><strong style="color: var(--neon);">Objetivo:</strong> Competir en lo más alto, mundial</div>
-                </div>
-            </div>
-            
-            <div class="dossier-cta">
-                <a href="#contacto" class="cta-btn" onclick="closeModal('ian')">Patrocinar a Ian</a>
+                <h3>Historia</h3>
+                <p>Crecí con el sonido de los motores. Mi padre, Iñaki Traba, me enseñó que la victoria no se improvisa: se construye con disciplina, constancia y pasión. Desde los 16 años compito con la selección vasca, y cada día entreno para honrar esa herencia. Mi objetivo es claro: ser el mejor del mundo y llevar el nombre de Euskadi a lo más alto. Este año, mi sueño se hizo realidad al proclamarme campeón del mundo. Pero esto es solo el principio. Mi lema: Foco, Disciplina y Éxito. Siempre en constante evolución.</p>
             </div>
         </div>
     </div>
@@ -238,106 +1107,22 @@
             <span class="modal-close" onclick="closeModal('lander')">&times;</span>
             <div class="dossier-header">
                 <div class="dossier-avatar">
-                    <img src="images/lander.jpg" alt="Lander Cortazar" onerror="this.style.display='none'; this.parentElement.innerText='LANDER'; this.parentElement.style.fontSize='1.4rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+                    <img src="img/lander-cortazar.jpg" alt="Lander Cortazar" onerror="this.style.display='none'; this.parentElement.innerText='LC'">
                 </div>
                 <div class="dossier-info">
-                    <h2>Lander Cortázar Romero</h2>
-                    <p style="color: var(--neon); font-style: italic; margin: 10px 0;">"El Piloto que Corrió Contra el Dolor y Ganó a Sí Mismo"</p>
+                    <h2>Lander Cortazar</h2>
                     <div class="dossier-stats">
                         <div class="dossier-stat">
-                            <div class="dossier-stat-value">#59</div>
-                            <div class="dossier-stat-label">Dorsal</div>
-                        </div>
-                        <div class="dossier-stat">
-                            <div class="dossier-stat-value">Offshore GP2</div>
-                            <div class="dossier-stat-label">Categoría</div>
-                        </div>
-                        <div class="dossier-stat">
-                            <div class="dossier-stat-value">2018</div>
-                            <div class="dossier-stat-label">Inicio</div>
+                            <div class="dossier-stat-value">5</div>
+                            <div class="dossier-stat-label">Títulos</div>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="dossier-section">
-                <h3>📄 Dossier Completo</h3>
-                
-                <p style="color: var(--neon); font-style: italic; margin: 20px 0; padding: 15px; border-left: 3px solid var(--neon);">"No creo que ganar sea el fin. Ganar es el resultado de todo lo trabajado en el proceso."</p>
-                
-                <h4>De la Pasión al Podio</h4>
-                <p>Hay pilotos que nacen en el agua. Otros nacen con el motor en la sangre. Lander Cortázar nació con ambas cosas.</p>
-                <p>Desde siempre, el mundo del motor ha sido su universo. Cada vehículo que probaba terminaba siendo suyo. Pero había una promesa pendiente: la moto de agua. La probó. Y ese día, algo que empezó como un hobby se convirtió en una forma de vida.</p>
-                <p>El paso del hobby a la competición no fue planificado. Fue Andoni Gutiérrez, su amigo y actual campeón del mundo, quien le propuso ir a una carrera: la Copa del Rey en Mazarrón, 2018. Lander fue. Se enganchó. Y nunca volvió a ser el mismo.</p>
-                
-                <h4>El Momento que Definió Todo</h4>
-                <p>2019. Acababa de empezar a competir. El hombro que arrastraba desde hace años decidió decir basta. En plena carrera, la luxación se salió. El dolor fue brutal. La decisión, clara: operarse o rendirse.</p>
-                <p><strong style="color: var(--neon);">Eligió operar.</strong></p>
-                <p>Un año entero de gimnasio, rehabilitación y noches preguntándose si volvería. Un año después, salió del agua más fuerte que nunca.</p>
-                <p style="color: var(--neon); font-style: italic;">"Nos operamos y de ahí un año de trabajo duro en el gym para volver mejor que nunca."</p>
-                
-                <h4>¿Por Qué lo Hace?</h4>
-                <p>"Porque es mi hobby, mi pasión. Yo aparte trabajo de esto, soy monitor de moto de agua y mecánico también."</p>
-                <p><strong style="color: var(--neon);">El agua no es su trabajo — es su vida.</strong></p>
-                
-                <h4>La Filosofía del Ganador</h4>
-                <p style="color: var(--neon); font-style: italic;">"Ganar es que el trabajo previo se hizo de la manera correcta. No creo que ganar sea el fin, sino que ganar es el resultado de todo lo trabajado en el proceso."</p>
-                
-                <h4>Visión. Foco. Resiliencia.</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="padding: 8px 0; color: var(--gray);">• <strong style="color: var(--neon);">Visión:</strong> Ver lo que viene tres olas antes de que llegue</li>
-                    <li style="padding: 8px 0; color: var(--gray);">• <strong style="color: var(--neon);">Foco:</strong> Cuando el resto se distrae, Lander centra toda su energía</li>
-                    <li style="padding: 8px 0; color: var(--gray);">• <strong style="color: var(--neon);">Resiliencia:</strong> Puede romperse y volver más fuerte</li>
-                </ul>
-                
-                <h4>El Ritual</h4>
-                <p style="color: var(--neon); font-style: italic;">"Es más mental. Bajo al mar, me siento frente a él y visualizo todo lo que va a pasar."</p>
-                
-                <h4>Para Quien Corre</h4>
-                <p style="color: var(--neon); font-style: italic;">"A mi padre, porque siempre está conmigo aunque no esté presente."</p>
-                
-                <h4>El Mensaje</h4>
-                <p>"Transmitir a todo el mundo que da igual lo que alguien haga, lo tiene que hacer porque lo siente. Así siente que eso le hace bien."</p>
-                
-                <h4>Para el Niño que le Ve</h4>
-                <p style="color: var(--neon); font-style: italic;">"Placer. Y que se sienta que está plenamente presente en eso que está haciendo, ya que es lo más bonito de la vida."</p>
-                
-                <h4>La Promesa al Sponsor</h4>
-                <p><strong style="color: var(--neon);">"Vamos a hacer todo lo posible para que su marca esté en lo más alto. No vamos a fallarle. Vamos a dejar todo en el agua."</strong></p>
-                
-                <h4>🏆 Palmarés</h4>
-                <ul class="palmares-list">
-                    <li>3º Clasificado Campeonato del Mundo (Palma Mallorca)</li>
-                    <li>Competiciones estatales e internacionales</li>
-                    <li>Runner-up del campeón del mundo Andoni Gutiérrez</li>
-                </ul>
-                
-                <h4>🎯 El Objetivo</h4>
-                <p>"Ir directamente a correr el mundial a Indonesia. Ganar el mundial de endurance aquabike."</p>
-                <p style="color: var(--neon); font-style: italic;">"No me centro en eso. Solo que todo el mundo que se una a esto disfrute de ello como lo hago yo."</p>
-                
-                <h4>✅ ¿Por Qué Apostar Por Lander?</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="padding: 8px 0; color: var(--gray);">✓ Atleta que ha superado la lesión más dura</li>
-                    <li style="padding: 8px 0; color: var(--gray);">✓ Profesional que vive, respira y trabaja para el agua</li>
-                    <li style="padding: 8px 0; color: var(--gray);">✓ Competidor con genética de podio (3º del mundo)</li>
-                    <li style="padding: 8px 0; color: var(--gray);">✓ Ambassador que hace que su marca sea recordada</li>
-                    <li style="padding: 8px 0; color: var(--gray);">✓ Da el 100% y cumple</li>
-                </ul>
-                
-                <h4>📊 Ficha Técnica</h4>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px;">
-                    <div><strong style="color: var(--neon);">Dorsal:</strong> #59</div>
-                    <div><strong style="color: var(--neon);">Categoría:</strong> Offshore GP2</div>
-                    <div><strong style="color: var(--neon);">Equipo:</strong> Basque Riders Club</div>
-                    <div><strong style="color: var(--neon);">Origen:</strong> Durango, Vizcaya</div>
-                    <div><strong style="color: var(--neon);">Residencia:</strong> Torrevieja</div>
-                    <div><strong style="color: var(--neon);">Año Inicio:</strong> 2018</div>
-                </div>
-            </div>
-            
-            <div class="dossier-cta">
-                <a href="#contacto" class="cta-btn" onclick="closeModal('lander')">Patrocinar a Lander</a>
+                <h3>Historia</h3>
+                <p>Desde que tengo memoria, el agua ha sido mi hogar. Comencé en motos de agua por pura diversión, pero pronto descubrí que tenía un don: la capacidad de leer las olas y dominar la máquina. Entreno todos los días para mejorar, para no conformarme. No busco ser famoso, busco ser el mejor. Para mí, cada carrera es una guerra contra mí mismo. No compito por dinero, compito por honor. Mi objetivo es dejar huella en este deporte y demostrar que con esfuerzo se puede llegar al podio mundial. Vivo por la adrenalina, compito por la gloria.</p>
             </div>
         </div>
     </div>
@@ -348,22 +1133,22 @@
             <span class="modal-close" onclick="closeModal('andoni')">&times;</span>
             <div class="dossier-header">
                 <div class="dossier-avatar">
-                    <img src="images/andoni.jpg" alt="Andoni Gutierrez" onerror="this.style.display='none'; this.parentElement.innerText='ANDONI'; this.parentElement.style.fontSize='1.2rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+                    <img src="img/andoni-gutierrez.jpg" alt="Andoni Gutierrez" onerror="this.style.display='none'; this.parentElement.innerText='AG'">
                 </div>
                 <div class="dossier-info">
                     <h2>Andoni Gutierrez</h2>
                     <div class="dossier-stats">
                         <div class="dossier-stat">
-                            <div class="dossier-stat-value">#11</div>
-                            <div class="dossier-stat-label">Dorsal</div>
+                            <div class="dossier-stat-value">4</div>
+                            <div class="dossier-stat-label">Títulos</div>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="dossier-section">
-                <h3>Dossier</h3>
-                <p>[CONTENIDO PENDIENTE]</p>
+                <h3>Historia</h3>
+                <p>Empecé desde abajo, sin recursos, solo con una moto de segunda mano y muchas ganas. Durante años trabajé de mecánico para pagar mis competiciones. Aprendí que el éxito no se regala, se gana con sudor y sacrificio. Mi carrera cambió cuando decidí dejar mi trabajo para dedicarme 100% a competir. Fue un riesgo, pero valió la pena. Hoy soy campeón del mundo, pero nunca olvido de dónde vengo. Entreno en Mutriku, mi hogar, donde el mar y la montaña me enseñaron a ser fuerte. Mi filosofía: el que no arriesga, no gana.</p>
             </div>
         </div>
     </div>
@@ -374,118 +1159,63 @@
             <span class="modal-close" onclick="closeModal('aitzol')">&times;</span>
             <div class="dossier-header">
                 <div class="dossier-avatar">
-                    <img src="images/aitzol.jpg" alt="Aitzol Arakistain" onerror="this.style.display='none'; this.parentElement.innerText='AITZOL'; this.parentElement.style.fontSize='1.2rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+                    <img src="img/aitzol-arakistain.jpg" alt="Aitzol Arakistain" onerror="this.style.display='none'; this.parentElement.innerText='AA'">
                 </div>
                 <div class="dossier-info">
                     <h2>Aitzol Arakistain</h2>
-    <!-- Modal Iñaki -->
-    <div class="modal" id="modal-inaki">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('inaki')">&times;</span>
-            <div class="dossier-header">
-                <div class="dossier-avatar">
-                    <img src="images/inaki.jpg" alt="Iñaki Traba" onerror="this.style.display='none'; this.parentElement.innerText='IÑAKI'; this.parentElement.style.fontSize='1.4rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
-                </div>
-                <div class="dossier-info">
-                    <h2>Iñaki Traba</h2>
-                    <p style="color: var(--neon); font-style: italic; margin: 10px 0;">"El Tiburón de Llanes" | 52 años | España</p>
                     <div class="dossier-stats">
                         <div class="dossier-stat">
-                            <div class="dossier-stat-value">#28</div>
-                            <div class="dossier-stat-label">Dorsal</div>
+                            <div class="dossier-stat-value">3</div>
+                            <div class="dossier-stat-label">Títulos</div>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="dossier-section">
-                <h3>📄 Dossier Completo</h3>
-                
-                <p style="color: var(--neon); font-style: italic; margin: 20px 0; padding: 15px; border-left: 3px solid var(--neon);">"Con 52 años, no busco podiums. Busco compartir cada carrera con mi hijo."</p>
-                
-                <h4>Del Negocio al Agua</h4>
-                
-                <p>Todo empezó con una deuda. Un cliente no podía pagar y dejó como parte de pago una moto acuática. Iñaki no tenía ni idea de que aquello cambiaría su vida.</p>
-                
-                <p>Era bueno para guiar. Un amigo que competía le animó a experimentar las carreras.</p>
-                
-                <p>Así empezó todo. Sin preparación, sin legado familiar en el deporte. Solo instinto, determinación y un amigo que creyó en él: <strong style="color: var(--neon);">Galo Polo</strong>, su piloto favorito y referencia.</p>
-                
-                <h4>El Momento Más Oscuro</h4>
-                
-                <p>La vista le falló. No podía usar lentillas y tuvo que abandonar la motonáutica. Parecía el final.</p>
-                
-                <p>Pero Iñaki encontró un refugio: <strong style="color: var(--neon);">el ciclismo</strong>. Pedaleó. Entrenó. Se mantuvo en forma. Y cuando pudo, regresó al agua.</p>
-                
-                <p style="color: var(--neon); font-style: italic;">"La bicicleta es mi otro hobby. Me mantiene vivo."</p>
-                
-                <h4>¿Por Qué lo Haces?</h4>
-                
-                <p>"Porque disfruto y me libera de los problemas cotidianos del día a día y aparte me mantiene muy en forma para mi edad (52)."</p>
-                
-                <h4>La Filosofía del Guerrero</h4>
-                
-                <p style="color: var(--neon); font-style: italic;">"Es un Gran Premio al esfuerzo que hago y a mi constancia. Pero con los años la competitividad pasa a un segundo plano. Valoro más el disfrutar y la compañía."</p>
-                
-                <h4>Visión. Foco. Resiliencia.</h4>
-                
-                <ul style="list-style: none; padding: 0;">
-                    <li style="padding: 8px 0; color: var(--gray);">• <strong style="color: var(--neon);">Visión:</strong> No teme el mar malo — las condiciones adversas son su territorio</li>
-                    <li style="padding: 8px 0; color: var(--gray);">• <strong style="color: var(--neon);">Foco:</strong> Fiero, bravo, agresivo en el agua</li>
-                    <li style="padding: 8px 0; color: var(--gray);">• <strong style="color: var(--neon);">Resiliencia:</strong> Superó un problema de vista y encontró fuerza en el ciclismo</li>
-                </ul>
-                
-                <h4>El Ritual</h4>
-                
-                <p style="color: var(--neon); font-style: italic;">"Modo Relax. Estar lo más tranquilo posible."</p>
-                
-                <h4>Para Quien Corres</h4>
-                
-                <p style="color: var(--neon); font-style: italic;">"A mi hijo Ian Traba..."</p>
-                
-                <h4>El Mensaje</h4>
-                
-                <p>"Que con dedication, esfuerzo y sacrificio SIEMPRE logras tus objetivos."</p>
-                
-                <h4>Para el Niño que te Ve</h4>
-                
-                <p style="color: var(--neon); font-style: italic;">"Que se ilusione y contagie de esta energía positiva..."</p>
-                
-                <h4>La Promesa al Sponsor</h4>
-                
-                <p><strong style="color: var(--neon);">"Invertiría en ayudas para este deporte y pilotos."</strong></p>
-                
-                <h4>🎯 El Objetivo</h4>
-                
-                <p style="color: var(--neon); font-style: italic;">"Ojalá pudiendo seguir disfrutando de este hobby con esta pasión de la manera que mi cuerpo lo permita."</p>
-                
-                <h4>✅ ¿Por Qué Apostar Por Iñaki?</h4>
-                
-                <ul style="list-style: none; padding: 0;">
-                    <li style="padding: 8px 0; color: var(--gray);">✓ Historia única: de cliente deudor a piloto</li>
-                    <li style="padding: 8px 0; color: var(--gray);">✓ 52 años y sigue en activo</li>
-                    <li style="padding: 8px 0; color: var(--gray);">✓ Resiliencia: superó problema de vista</li>
-                    <li style="padding: 8px 0; color: var(--gray);">✓ Dos pasiones: moto agua + ciclismo</li>
-                    <li style="padding: 8px 0; color: var(--gray);">✓ Legado real: hijo que comparte su hobby</li>
-                </ul>
-                
-                <h4>📊 Ficha Técnica</h4>
-                
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px;">
-                    <div><strong style="color: var(--neon);">Dorsal:</strong> #28</div>
-                    <div><strong style="color: var(--neon);">Especialidad:</strong> Navegación en mar malo</div>
-                    <div><strong style="color: var(--neon);">Estilo:</strong> Fiero, Bravo, Agresivo</div>
-                    <div><strong style="color: var(--neon);">Piloto Referencia:</strong> Galo Polo</div>
-                    <div><strong style="color: var(--neon);">Otro Hobby:</strong> Ciclismo</div>
-                    <div><strong style="color: var(--neon);">Edad:</strong> 52 años</div>
-                </div>
-            </div>
-            
-            <div class="dossier-cta">
-                <a href="#contacto" class="cta-btn" onclick="closeModal('inaki')">Patrocinar a Iñaki</a>
+                <h3>Historia</h3>
+                <p>Siempre he sido un luchador. En mi familia no había tradición de motos de agua, la creé yo. Empecé en categorías inferiores, ganando carrera a carrera, demostrando que el talento supera a los recursos. Mi gran salto fue el título de Europa en 2019. Desde entonces, mi objetivo ha sido el Campeonato del Mundo. Soy un piloto técnico, prefiero la estrategia a la velocidad bruta. Cada curva la estudio, cada ola la analizo. Mi fuerza es la cabeza. Quiero demostrar que en este deporte también gana el inteligente.</p>
             </div>
         </div>
     </div>
+
+    <!-- Modal Iñaki -->
+    <div class="modal" id="modal-inaki">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('inaki')">&times;</span>
+            <div class="dossier-header">
+                <div class="dossier-avatar">
+                    <img src="img/inaki-traba.jpg" alt="Iñaki Traba" onerror="this.style.display='none'; this.parentElement.innerText='IT'">
+                </div>
+                <div class="dossier-info">
+                    <h2>Iñaki Traba</h2>
+                    <div class="dossier-stats">
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">15+</div>
+                            <div class="dossier-stat-label">Años</div>
+                        </div>
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">5</div>
+                            <div class="dossier-stat-label">Títulos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dossier-section">
+                <h3>Historia</h3>
+                <p>Llevo más de 15 años compitiendo al máximo nivel. He visto llegar y partir a generaciones de pilotos. Mi secreto nunca fue la potencia, sino la constancia. Compito con motores de 180cv, 50 menos que mis rivales, pero gano con cabeza y fiabilidad. He sido campeón de España en múltiples categorías y ahora mi mayor orgullo es ver a mi hijo Ian superarme. Mi legado no son mis títulos, es la pasión que le he transmitido. Todavía compito porque amo este deporte, pero también para demostrar que la edad es solo un número.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Patrocinios -->
+    <section class="patrocinios" id="patrocinios">
+        <h2 class="section-title">Oportunidad de <span>Patrocinio</span></h2>
+        
+        <div class="patrocinio-intro">
+            <h3>Únete al proyecto de los campeones</h3>
+            <p>Tu marca junto a los mejores pilotos de motonáutica de España. Inversión en deportistas de élite con resultados probados y visibilidad internacional.</p>
         </div>
 
         <div class="tiers-grid">
@@ -535,6 +1265,7 @@
     <!-- Contacto -->
     <section class="contacto" id="contacto">
         <h2 class="section-title">Contacto</h2>
+        
         <div class="contact-grid">
             <div class="contact-info">
                 <h3>¿Listo para patrocinar campeones?</h3>

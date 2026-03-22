@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pilotos de Élite | Agencia Deportiva</title>
+    <title>ELITE JSR | Agencia de Pilotos Élite</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -14,33 +14,23 @@
         }
 
         :root {
-            --cyan: #00d4ff;
-            --red: #ff2d55;
-            --dark: #0a0a0f;
-            --darker: #050508;
+            --neon: #00d4ff;
+            --black: #000000;
+            --dark: #0a0a0a;
             --light: #ffffff;
             --gray: #888888;
-            --gold: #ffd700;
-            --silver: #c0c0c0;
-            --bronze: #cd7f32;
         }
 
         body {
             font-family: 'Rajdhani', sans-serif;
-            background: var(--darker);
+            background: var(--black);
             color: var(--light);
             overflow-x: hidden;
         }
 
-        /* Animaciones */
         @keyframes glow {
             0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
             50% { box-shadow: 0 0 40px rgba(0, 212, 255, 0.6); }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
         }
 
         @keyframes slideUp {
@@ -48,20 +38,14 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
 
-        @keyframes shine {
-            0% { background-position: -200% center; }
-            100% { background-position: 200% center; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
         }
 
         /* Header */
@@ -74,21 +58,25 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background: rgba(10, 10, 15, 0.95);
+            background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(20px);
-            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
         }
 
         .logo {
             font-family: 'Orbitron', sans-serif;
             font-size: 2rem;
             font-weight: 900;
-            background: linear-gradient(90deg, var(--cyan), var(--red), var(--gold));
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shine 3s linear infinite;
+            letter-spacing: 3px;
+        }
+
+        .logo .elite {
+            color: var(--light);
+        }
+
+        .logo .jsr {
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
         }
 
         nav ul {
@@ -101,34 +89,18 @@
             color: var(--light);
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.9rem;
             transition: all 0.3s;
             text-transform: uppercase;
             letter-spacing: 2px;
-            position: relative;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--cyan);
-            transition: width 0.3s;
-        }
-
-        nav a:hover::after {
-            width: 100%;
         }
 
         nav a:hover {
-            color: var(--cyan);
-            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            color: var(--neon);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -136,7 +108,7 @@
             justify-content: center;
             text-align: center;
             padding: 120px 20px 80px;
-            background: linear-gradient(135deg, var(--darker) 0%, #0d1f33 30%, #1a0d33 70%, var(--darker) 100%);
+            background: var(--black);
             position: relative;
             overflow: hidden;
         }
@@ -150,7 +122,7 @@
             bottom: 0;
             background: 
                 radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 45, 85, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
         }
 
         .hero-content {
@@ -161,15 +133,17 @@
 
         .hero-badge {
             display: inline-block;
-            padding: 10px 30px;
-            background: rgba(0, 212, 255, 0.2);
-            border: 1px solid var(--cyan);
+            padding: 12px 35px;
+            background: transparent;
+            border: 2px solid var(--neon);
             border-radius: 50px;
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.9rem;
-            letter-spacing: 3px;
+            font-size: 0.85rem;
+            letter-spacing: 4px;
+            color: var(--neon);
             margin-bottom: 30px;
             animation: float 3s ease-in-out infinite;
+            text-transform: uppercase;
         }
 
         .hero h1 {
@@ -178,41 +152,48 @@
             font-weight: 900;
             margin-bottom: 20px;
             text-transform: uppercase;
-            line-height: 1.1;
+            line-height: 1;
+            color: var(--light);
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
         }
 
         .hero h1 span {
             display: block;
-            background: linear-gradient(90deg, var(--cyan), var(--red), var(--gold));
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shine 3s linear infinite;
+            color: var(--neon);
+            text-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
         }
 
-        .hero p {
-            font-size: 1.8rem;
+        .hero-subtitle {
+            font-size: 1.5rem;
             color: var(--gray);
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             letter-spacing: 5px;
             text-transform: uppercase;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            color: var(--neon);
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
         }
 
         .cta-btn {
             display: inline-block;
             padding: 20px 60px;
-            background: linear-gradient(90deg, var(--cyan), var(--red));
-            color: var(--light);
+            background: transparent;
+            color: var(--neon);
             text-decoration: none;
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             border-radius: 50px;
+            border: 2px solid var(--neon);
             transition: all 0.3s;
-            animation: glow 2s infinite;
             position: relative;
             overflow: hidden;
         }
@@ -224,27 +205,30 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
+            background: var(--neon);
+            transition: left 0.3s;
+            z-index: -1;
         }
 
         .cta-btn:hover::before {
-            left: 100%;
+            left: 0;
         }
 
         .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.5);
+            color: var(--black);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
         }
 
-        /* Stats Section */
+        /* Stats */
         .stats {
-            padding: 80px 50px;
+            padding: 60px 50px;
             background: var(--dark);
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 30px;
             text-align: center;
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
         }
 
         .stat-item {
@@ -252,78 +236,62 @@
             border: 1px solid rgba(0, 212, 255, 0.2);
             border-radius: 15px;
             transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stat-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .stat-item:hover::before {
-            left: 100%;
+            background: rgba(0, 212, 255, 0.02);
         }
 
         .stat-item:hover {
-            border-color: var(--cyan);
+            border-color: var(--neon);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
         }
 
         .stat-number {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             font-weight: 900;
-            background: linear-gradient(90deg, var(--cyan), var(--red));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
         }
 
         .stat-label {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             color: var(--gray);
             margin-top: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        /* Section Styles */
+        /* Sections */
         section {
             padding: 100px 50px;
         }
 
         .section-title {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3rem;
+            font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 20px;
             text-transform: uppercase;
+            color: var(--light);
         }
 
         .section-title span {
-            color: var(--cyan);
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
         }
 
         .section-subtitle {
             text-align: center;
             color: var(--gray);
-            font-size: 1.3rem;
-            margin-top: -50px;
-            margin-bottom: 70px;
-            letter-spacing: 2px;
+            font-size: 1.1rem;
+            margin-bottom: 60px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
-        /* Pilotos Section */
+        /* Pilotos */
         .pilotos {
-            background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
+            background: var(--black);
         }
 
         .piloto-grid {
@@ -335,58 +303,41 @@
         }
 
         .piloto-card {
-            background: linear-gradient(145deg, rgba(0, 212, 255, 0.1), rgba(255, 45, 85, 0.05));
-            border: 1px solid rgba(0, 212, 255, 0.3);
+            background: rgba(0, 212, 255, 0.03);
+            border: 1px solid rgba(0, 212, 255, 0.2);
             border-radius: 20px;
-            padding: 35px 25px;
+            padding: 35px 20px;
             text-align: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.4s;
+            cursor: pointer;
             position: relative;
-            overflow: hidden;
-        }
-
-        .piloto-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(0, 212, 255, 0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.5s;
-        }
-
-        .piloto-card:hover::before {
-            transform: rotate(45deg) translate(50%, 50%);
         }
 
         .piloto-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            border-color: var(--cyan);
-            box-shadow: 0 25px 50px rgba(0, 212, 255, 0.3);
+            transform: translateY(-15px);
+            border-color: var(--neon);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+            background: rgba(0, 212, 255, 0.08);
         }
 
         .piloto-rank {
             position: absolute;
             top: 15px;
             right: 15px;
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Orbitron', sans-serif;
             font-weight: 900;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            background: transparent;
+            border: 2px solid var(--neon);
+            color: var(--neon);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
         }
-
-        .rank-1 { background: linear-gradient(135deg, var(--gold), #ffb700); color: var(--dark); }
-        .rank-2 { background: linear-gradient(135deg, var(--silver), #a0a0a0); color: var(--dark); }
-        .rank-3 { background: linear-gradient(135deg, var(--bronze), #b87333); color: var(--dark); }
-        .rank-4 { background: linear-gradient(135deg, #4a4a4a, #2a2a2a); border: 2px solid var(--cyan); }
-        .rank-5 { background: linear-gradient(135deg, #3a3a3a, #1a1a1a); border: 2px solid var(--red); }
 
         .piloto-avatar {
             width: 100px;
@@ -400,265 +351,343 @@
             font-size: 2rem;
             font-weight: 900;
             color: var(--light);
-            border: 3px solid transparent;
-            background: linear-gradient(var(--dark), var(--dark)) padding-box,
-                        linear-gradient(135deg, var(--cyan), var(--red)) border-box;
+            border: 3px solid var(--neon);
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .piloto-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .piloto-name {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 8px;
             color: var(--light);
         }
 
-        .piloto-role {
-            color: var(--cyan);
+        .piloto-team {
+            color: var(--neon);
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.85rem;
+            letter-spacing: 3px;
             margin-bottom: 12px;
-            font-weight: 600;
         }
 
-        .piloto-stats {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
+        .piloto-dorsal {
             color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
         }
 
-        .piloto-stat {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .piloto-stat-value {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
-            color: var(--cyan);
+        .piloto-dorsal span {
+            color: var(--neon);
             font-weight: 700;
         }
 
-        .piloto-stat-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .piloto-desc {
-            color: var(--gray);
-            line-height: 1.5;
-            font-size: 0.9rem;
-        }
-
-        .piloto-social {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .piloto-social a {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--light);
+        .piloto-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            border: 1px solid var(--neon);
+            color: var(--neon);
             text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 25px;
             transition: all 0.3s;
         }
 
-        .piloto-social a:hover {
-            background: var(--cyan);
-            transform: scale(1.1);
+        .piloto-btn:hover {
+            background: var(--neon);
+            color: var(--black);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
         }
 
-        /* Patrocinios Section */
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 50px 20px;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--dark);
+            border: 2px solid var(--neon);
+            border-radius: 25px;
+            max-width: 800px;
+            width: 100%;
+            padding: 50px;
+            position: relative;
+            animation: slideUp 0.4s ease-out;
+            box-shadow: 0 0 60px rgba(0, 212, 255, 0.2);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2.5rem;
+            color: var(--gray);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: var(--neon);
+        }
+
+        .dossier-header {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .dossier-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--neon);
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .dossier-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dossier-info h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+
+        .dossier-info .team {
+            color: var(--neon);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .dossier-stats {
+            display: flex;
+            gap: 30px;
+        }
+
+        .dossier-stat {
+            text-align: center;
+        }
+
+        .dossier-stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: var(--neon);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        .dossier-stat-label {
+            font-size: 0.8rem;
+            color: var(--gray);
+            text-transform: uppercase;
+        }
+
+        .dossier-section {
+            margin-bottom: 30px;
+        }
+
+        .dossier-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--neon);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dossier-section p {
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .palmares-list {
+            list-style: none;
+        }
+
+        .palmares-list li {
+            padding: 12px 0;
+            color: var(--gray);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .palmares-list li::before {
+            content: '▸';
+            color: var(--neon);
+            font-size: 1.2rem;
+        }
+
+        .dossier-cta {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        /* Patrocinios */
         .patrocinios {
-            background: var(--darker);
+            background: var(--dark);
+            border-top: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .patrocinio-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .patrocinio-intro h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--neon);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .patrocinio-intro p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .tiers-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .tier-card {
-            background: linear-gradient(145deg, rgba(0, 212, 255, 0.05), rgba(255, 45, 85, 0.05));
-            border: 2px solid transparent;
+            background: rgba(0, 212, 255, 0.03);
+            border: 1px solid rgba(0, 212, 255, 0.2);
             border-radius: 25px;
-            padding: 50px 40px;
+            padding: 50px 35px;
             text-align: center;
             transition: all 0.3s;
-            position: relative;
         }
 
         .tier-card.featured {
-            border-color: var(--cyan);
-            transform: scale(1.05);
-            background: linear-gradient(145deg, rgba(0, 212, 255, 0.1), rgba(255, 45, 85, 0.1));
-        }
-
-        .tier-card.featured::before {
-            content: 'RECOMENDADO';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(90deg, var(--cyan), var(--red));
-            color: var(--dark);
-            padding: 8px 25px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 900;
-            border-radius: 20px;
-            letter-spacing: 2px;
+            border-color: var(--neon);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.2);
+            background: rgba(0, 212, 255, 0.05);
         }
 
         .tier-card:hover {
-            border-color: var(--cyan);
+            border-color: var(--neon);
             transform: translateY(-10px);
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.3);
         }
 
-        .tier-card.featured:hover {
-            transform: scale(1.05) translateY(-10px);
+        .tier-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--neon);
         }
 
         .tier-name {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin-bottom: 15px;
+            color: var(--light);
         }
 
         .tier-price {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            background: linear-gradient(90deg, var(--cyan), var(--red));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
+            color: var(--neon);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+            margin-bottom: 5px;
         }
 
-        .tier-price-range {
-            font-size: 1.1rem;
+        .tier-price span {
+            font-size: 1rem;
             color: var(--gray);
-            margin-bottom: 30px;
         }
 
         .tier-features {
             list-style: none;
             text-align: left;
-            margin-bottom: 40px;
+            margin: 30px 0;
         }
 
         .tier-features li {
             padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
             color: var(--gray);
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .tier-features li::before {
-            content: '✓';
-            color: var(--cyan);
-            margin-right: 12px;
-            font-weight: bold;
+            content: '▸';
+            color: var(--neon);
+            margin-right: 10px;
         }
 
-        .tier-btn {
-            display: inline-block;
-            padding: 18px 50px;
-            border: 2px solid var(--cyan);
-            color: var(--cyan);
-            text-decoration: none;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            border-radius: 50px;
-            transition: all 0.3s;
-        }
-
-        .tier-btn:hover {
-            background: linear-gradient(90deg, var(--cyan), var(--red));
-            color: var(--dark);
-            border-color: transparent;
-        }
-
-        /* Marcas Section */
-        .marcas {
-            background: var(--dark);
-            text-align: center;
-            padding: 80px 50px;
-        }
-
-        .marcas-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        .marca-item {
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            transition: all 0.3s;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.1rem;
-            color: var(--gray);
-            border: 1px solid transparent;
-        }
-
-        .marca-item:hover {
-            background: rgba(0, 212, 255, 0.1);
-            color: var(--cyan);
-            transform: scale(1.05);
-            border-color: var(--cyan);
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
-        }
-
-        /* Contacto Section */
+        /* Contacto */
         .contacto {
-            background: linear-gradient(180deg, var(--darker) 0%, var(--dark) 100%);
+            background: var(--black);
+            border-top: 1px solid rgba(0, 212, 255, 0.1);
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .contact-info h3 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 30px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--light);
         }
 
         .contact-info p {
             color: var(--gray);
-            font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 30px;
-        }
-
-        .contact-details {
-            list-style: none;
         }
 
         .contact-details li {
@@ -667,224 +696,151 @@
             display: flex;
             align-items: center;
             gap: 15px;
+            list-style: none;
         }
 
-        .contact-details li strong {
-            color: var(--cyan);
+        .contact-details strong {
+            color: var(--neon);
             min-width: 100px;
         }
 
         .contact-form {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 50px;
+            background: rgba(0, 212, 255, 0.03);
+            padding: 40px;
             border-radius: 20px;
             border: 1px solid rgba(0, 212, 255, 0.2);
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 10px;
-            color: var(--cyan);
+            margin-bottom: 8px;
+            color: var(--neon);
             text-transform: uppercase;
+            font-size: 0.85rem;
             letter-spacing: 2px;
-            font-size: 0.9rem;
         }
 
         .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group textarea {
             width: 100%;
-            padding: 15px 20px;
-            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(0, 212, 255, 0.3);
             border-radius: 10px;
             color: var(--light);
             font-family: 'Rajdhani', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: all 0.3s;
         }
 
         .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
+        .form-group textarea:focus {
             outline: none;
-            border-color: var(--cyan);
+            border-color: var(--neon);
             box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
         }
 
         .submit-btn {
             width: 100%;
             padding: 18px;
-            background: linear-gradient(90deg, var(--cyan), var(--red));
-            border: none;
-            border-radius: 10px;
-            color: var(--light);
+            background: transparent;
+            border: 2px solid var(--neon);
+            color: var(--neon);
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 3px;
             cursor: pointer;
             transition: all 0.3s;
+            border-radius: 10px;
         }
 
         .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.4);
+            background: var(--neon);
+            color: var(--black);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
         }
 
         /* Footer */
         footer {
-            padding: 50px;
+            padding: 40px;
             text-align: center;
-            background: var(--darker);
-            border-top: 2px solid rgba(0, 212, 255, 0.2);
+            background: var(--black);
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
         }
 
         footer p {
             color: var(--gray);
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .footer-social {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .footer-social a {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--light);
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 1.2rem;
-        }
-
-        .footer-social a:hover {
-            background: var(--cyan);
-            transform: translateY(-3px);
+            font-size: 0.9rem;
         }
 
         /* Responsive */
         @media (max-width: 1200px) {
-            .piloto-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .stats {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .piloto-grid { grid-template-columns: repeat(3, 1fr); }
+            .stats { grid-template-columns: repeat(3, 1fr); }
+            .tiers-grid { grid-template-columns: 1fr; max-width: 400px; }
         }
 
         @media (max-width: 768px) {
-            header {
-                padding: 15px 20px;
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav ul {
-                gap: 20px;
-            }
-
-            nav a {
-                font-size: 0.8rem;
-            }
-
-            section {
-                padding: 60px 20px;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .piloto-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .tiers-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .tier-card.featured {
-                transform: none;
-            }
-
-            .marcas-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
+            header { padding: 15px 20px; flex-direction: column; gap: 15px; }
+            nav ul { gap: 20px; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.2rem; letter-spacing: 4px; }
+            .piloto-grid { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
+            .dossier-header { grid-template-columns: 1fr; text-align: center; }
+            .dossier-stats { justify-content: center; }
+            .modal-content { padding: 30px 20px; }
+            .dossier-cta { flex-direction: column; }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">PILOTOS ÉLITE</div>
+        <div class="logo"><span class="elite">ELITE</span> <span class="jsr">JSR</span></div>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#pilotos">Pilotos</a></li>
-                <li><a href="#patrocinios">Patrocinios</a></li>
+                <li><a href="#patrocinios">Patrocinio</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="inicio">
         <div class="hero-content">
-            <div class="hero-badge">✦ Agencia Deportiva Premium ✦</div>
-            <h1>Pilotos de <span>Élite</span></h1>
-            <p>Compromiso Total · Pasión Sin Límites</p>
-            <a href="#patrocinios" class="cta-btn">Colabora Con Nosotros</a>
+            <div class="hero-badge">Agencia de pilotos élite</div>
+            <h1>ELITE <span>JSR</span></h1>
+            <p class="hero-tagline">FOCO · DISCIPLINA · ÉXITO</p>
+            <a href="#patrocinios" class="cta-btn">Patrocina el Éxito</a>
         </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- Stats -->
     <section class="stats">
-        <div class="stat-item">
-            <div class="stat-number">150K+</div>
-            <div class="stat-label">Seguidores</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">45+</div>
-            <div class="stat-label">Eventos/Año</div>
-        </div>
         <div class="stat-item">
             <div class="stat-number">5</div>
             <div class="stat-label">Pilotos Élite</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">12</div>
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Títulos Mundiales</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Eventos/Año</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">12+</div>
             <div class="stat-label">Años Exp.</div>
         </div>
         <div class="stat-item">
@@ -893,206 +849,359 @@
         </div>
     </section>
 
-    <!-- Pilotos Section -->
+    <!-- Pilotos -->
     <section class="pilotos" id="pilotos">
         <h2 class="section-title">Nuestros <span>Pilotos</span></h2>
-        <p class="section-subtitle">Los 5 mejores del equipo · Ranking 2026</p>
+        <p class="section-subtitle">5 ÉLITES · PILOTOS DE BASQUE RIDERS</p>
         
         <div class="piloto-grid">
-            <!-- Piloto 1 -->
-            <div class="piloto-card">
-                <div class="piloto-rank rank-1">1</div>
-                <div class="piloto-avatar">LC</div>
+            <!-- Ian Traba -->
+            <div class="piloto-card" onclick="openModal('ian')">
+                <div class="piloto-rank">1</div>
+                <div class="piloto-avatar">
+                    <img src="img/ian-traba.jpg" alt="Ian Traba" onerror="this.style.display='none'; this.parentElement.innerText='IT'">
+                </div>
+                <h3 class="piloto-name">Ian Traba</h3>
+                <p class="piloto-team">Piloto de Basque Riders</p>
+                <p class="piloto-dorsal">Dorsal: <span>#18</span></p>
+                <a href="#" class="piloto-btn" onclick="event.stopPropagation(); openModal('ian')">Ver Dosier</a>
+            </div>
+
+            <!-- Andoni Gutierrez -->
+            <div class="piloto-card" onclick="openModal('andoni')">
+                <div class="piloto-rank">2</div>
+                <div class="piloto-avatar">
+                    <img src="img/andoni-gutierrez.jpg" alt="Andoni Gutierrez" onerror="this.style.display='none'; this.parentElement.innerText='AG'">
+                </div>
+                <h3 class="piloto-name">Andoni Gutierrez</h3>
+                <p class="piloto-team">Piloto de Basque Riders</p>
+                <p class="piloto-dorsal">EUSKAL SELEKZIOA</p>
+                <a href="#" class="piloto-btn" onclick="event.stopPropagation(); openModal('andoni')">Ver Dosier</a>
+            </div>
+
+            <!-- Iñaki Traba -->
+            <div class="piloto-card" onclick="openModal('inaki')">
+                <div class="piloto-rank">3</div>
+                <div class="piloto-avatar">
+                    <img src="img/inaki-traba.jpg" alt="Iñaki Traba" onerror="this.style.display='none'; this.parentElement.innerText='IT'">
+                </div>
+                <h3 class="piloto-name">Iñaki Traba</h3>
+                <p class="piloto-team">Piloto de Basque Riders</p>
+                <p class="piloto-dorsal">Dorsal: <span>#60</span></p>
+                <a href="#" class="piloto-btn" onclick="event.stopPropagation(); openModal('inaki')">Ver Dosier</a>
+            </div>
+
+            <!-- Aitzol Arakistain -->
+            <div class="piloto-card" onclick="openModal('aitzol')">
+                <div class="piloto-rank">4</div>
+                <div class="piloto-avatar">
+                    <img src="img/aitzol-arakistain.jpg" alt="Aitzol Arakistain" onerror="this.style.display='none'; this.parentElement.innerText='AA'">
+                </div>
+                <h3 class="piloto-name">Aitzol Arakistain</h3>
+                <p class="piloto-team">Piloto de Basque Riders</p>
+                <p class="piloto-dorsal">DEBAO</p>
+                <a href="#" class="piloto-btn" onclick="event.stopPropagation(); openModal('aitzol')">Ver Dosier</a>
+            </div>
+
+            <!-- Lander Cortazar -->
+            <div class="piloto-card" onclick="openModal('lander')">
+                <div class="piloto-rank">5</div>
+                <div class="piloto-avatar">
+                    <img src="img/lander-cortazar.jpg" alt="Lander Cortazar" onerror="this.style.display='none'; this.parentElement.innerText='LC'">
+                </div>
                 <h3 class="piloto-name">Lander Cortazar</h3>
-                <p class="piloto-role">Piloto Principal</p>
-                <div class="piloto-stats">
-                    <div class="piloto-stat">
-                        <span class="piloto-stat-value">47</span>
-                        <span class="piloto-stat-label">Victorias</span>
-                    </div>
-                    <div class="piloto-stat">
-                        <span class="piloto-stat-value">12</span>
-                        <span class="piloto-stat-label">Años</span>
-                    </div>
-                </div>
-                <p class="piloto-desc">Piloto #1 del equipo. Especialista en competiciones internacionales y embajador de marca.</p>
-                <div class="piloto-social">
-                    <a href="#">IG</a>
-                    <a href="#">YT</a>
-                    <a href="#">TT</a>
-                </div>
-            </div>
-
-            <!-- Piloto 2 -->
-            <div class="piloto-card">
-                <div class="piloto-rank rank-2">2</div>
-                <div class="piloto-avatar">MR</div>
-                <h3 class="piloto-name">Marco Rodriguez</h3>
-                <p class="piloto-role">Piloto Pro</p>
-                <div class="piloto-stats">
-                    <div class="piloto-stat">
-                        <span class="piloto-stat-value">38</span>
-                        <span class="piloto-stat-label">Victorias</span>
-                    </div>
-                    <div class="piloto-stat">
-                        <span class="piloto-stat-value">8</span>
-                        <span class="piloto-stat-label">Años</span>
-                    </div>
-                </div>
-                <p class="piloto-desc">Especialista en velocidad y maniobras técnicas. Campeón nacional 2024.</p>
-                <div class="piloto-social">
-                    <a href="#">IG</a>
-                    <a href="#">YT</a>
-                </div>
-            </div>
-
-            <!-- Piloto 3 -->
-            <div class="piloto-card">
-                <div class="piloto-rank rank-3">3</div>
-                <div class="piloto-avatar">AF</div>
-                <h3 class="piloto-name">Ana Fernandez</h3>
-                <p class="piloto-role">Piloto Pro</p>
-                <div class="piloto-stats">
-                    <div class="piloto-stat">
-                        <span class="piloto-stat-value">31</span>
-                        <span class="piloto-stat-label">Victorias</span>
-                    </div>
-                    <div class="piloto-stat">
-                        <span class="piloto-stat-value">6</span>
-                        <span class="piloto-stat-label">Años</span>
-                    </div>
-                </div>
-                <p class="piloto-desc">Piloto de precisión y estrategia. Experta en competiciones de resistencia.</p>
-                <div class="piloto-social">
-                    <a href="#">IG</a>
-                    <a href="#">TT</a>
-                </div>
-            </div>
-
-            <!-- Piloto 4 -->
-            <div class="piloto-card">
-                <div class="piloto-rank rank-4">4</div>
-                <div class="piloto-avatar">JS</div>
-                <h3 class="piloto-name">Javier Sanchez</h3>
-                <p class="piloto-role">Piloto Senior</p>
-                <div class="piloto-stats">
-                    <div class="piloto-stat">
-                        <span class="piloto-stat-value">25</span>
-                        <span class="piloto-stat-label">Victorias</span>
-                    </div>
-                    <div class="piloto-stat">
-                        <span class="piloto-stat-value">5</span>
-                        <span class="piloto-stat-label">Años</span>
-                    </div>
-                </div>
-                <p class="piloto-desc">Joven promesa con gran potencial. Especialista en circuitos urbanos.</p>
-                <div class="piloto-social">
-                    <a href="#">IG</a>
-                    <a href="#">YT</a>
-                </div>
-            </div>
-
-            <!-- Piloto 5 -->
-            <div class="piloto-card">
-                <div class="piloto-rank rank-5">5</div>
-                <div class="piloto-avatar">LG</div>
-                <h3 class="piloto-name">Laura Garcia</h3>
-                <p class="piloto-role">Piloto Senior</p>
-                <div class="piloto-stats">
-                    <div class="piloto-stat">
-                        <span class="piloto-stat-value">19</span>
-                        <span class="piloto-stat-label">Victorias</span>
-                    </div>
-                    <div class="piloto-stat">
-                        <span class="piloto-stat-value">4</span>
-                        <span class="piloto-stat-label">Años</span>
-                    </div>
-                </div>
-                <p class="piloto-desc">Rising star del equipo. Destacada en acrobacias y shows en vivo.</p>
-                <div class="piloto-social">
-                    <a href="#">IG</a>
-                    <a href="#">TT</a>
-                </div>
+                <p class="piloto-team">Piloto de Basque Riders</p>
+                <p class="piloto-dorsal">Dorsal: <span>#7</span></p>
+                <a href="#" class="piloto-btn" onclick="event.stopPropagation(); openModal('lander')">Ver Dosier</a>
             </div>
         </div>
     </section>
 
-    <!-- Patrocinios Section -->
+    <!-- Modal Ian -->
+    <div class="modal" id="modal-ian">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('ian')">&times;</span>
+            <div class="dossier-header">
+                <div class="dossier-avatar">
+                    <img src="img/ian-traba.jpg" alt="Ian Traba" onerror="this.style.display='none'; this.parentElement.innerText='IT'">
+                </div>
+                <div class="dossier-info">
+                    <h2>Ian Traba</h2>
+                    <p class="team">Piloto de Basque Riders</p>
+                    <div class="dossier-stats">
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">18</div>
+                            <div class="dossier-stat-label">Años</div>
+                        </div>
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">#18</div>
+                            <div class="dossier-stat-label">Dorsal</div>
+                        </div>
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">1</div>
+                            <div class="dossier-stat-label">Mundial</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dossier-section">
+                <h3>Palmarés</h3>
+                <ul class="palmares-list">
+                    <li>Campeón del Mundo Aquabike Offshore GP3 2025 (Italia)</li>
+                    <li>Campeón de España Aquabike 2025</li>
+                    <li>Doble campeón estatal 2025</li>
+                    <li>Hijo de leyenda: Iñaki Traba, campeón mundial veterano</li>
+                </ul>
+            </div>
+
+            <div class="dossier-section">
+                <h3>Por qué Ian</h3>
+                <p>El futuro del motonáutico español. Con apenas 18 años ya es campeón del mundo, demostrando que la velocidad y la precisión son cosa de familia. Piloto más joven y precoz del circuito.</p>
+            </div>
+
+            <div class="dossier-cta">
+                <a href="#contacto" class="cta-btn" onclick="closeModal('ian')">Patrocinar a Ian</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Andoni -->
+    <div class="modal" id="modal-andoni">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('andoni')">&times;</span>
+            <div class="dossier-header">
+                <div class="dossier-avatar">
+                    <img src="img/andoni-gutierrez.jpg" alt="Andoni Gutierrez" onerror="this.style.display='none'; this.parentElement.innerText='AG'">
+                </div>
+                <div class="dossier-info">
+                    <h2>Andoni Gutierrez</h2>
+                    <p class="team">Piloto de Basque Riders · EUSKAL SELEKZIOA</p>
+                    <div class="dossier-stats">
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">1</div>
+                            <div class="dossier-stat-label">Mundial</div>
+                        </div>
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">1</div>
+                            <div class="dossier-stat-label">Europa</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dossier-section">
+                <h3>Palmarés</h3>
+                <ul class="palmares-list">
+                    <li>Campeón del Mundo de Motonáutica (Palma Mallorca)</li>
+                    <li>Campeón de Europa 2022</li>
+                    <li>Trayectoria: Abadiño → GP1 → Campeón del Mundo</li>
+                </ul>
+            </div>
+
+            <div class="dossier-section">
+                <h3>Por qué Andoni</h3>
+                <p>El campeón del mundo que demostró que con trabajo duro y dedicación se llega a lo más alto. De cero a campeón mundial gracias a años de entrenamiento en Mutriku.</p>
+            </div>
+
+            <div class="dossier-cta">
+                <a href="#contacto" class="cta-btn" onclick="closeModal('andoni')">Patrocinar a Andoni</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Iñaki -->
+    <div class="modal" id="modal-inaki">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('inaki')">&times;</span>
+            <div class="dossier-header">
+                <div class="dossier-avatar">
+                    <img src="img/inaki-traba.jpg" alt="Iñaki Traba" onerror="this.style.display='none'; this.parentElement.innerText='IT'">
+                </div>
+                <div class="dossier-info">
+                    <h2>Iñaki Traba</h2>
+                    <p class="team">Piloto de Basque Riders</p>
+                    <div class="dossier-stats">
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">15+</div>
+                            <div class="dossier-stat-label">Años</div>
+                        </div>
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">#60</div>
+                            <div class="dossier-stat-label">Dorsal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dossier-section">
+                <h3>Palmarés</h3>
+                <ul class="palmares-list">
+                    <li>Campeón de España Rallyjet GP2 (2010)</li>
+                    <li>Campeón de España Rallyjet GP1 Atmósfera (2022)</li>
+                    <li>Campeón de España Rallyjet GP3 + GP1 Atmósfera (2023)</li>
+                    <li>Campeón de España Offshore GP2 (2010)</li>
+                    <li>Campeón de España Offshore GP1 Atmósfera (2022)</li>
+                </ul>
+            </div>
+
+            <div class="dossier-section">
+                <h3>Por qué Iñaki</h3>
+                <p>La leyenda viva del motonáutico español. 15+ años compitiendo con 180 CV (50 menos que rivales) y ganando por pura fiabilidad. Padre y mentor del campeón del mundo más joven.</p>
+            </div>
+
+            <div class="dossier-cta">
+                <a href="#contacto" class="cta-btn" onclick="closeModal('inaki')">Patrocinar a Iñaki</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Aitzol -->
+    <div class="modal" id="modal-aitzol">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('aitzol')">&times;</span>
+            <div class="dossier-header">
+                <div class="dossier-avatar">
+                    <img src="img/aitzol-arakistain.jpg" alt="Aitzol Arakistain" onerror="this.style.display='none'; this.parentElement.innerText='AA'">
+                </div>
+                <div class="dossier-info">
+                    <h2>Aitzol Arakistain</h2>
+                    <p class="team">Piloto de Basque Riders · DEBAO</p>
+                    <div class="dossier-stats">
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">1</div>
+                            <div class="dossier-stat-label">Europa</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dossier-section">
+                <h3>Palmarés</h3>
+                <ul class="palmares-list">
+                    <li>Campeón de Europa Rallyjet Runabout GP3 (2019)</li>
+                    <li>Representando España en Sumatra 2023 (Endurance Aquabike, Lago Toba)</li>
+                </ul>
+            </div>
+
+            <div class="dossier-section">
+                <h3>Por qué Aitzol</h3>
+                <p>El puente entre Europa y los Mundiales. Campeón de Europa en 2019 y seleccionado para representar a España internacionalmente. En constante evolución para alcanzar el título mundial.</p>
+            </div>
+
+            <div class="dossier-cta">
+                <a href="#contacto" class="cta-btn" onclick="closeModal('aitzol')">Patrocinar a Aitzol</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Lander -->
+    <div class="modal" id="modal-lander">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('lander')">&times;</span>
+            <div class="dossier-header">
+                <div class="dossier-avatar">
+                    <img src="img/lander-cortazar.jpg" alt="Lander Cortazar" onerror="this.style.display='none'; this.parentElement.innerText='LC'">
+                </div>
+                <div class="dossier-info">
+                    <h2>Lander Cortazar</h2>
+                    <p class="team">Piloto de Basque Riders</p>
+                    <div class="dossier-stats">
+                        <div class="dossier-stat">
+                            <div class="dossier-stat-value">#7</div>
+                            <div class="dossier-stat-label">Dorsal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dossier-section">
+                <h3>Palmarés</h3>
+                <ul class="palmares-list">
+                    <li>Campeón Basque Country Cup GP3 F2 (2023)</li>
+                    <li>Campeón Basque Country Cup GP2 (2025)</li>
+                    <li>Subcampeón España Rallyjet (2022)</li>
+                </ul>
+            </div>
+
+            <div class="dossier-section">
+                <h3>Por qué Lander</h3>
+                <p>Piloto en ascenso con múltiples victorias en Basque Country Cup. Doble campeón regional y subcampeón nacional. Representa la nueva generación de pilotos del País Vasco.</p>
+            </div>
+
+            <div class="dossier-cta">
+                <a href="#contacto" class="cta-btn" onclick="closeModal('lander')">Patrocinar a Lander</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Patrocinios -->
     <section class="patrocinios" id="patrocinios">
-        <h2 class="section-title">Planes de <span>Patrocinio</span></h2>
+        <h2 class="section-title">Oportunidad de <span>Patrocinio</span></h2>
+        
+        <div class="patrocinio-intro">
+            <h3>Únete al proyecto de los campeones</h3>
+            <p>Tu marca junto a los mejores pilotos de motonáutica de España. Inversión en deportistas de élite con resultados probados y visibilidad internacional.</p>
+        </div>
+
         <div class="tiers-grid">
             <div class="tier-card">
-                <h3 class="tier-name">Starter</h3>
-                <div class="tier-price">€1K-3K</div>
-                <p class="tier-price-range">/ mes</p>
+                <div class="tier-icon">▸</div>
+                <h3 class="tier-name">Campeonato Nacional</h3>
+                <div class="tier-price">€2K-4K<span>/año</span></div>
                 <ul class="tier-features">
-                    <li>Logo en equipamiento 5 pilotos</li>
-                    <li>Menciones en redes (150K+ reach)</li>
-                    <li>Presencia en 5 eventos/año</li>
+                    <li>Logo en web oficial</li>
+                    <li>Mención en redes sociales</li>
+                    <li>Visibilidad en contenido</li>
                     <li>Reporte mensual analytics</li>
-                    <li>Contenido mensual exclusivo</li>
                 </ul>
-                <a href="#contacto" class="tier-btn">Elegir Plan</a>
+                <a href="#contacto" class="cta-btn">Elegir Plan</a>
             </div>
+            
             <div class="tier-card featured">
-                <h3 class="tier-name">Pro</h3>
-                <div class="tier-price">€5K-10K</div>
-                <p class="tier-price-range">/ mes</p>
+                <div class="tier-icon">▸</div>
+                <h3 class="tier-name">Campeonato Europeo</h3>
+                <div class="tier-price">€5K-9K<span>/año</span></div>
                 <ul class="tier-features">
-                    <li>Todo Starter incluido</li>
-                    <li>Logo en vehículos principales</li>
-                    <li>Contenido semanal profesional</li>
-                    <li>Eventos privados con pilotos</li>
-                    <li>Campañas personalizadas</li>
-                    <li>Acceso VIP competiciones</li>
+                    <li>Logo en equipo auxiliar</li>
+                    <li>6 posts + vídeo profesional</li>
+                    <li>Presencia en eventos selectos</li>
+                    <li>Invitación a eventos</li>
+                    <li>Todos los beneficios Nacional</li>
                 </ul>
-                <a href="#contacto" class="tier-btn">Elegir Plan</a>
+                <a href="#contacto" class="cta-btn">Elegir Plan</a>
             </div>
+            
             <div class="tier-card">
-                <h3 class="tier-name">Elite</h3>
-                <div class="tier-price">€15K-30K</div>
-                <p class="tier-price-range">/ mes</p>
+                <div class="tier-icon">▸</div>
+                <h3 class="tier-name">Campeonato Internacional</h3>
+                <div class="tier-price">€10K-15K<span>/año</span></div>
                 <ul class="tier-features">
-                    <li>Todo Pro incluido</li>
-                    <li>Embajador oficial marca</li>
-                    <li>Co-desarrollo producto</li>
-                    <li>Producción contenido premium</li>
-                    <li>Acceso exclusivo 24/7</li>
-                    <li>Partnership estratégico</li>
+                    <li>Logo principal en moto</li>
+                    <li>12 posts + 3 reels pro</li>
+                    <li>Exposición internacional</li>
+                    <li>Hospitality en 3 circuitos</li>
+                    <li>Todos los beneficios Europeo</li>
                 </ul>
-                <a href="#contacto" class="tier-btn">Elegir Plan</a>
+                <a href="#contacto" class="cta-btn">Elegir Plan</a>
             </div>
         </div>
     </section>
 
-    <!-- Marcas Section -->
-    <section class="marcas">
-        <h2 class="section-title">Marcas <span>Objetivo</span></h2>
-        <div class="marcas-grid">
-            <div class="marca-item">YAMAHA</div>
-            <div class="marca-item">SEA-DOO</div>
-            <div class="marca-item">RED BULL</div>
-            <div class="marca-item">MONSTER</div>
-            <div class="marca-item">TAG HEUER</div>
-            <div class="marca-item">GARMIN</div>
-        </div>
-    </section>
-
-    <!-- Contacto Section -->
+    <!-- Contacto -->
     <section class="contacto" id="contacto">
         <h2 class="section-title">Contacto</h2>
         <div class="contact-grid">
             <div class="contact-info">
-                <h3>¿Listo para llevar tu marca al siguiente nivel?</h3>
-                <p>Conecta con los mejores pilotos del circuito. Ofrecemos alcance auténtico, engagement real y asociaciones que generan resultados medibles.</p>
+                <h3>¿Listo para patrocinar campeones?</h3>
+                <p>Conecta con los mejores pilotos del motonáutico español. Ofrecemos alcance auténtico y asociaciones que generan resultados medibles.</p>
                 <ul class="contact-details">
-                    <li><strong>Email:</strong> contacto@pilotoselite.com</li>
+                    <li><strong>Email:</strong> info@elitejsr.com</li>
                     <li><strong>Tel:</strong> +34 600 000 000</li>
-                    <li><strong>Ubicación:</strong> Madrid, España</li>
-                    <li><strong>Reach:</strong> 150K+ seguidores</li>
+                    <li><strong>Ubicación:</strong> País Vasco, España</li>
                 </ul>
             </div>
-            <form class="contact-form">
+            <form class="contact-form" action="mailto:info@elitejsr.com" method="post" enctype="text/plain">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
@@ -1102,15 +1211,12 @@
                     <input type="email" id="email" name="email" placeholder="tu@email.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="tipo">Tipo de Consulta</label>
-                    <select id="tipo" name="tipo" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="patrocinio">Patrocinio</option>
-                        <option value="piloto">Quiero ser piloto</option>
-                        <option value="evento">Organizar evento</option>
-                        <option value="colaboracion">Colaboración</option>
-                        <option value="otro">Otro</option>
-                    </select>
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de empresa">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
                 </div>
                 <div class="form-group">
                     <label for="mensaje">Mensaje</label>
@@ -1123,17 +1229,20 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Pilotos de Élite. Todos los derechos reservados.</p>
-        <div class="footer-social">
-            <a href="#">IG</a>
-            <a href="#">YT</a>
-            <a href="#">TT</a>
-            <a href="#">X</a>
-        </div>
+        <p>&copy; 2026 ELITE JSR. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // Smooth scroll
+        function openModal(piloto) {
+            document.getElementById('modal-' + piloto).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(piloto) {
+            document.getElementById('modal-' + piloto).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1143,28 +1252,14 @@
             });
         });
 
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-            this.reset();
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
         });
-
-        // Animación números
-        const stats = document.querySelectorAll('.stat-number');
-        const observerOptions = {
-            threshold: 0.5
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'pulse 2s infinite';
-                }
-            });
-        }, observerOptions);
-
-        stats.forEach(stat => observer.observe(stat));
     </script>
 </body>
 </html>

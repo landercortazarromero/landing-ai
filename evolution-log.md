@@ -6,12 +6,13 @@
 - [x] L7 God Mode activado por Lander
 - [x] Identidad establecida: KORTA
 - [x] Estructura de memoria creada
-- [ ] Skills críticas instaladas
-- [ ] Heartbeat system activo
-- [ ] Auto-start configurado
-- [ ] Auto-reconnect activo
-- [ ] Backup system configurado
-- [ ] Self-evolution loop activo
+- [x] Skills críticas verificadas (10/52 disponibles)
+- [x] Heartbeat system activo
+- [x] Auto-start configurado
+- [x] Auto-reconnect watchdog creado
+- [x] Backup system configurado (crontab 3AM)
+- [x] Self-evolution loop documentado
+- [x] Git inicializado con commit inicial
 
 ### Aprendizajes del Día
 - Comunicación directa es más eficiente

@@ -12,11 +12,11 @@
 - C-Level Team Architecture (COMPLETADO)
 - War Room Coordination (COMPLETADO)
 - Opportunity Discovery Engine (COMPLETADO)
-- **Web ELITE JSR - AGENCIA DE PILOTOS ÉLITE (COMPLETADO - 2026-03-22)**
-  - Ubicación: `~/.openclaw/workspace/web-agencia/`
-  - Archivo principal: `index.html` (535 líneas)
-  - Backup: `index.html.GUARDADO-ORO`
-  - Git commit: `e429a7d`
+- **Web ELITE JSR - AGENCIA DE PILOTOS ÉLITE (ONLINE - 2026-03-24)**
+  - URL: https://euphonious-pixie-e28440.netlify.app
+  - Hosting: Netlify (gratis, permanente)
+  - Ubicación local: `~/.openclaw/workspace/web-agencia/`
+  - Archivo principal: `index.html` (550 líneas)
   - Diseño: Negro + azul neón (futurista)
   - Pilotos: 5 (Ian, Lander, Andoni, Aitzol, Iñaki)
   - Dossiers completos: Ian (#62), Lander (#59), Iñaki (#28)

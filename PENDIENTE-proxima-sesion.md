@@ -7,7 +7,18 @@
 
 ## 🎯 LO QUE DEJAMOS PENDIENTE
 
-### 1. SUBIR WEB A INTERNET (PRIORIDAD #1)
+### 1. CRON JOBS ACTIVOS (CONFIGURADOS)
+**OMEN X — Mentoría Trading:**
+- Inicio: Lunes-Viernes 05:30 AM
+- Cierre: Lunes-Viernes 08:00 AM
+- Duración: 2.5 horas de mentoría intensiva
+
+**Jorge Carrasco — Autoconocimiento:**
+- Inicio: Lunes-Viernes 08:00 AM
+- Cierre: Lunes-Viernes 08:30 AM
+- Duración: 30 minutos
+
+### 2. SUBIR WEB A INTERNET (PRIORIDAD #1)
 **Estado:** Web lista en local, falta subir a hosting
 **Opción elegida:** Dominio + Hosting (pago ~65€/año)
 

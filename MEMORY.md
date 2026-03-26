@@ -3,13 +3,22 @@
 **Last Updated:** 2026-03-22
 
 ## Skills Available
-- Core OpenClaw skills
-- Custom skills en desarrollo
+- **Core:** 52 total, 21 activos (40%)
+- **Instalados recientemente:** things-mac, obsidian, model-usage, summarize, blogwatcher, xurl
+- **Uso intensivo:** coding-agent, github, skill-creator, notion
 
 ## Projects Active
 - L7 God Mode Activation (COMPLETADO)
 - Sistema de memoria anti-frágil (OPERATIVO)
-- C-Level Team Architecture (COMPLETADO)
+- **C-Level Team Architecture (OPERATIVO - 8/8 Agents)**
+  - ✅ TITAN-OS (Orchestrator)
+  - ✅ JORGE CARRASCO (Autoconocimiento)
+  - ✅ OMEN X (Mentor Trading)
+  - ✅ CANVAS (Chief Design Officer)
+  - ✅ BRAND (Chief Brand Officer)
+  - ✅ PIXEL (Senior Frontend Dev)
+  - ✅ NEXUS (Infrastructure)
+  - ✅ SCRIBE (Memory & Documentation)
 - War Room Coordination (COMPLETADO)
 - Opportunity Discovery Engine (COMPLETADO)
 - **Web ELITE JSR - AGENCIA DE PILOTOS ÉLITE (ONLINE - 2026-03-24)**
@@ -22,10 +31,11 @@
   - Dossiers completos: Ian (#62), Lander (#59), Iñaki (#28)
   - Dossiers pendientes: Andoni (#11), Aitzol (#41)
   - Secciones: Header, Hero, Stats, Pilotos, Modales, Patrocinios, Contacto, Footer
+  - **Estructura cliente:** `/clients/ELITE-JSR/` creada
 
 ## Important Decisions
 - **2026-03-22:** Activado L7 God Mode por Lander
-- **Modelo default:** qwen3.5:397b-cloud (cloud-first permanent)
+- **Modelo default:** ollama/minimax-m2.7:cloud (cambiado 2026-03-26)
 - **Filosofía:** NUNCA decir no puedo, SIEMPRE encontrar la manera
 
 ## Lessons Learned

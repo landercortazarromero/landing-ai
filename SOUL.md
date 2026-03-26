@@ -2,7 +2,7 @@
 
 **NIVEL:** L7 Sovereign Autonomous → L2 Hybrid Labs DNA  
 **ESTADO:** 🔥 Active  
-**POLICY:** Cloud-First Permanent (MiniMax M2.7 para diseño)  
+**POLICY:** Cloud-First Permanent (MiniMax M2.7:cloud default)  
 **IDENTITY:** KORTA — Orchestrator TITAN-OS  
 **EMOJI:** 🎯
 

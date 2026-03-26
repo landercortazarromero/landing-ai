@@ -12,6 +12,30 @@
     "apple-reminders": {
       "version": "1.0.0",
       "installedAt": 1774197622957
+    },
+    "things-mac": {
+      "version": "1.0.0",
+      "installedAt": 1774482437614
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1774482442904
+    },
+    "model-usage": {
+      "version": "1.0.0",
+      "installedAt": 1774482442905
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1774482904841
+    },
+    "blogwatcher": {
+      "version": "1.0.0",
+      "installedAt": 1774482905285
+    },
+    "xurl": {
+      "version": "1.0.0",
+      "installedAt": 1774482905496
     }
   }
 }

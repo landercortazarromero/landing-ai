@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+:root { --neon: #00d4ff; --dark: #0a0a0a; --light: #ffffff; }
+body { background: var(--dark); color: var(--light); font-family: sans-serif; padding: 40px; }
+.opcion { margin-bottom: 60px; border: 2px solid rgba(0,212,255,0.3); padding: 40px; border-radius: 20px; }
+.titulo-opcion { color: var(--neon); font-size: 1.5rem; margin-bottom: 30px; text-transform: uppercase; }
+
+/* GRID */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; }
+.card { background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.2); border-radius: 20px; padding: 40px; text-align: center; min-height: 400px; }
+
+/* OPCION 1: Trofeos */
+.op1-icono { font-size: 4rem; margin-bottom: 20px; }
+.op1-icono.bronce { filter: sepia(1) saturate(2) hue-rotate(-15deg); }
+.op1-icono.plata { filter: grayscale(0.8) brightness(1.2); }
+.op1-icono.oro { filter: sepia(1) saturate(3) hue-rotate(10deg) brightness(1.1); }
+
+/* OPCION 2: Números en círculos */
+.op2-icono { 
+    width: 100px; height: 100px; 
+    border-radius: 50%; 
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    border: 3px solid;
+}
+.op2-bronce { background: linear-gradient(135deg, #cd7f32 0%, #8b4513 100%); border-color: #cd7f32; box-shadow: 0 0 20px rgba(205,127,50,0.5); }
+.op2-plata { background: linear-gradient(135deg, #c0c0c0 0%, #808080 100%); border-color: #c0c0c0; box-shadow: 0 0 20px rgba(192,192,192,0.5); }
+.op2-oro { background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%); border-color: #ffd700; box-shadow: 0 0 20px rgba(255,215,0,0.5); color: #000; }
+
+/* OPCION 3: Badges escudo */
+.op3-icono {
+    width: 90px; height: 110px;
+    margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Orbitron', sans-serif;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    border: 2px solid;
+}
+.op3-bronce { background: linear-gradient(180deg, #cd7f32 0%, #8b4513 100%); border-color: #cd7f32; }
+.op3-plata { background: linear-gradient(180deg, #e8e8e8 0%, #a0a0a0 100%); border-color: #c0c0c0; color: #333; }
+.op3-oro { background: linear-gradient(180deg, #ffd700 0%, #daa520 100%); border-color: #ffd700; color: #000; }
+
+/* OPCION 4: Estrellas neón */
+.op4-icono {
+    width: 100px; height: 100px;
+    margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem;
+    text-shadow: 0 0 20px currentColor;
+}
+.op4-bronce { color: #cd7f32; }
+.op4-plata { color: #c0c0c0; }
+.op4-oro { color: #ffd700; }
+
+/* OPCION 5: Letras grandes */
+.op5-icono {
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px;
+    text-shadow: 0 0 30px currentColor;
+}
+.op5-bronce { color: #cd7f32; }
+.op5-plata { color: #c0c0c0; }
+.op5-oro { color: #ffd700; }
+
+/* OPCION 6: Solo colores de borde sin icono */
+.op6-card { border-width: 3px; }
+.op6-bronce { border-color: #cd7f32; box-shadow: 0 0 30px rgba(205,127,50,0.3); }
+.op6-plata { border-color: #c0c0c0; box-shadow: 0 0 30px rgba(192,192,192,0.3); }
+.op6-oro { border-color: #ffd700; box-shadow: 0 0 30px rgba(255,215,0,0.3); }
+.op6-numero {
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 20px;
+}
+
+.titulo-card { font-size: 1.3rem; margin: 20px 0; text-transform: uppercase; }
+.precio { font-size: 2rem; color: var(--neon); font-weight: 700; margin: 20px 0; }
+</style>
+</head>
+<body>
+
+<div class="opcion">
+    <div class="titulo-opcion">OPCIÓN 1: Trofeos con efecto metálico</div>
+    <div class="cards">
+        <div class="card">
+            <div class="op1-icono bronce">🏆</div>
+            <div class="titulo-card">Campeonato Nacional</div>
+            <div class="precio">€2,000 - €4,000</div>
+        </div>
+        <div class="card">
+            <div class="op1-icono plata">🏆</div>
+            <div class="titulo-card">Campeonato Europeo</div>
+            <div class="precio">€5,000 - €9,000</div>
+        </div>
+        <div class="card">
+            <div class="op1-icono oro">🏆</div>
+            <div class="titulo-card">Campeonato Mundial</div>
+            <div class="precio">€10,000 - €15,000</div>
+        </div>
+    </div>
+</div>
+
+<div class="opcion">
+    <div class="titulo-opcion">OPCIÓN 2: Números en círculos metálicos</div>
+    <div class="cards">
+        <div class="card">
+            <div class="op2-icono op2-bronce">3</div>
+            <div class="titulo-card">Campeonato Nacional</div>
+            <div class="precio">€2,000 - €4,000</div>
+        </div>
+        <div class="card">
+            <div class="op2-icono op2-plata">2</div>
+            <div class="titulo-card">Campeonato Europeo</div>
+            <div class="precio">€5,000 - €9,000</div>
+        </div>
+        <div class="card">
+            <div class="op2-icono op2-oro">1</div>
+            <div class="titulo-card">Campeonato Mundial</div>
+            <div class="precio">€10,000 - €15,000</div>
+        </div>
+    </div>
+</div>
+
+<div class="opcion">
+    <div class="titulo-opcion">OPCIÓN 3: Badges en forma de escudo</div>
+    <div class="cards">
+        <div class="card">
+            <div class="op3-icono op3-bronce">N</div>
+            <div class="titulo-card">Campeonato Nacional</div>
+            <div class="precio">€2,000 - €4,000</div>
+        </div>
+        <div class="card">
+            <div class="op3-icono op3-plata">E</div>
+            <div class="titulo-card">Campeonato Europeo</div>
+            <div class="precio">€5,000 - €9,000</div>
+        </div>
+        <div class="card">
+            <div class="op3-icono op3-oro">M</div>
+            <div class="titulo-card">Campeonato Mundial</div>
+            <div class="precio">€10,000 - €15,000</div>
+        </div>
+    </div>
+</div>
+
+<div class="opcion">
+    <div class="titulo-opcion">OPCIÓN 4: Estrellas con glow neón</div>
+    <div class="cards">
+        <div class="card">
+            <div class="op4-icono op4-bronce">⭐</div>
+            <div class="titulo-card">Campeonato Nacional</div>
+            <div class="precio">€2,000 - €4,000</div>
+        </div>
+        <div class="card">
+            <div class="op4-icono op4-plata">⭐⭐</div>
+            <div class="titulo-card">Campeonato Europeo</div>
+            <div class="precio">€5,000 - €9,000</div>
+        </div>
+        <div class="card">
+            <div class="op4-icono op4-oro">⭐⭐⭐</div>
+            <div class="titulo-card">Campeonato Mundial</div>
+            <div class="precio">€10,000 - €15,000</div>
+        </div>
+    </div>
+</div>
+
+<div class="opcion">
+    <div class="titulo-opcion">OPCIÓN 5: Letras grandes estilizadas</div>
+    <div class="cards">
+        <div class="card">
+            <div class="op5-icono op5-bronce">NIVEL 3</div>
+            <div class="titulo-card">Campeonato Nacional</div>
+            <div class="precio">€2,000 - €4,000</div>
+        </div>
+        <div class="card">
+            <div class="op5-icono op5-plata">NIVEL 2</div>
+            <div class="titulo-card">Campeonato Europeo</div>
+            <div class="precio">€5,000 - €9,000</div>
+        </div>
+        <div class="card">
+            <div class="op5-icono op5-oro">NIVEL 1</div>
+            <div class="titulo-card">Campeonato Mundial</div>
+            <div class="precio">€10,000 - €15,000</div>
+        </div>
+    </div>
+</div>
+
+<div class="opcion">
+    <div class="titulo-opcion">OPCIÓN 6: Solo bordes coloreados + número grande</div>
+    <div class="cards">
+        <div class="card op6-card op6-bronce">
+            <div class="op6-numero">03</div>
+            <div class="titulo-card">Campeonato Nacional</div>
+            <div class="precio">€2,000 - €4,000</div>
+        </div>
+        <div class="card op6-card op6-plata">
+            <div class="op6-numero">02</div>
+            <div class="titulo-card">Campeonato Europeo</div>
+            <div class="precio">€5,000 - €9,000</div>
+        </div>
+        <div class="card op6-card op6-oro">
+            <div class="op6-numero">01</div>
+            <div class="titulo-card">Campeonato Mundial</div>
+            <div class="precio">€10,000 - €15,000</div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

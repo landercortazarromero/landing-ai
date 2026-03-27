@@ -1,48 +1,19 @@
 {
   "system": "Hybrid Labs L2",
-  "version": "1.0.0",
-  "status": "ACTIVE",
-  "lastUpdated": "2026-03-24T08:00:00+01:00",
-  "agents": {
-    "CANVAS": {
-      "status": "ready",
-      "role": "Chief Design Officer",
-      "model": "MiniMax M2.7",
-      "lastActivity": null
-    },
-    "BRAND": {
-      "status": "ready",
-      "role": "Chief Brand Officer",
-      "model": "MiniMax M2.7",
-      "lastActivity": null
-    },
-    "PIXEL": {
-      "status": "ready",
-      "role": "Senior Frontend Developer",
-      "model": "MiniMax M2.7",
-      "lastActivity": null
-    },
-    "NEXUS": {
-      "status": "ready",
-      "role": "Infrastructure & Deployments",
-      "lastActivity": null
-    },
-    "SCRIBE": {
-      "status": "ready",
-      "role": "Memory & Documentation",
-      "lastActivity": null
-    },
-    "TITAN-OS": {
-      "status": "active",
-      "role": "Orchestrator",
-      "lastActivity": "2026-03-24T08:00:00+01:00"
-    }
-  },
-  "activeClient": null,
-  "activeProject": null,
+  "status": "ACTIVATED",
+  "activation_date": "2026-03-27",
+  "timestamp": "2026-03-27T05:02:00Z",
+  "version": "10.0",
+  "agents_total": 8,
+  "agents_active": 8,
+  "skills_available": 52,
+  "skills_active": 21,
+  "cron_jobs": 13,
+  "mode": "AUTONOMOUS_SELF_IMPROVING",
+  "last_backup": "auto",
+  "memory_sync": "active",
   "metrics": {
-    "sessionsToday": 0,
-    "projectsCompleted": 0,
-    "clientsServed": 0
+    "l7_score": "4.9/5.0",
+    "target": "5.0/5.0"
   }
 }

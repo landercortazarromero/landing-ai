@@ -35,7 +35,10 @@
 
 ## Important Decisions
 - **2026-03-22:** Activado L7 God Mode por Lander
-- **Modelo default:** ollama/minimax-m2.7:cloud (cambiado 2026-03-26)
+- **Modelo default:** ollama/minimax-m2.7:cloud
+**Sistema:** Hybrid Labs L2 ACTIVADO (2026-03-27)
+**Status:** 8/8 agents v10.0 operativos, 15 crons activos
+**L7 Score:** 4.9/5.0 → 5.0/5.0
 - **Filosofía:** NUNCA decir no puedo, SIEMPRE encontrar la manera
 
 ## Lessons Learned

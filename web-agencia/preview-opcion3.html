@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPCIÓN 3: Storytelling Impacto - Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --neon: #00d4ff; --black: #000000; --dark: #0a0a0a; --light: #ffffff; --gray: #888888; }
+        body { font-family: 'Rajdhani', sans-serif; background: var(--black); color: var(--light); padding: 40px; line-height: 1.6; }
+        
+        .titulo-seccion { font-family: 'Orbitron', sans-serif; font-size: 2rem; text-align: center; margin-bottom: 50px; color: var(--neon); text-transform: uppercase; }
+        
+        /* EXTRAS A MEDIDA - Storytelling */
+        .extras-container { max-width: 1000px; margin: 0 auto 80px; }
+        
+        .extras-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
+        
+        .extra-card { 
+            padding: 50px 40px; 
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            transition: all 0.3s;
+        }
+        .extra-card:hover { 
+            background: rgba(0, 212, 255, 0.05); 
+            border-color: var(--neon);
+        }
+        
+        .extra-card:nth-child(1) { border-right: 1px solid rgba(0, 212, 255, 0.2); border-bottom: 1px solid rgba(0, 212, 255, 0.2); }
+        .extra-card:nth-child(2) { border-bottom: 1px solid rgba(0, 212, 255, 0.2); }
+        .extra-card:nth-child(3) { border-right: 1px solid rgba(0, 212, 255, 0.2); }
+        
+        .extra-icono { font-size: 2.5rem; margin-bottom: 20px; }
+        
+        .extra-titulo { 
+            font-family: 'Orbitron', sans-serif; 
+            color: var(--neon); 
+            font-size: 1.1rem; 
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .extra-desc { color: var(--gray); font-size: 1rem; line-height: 1.8; }
+        
+        .extra-desc strong { color: var(--light); }
+        
+        /* ¿POR QUÉ PATROCINAR? - Storytelling */
+        .porque-container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: rgba(0, 212, 255, 0.03); 
+            border: 1px solid rgba(0, 212, 255, 0.2); 
+            border-radius: 25px; 
+            padding: 60px; 
+        }
+        
+        .porque-item { 
+            display: flex; 
+            align-items: flex-start; 
+            gap: 25px; 
+            margin-bottom: 40px; 
+            padding: 30px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            border-left: 4px solid var(--neon);
+        }
+        
+        .porque-icono { font-size: 2.5rem; flex-shrink: 0; }
+        
+        .porque-contenido {}
+        
+        .porque-titulo { 
+            font-family: 'Orbitron', sans-serif; 
+            color: var(--light); 
+            font-size: 1.2rem; 
+            margin-bottom: 10px;
+        }
+        
+        .porque-texto { color: var(--gray); line-height: 1.8; }
+        
+        .porque-texto strong { color: var(--neon); }
+        
+        /* CTA Final */
+        .cta-final { 
+            margin-top: 50px; 
+            text-align: center; 
+            padding: 40px; 
+            background: var(--neon); 
+            color: var(--black); 
+            border-radius: 15px;
+        }
+        
+        .cta-titulo { 
+            font-family: 'Orbitron', sans-serif; 
+            font-size: 1.3rem; 
+            font-weight: 700; 
+            margin-bottom: 15px;
+        }
+        
+        .cta-texto { font-size: 1rem; }
+        
+        @media (max-width: 768px) {
+            .extras-grid { grid-template-columns: 1fr; }
+            .extra-card { border: 1px solid rgba(0, 212, 255, 0.2) !important; margin-bottom: 20px; }
+            .porque-item { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- EXTRAS A MEDIDA -->
+    <div class="extras-container">
+        <h2 class="titulo-seccion">🎯 TU MARCA, SU HISTORIA DE ÉXITO</h2>
+        
+        <div class="extras-grid">
+            
+            <div class="extra-card">
+                <div class="extra-icono">🎯</div>
+                <div class="extra-titulo">Patrocinio Técnico</div>
+                <div class="extra-desc">
+                    Tu producto en la moto, en el equipo, en la piel del piloto. <strong>No es publicidad intrusiva, es visibilidad real</strong> cuando millones de ojos están puestos en la línea de salida.
+                </div>
+            </div>
+            
+            <div class="extra-card">
+                <div class="extra-icono">🎬</div>
+                <div class="extra-titulo">Contenido Que Conecta</div>
+                <div class="extra-desc">
+                    Historias de superación, victoria, sacrificio. <strong>Emoción que vende</strong>, no anuncios que ignoran. Cada reel es una historia que tu audiencia querrá compartir.
+                </div>
+            </div>
+            
+            <div class="extra-card">
+                <div class="extra-icono">🏆</div>
+                <div class="extra-titulo">Experiencias VIP</div>
+                <div class="extra-desc">
+                    Tu cliente en el paddock, vibrando con la carrera. <strong>Relaciones que construyen negocios</strong>, no simples contactos de LinkedIn. Acceso que el dinero no puede comprar... excepto contigo.
+                </div>
+            </div>
+            
+            <div class="extra-card">
+                <div class="extra-icono">🤝</div>
+                <div class="extra-titulo">Activaciones B2B</div>
+                <div class="extra-desc">
+                    Encuentros con otros patrocinadores, networking de alto nivel. <strong>Oportunidades de negocio reales</strong> que surgen cuando el ambiente es de victoria.
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- ¿POR QUÉ PATROCINAR? -->
+    <div class="porque-container">
+        <h2 class="titulo-seccion">¿QUÉ OBTIENES REALMENTE?</h2>
+        
+        <div class="porque-item">
+            <div class="porque-icono">💎</div>
+            <div class="porque-contenido">
+                <div class="porque-titulo">Diferenciación Auténtica</div>
+                <div class="porque-texto">
+                    En un mar de anuncios genéricos, ser el patrocinador de un campeón <strong>te separa de la competencia</strong>. No eres otra marca más, eres parte de su victoria.
+                </div>
+            </div>
+        </div>
+        
+        <div class="porque-item">
+            <div class="porque-icono">❤️</div>
+            <div class="porque-contenido">
+                <div class="porque-titulo">Lealtad Emocional</div>
+                <div class="porque-texto">
+                    Los fans no siguen a los pilotos por obligación, <strong>lo hacen con pasión</strong>. Esa pasión se transfiere a tu marca. Es marketing emocional de alto rendimiento.
+                </div>
+            </div>
+        </div>
+        
+        <div class="porque-item">
+            <div class="porque-icono">📈</div>
+            <div class="porque-contenido">
+                <div class="porque-titulo">Crecimiento Compartido</div>
+                <div class="porque-texto">
+                    Cuando nuestros pilotos ganan, tu marca gana. <strong>Su podio es tu escaparate</strong>. Su éxito se convierte en tu éxito.
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-final">
+            <div class="cta-titulo">NO ES UN GASTO. ES UNA INVERSIÓN EN TU REPUTACIÓN.</div>
+            <div class="cta-texto">Las marcas que patrocinan deportistas de élite crecen un 23% más rápido que sus competidores.</div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

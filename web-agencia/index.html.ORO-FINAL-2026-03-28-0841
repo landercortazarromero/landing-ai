@@ -598,12 +598,8 @@
         <p class="section-subtitle">HABLEMOS DE TU PRÓXIMO PATROCINIO</p>
         
         <div style="max-width: 600px; margin: 0 auto;">
-            <form class="contact-form" action="https://formsubmit.co/elitejsr59@gmail.com" method="POST" id="contact-form">
+            <form class="contact-form" action="mailto:info@elitejsr.com" method="post" enctype="text/plain">
                 <input type="hidden" id="campeonato-seleccionado" name="campeonato" value="">
-                <input type="hidden" name="_subject" value="Nueva solicitud de patrocinio - ELITE JSR">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://landercortazarromero.github.io/elite-jsr/#gracias">
                 
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
@@ -633,13 +629,6 @@
                 <button type="submit" class="submit-btn">Enviar Mensaje</button>
             
             </form>
-            
-            <!-- Mensaje de confirmación (oculto por defecto) -->
-            <div id="mensaje-gracias" style="display: none; text-align: center; padding: 40px; background: rgba(0, 212, 255, 0.1); border: 1px solid var(--neon); border-radius: 15px; margin-top: 30px;">
-                <div style="font-size: 3rem; margin-bottom: 20px;">✅</div>
-                <h3 style="font-family: 'Orbitron', sans-serif; color: var(--neon); margin-bottom: 15px;">¡MENSAJE ENVIADO!</h3>
-                <p style="color: var(--gray);">Gracias por contactarnos. Te responderemos en menos de 24 horas.</p>
-            </div>
         </div>
     </section>
 
@@ -679,28 +668,6 @@
                     nombreInput.focus();
                 }
             }, 800);
-        }
-        
-        // Mostrar mensaje de confirmación al enviar formulario
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            const form = this;
-            const mensajeGracias = document.getElementById('mensaje-gracias');
-            
-            // Ocultar formulario después de enviar
-            setTimeout(() => {
-                form.style.display = 'none';
-                if (mensajeGracias) {
-                    mensajeGracias.style.display = 'block';
-                }
-            }, 500);
-        });
-        
-        // Verificar si viene de redirección de formsubmit
-        if (window.location.hash === '#gracias') {
-            const form = document.getElementById('contact-form');
-            const mensajeGracias = document.getElementById('mensaje-gracias');
-            if (form) form.style.display = 'none';
-            if (mensajeGracias) mensajeGracias.style.display = 'block';
         }
     </script>
 </body>

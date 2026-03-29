@@ -6,6 +6,14 @@
     <title>ELITE JSR | Agencia de Pilotos Élite</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+                publicKey: "4dSpPz5Tx7xVrOR2F",
+            });
+        })();
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --neon: #00d4ff; --black: #000000; --dark: #0a0a0a; --light: #ffffff; --gray: #888888; }
@@ -598,20 +606,16 @@
         <p class="section-subtitle">HABLEMOS DE TU PRÓXIMO PATROCINIO</p>
         
         <div style="max-width: 600px; margin: 0 auto;">
-            <form class="contact-form" action="https://formsubmit.co/elitejsr59@gmail.com" method="POST" id="contact-form">
+            <form class="contact-form" id="contact-form" onsubmit="enviarFormulario(event)">
                 <input type="hidden" id="campeonato-seleccionado" name="campeonato" value="">
-                <input type="hidden" name="_subject" value="Nueva solicitud de patrocinio - ELITE JSR">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://landercortazarromero.github.io/elite-jsr/#gracias">
                 
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
+                    <label for="nombre">Nombre *</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">Email *</label>
                     <input type="email" id="email" name="email" placeholder="tu@email.com" required>
                 </div>
                 
@@ -626,12 +630,13 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
+                    <label for="mensaje">Mensaje *</label>
                     <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos tu propuesta..." required></textarea>
                 </div>
                 
-                <button type="submit" class="submit-btn">Enviar Mensaje</button>
-            
+                <button type="submit" class="submit-btn" id="submit-btn">Enviar Mensaje</button>
+                
+                <div id="form-status" style="margin-top: 20px; text-align: center; color: var(--neon); font-weight: 600; display: none;"></div>
             </form>
             
             <!-- Mensaje de confirmación (oculto por defecto) -->
@@ -681,26 +686,46 @@
             }, 800);
         }
         
-        // Mostrar mensaje de confirmación al enviar formulario
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            const form = this;
-            const mensajeGracias = document.getElementById('mensaje-gracias');
+        // Función para enviar formulario por email usando EmailJS
+        function enviarFormulario(e) {
+            e.preventDefault();
             
-            // Ocultar formulario después de enviar
-            setTimeout(() => {
-                form.style.display = 'none';
-                if (mensajeGracias) {
-                    mensajeGracias.style.display = 'block';
-                }
-            }, 500);
-        });
-        
-        // Verificar si viene de redirección de formsubmit
-        if (window.location.hash === '#gracias') {
+            const btn = document.getElementById('submit-btn');
+            const status = document.getElementById('form-status');
             const form = document.getElementById('contact-form');
             const mensajeGracias = document.getElementById('mensaje-gracias');
-            if (form) form.style.display = 'none';
-            if (mensajeGracias) mensajeGracias.style.display = 'block';
+            
+            // Deshabilitar botón y mostrar cargando
+            btn.disabled = true;
+            btn.textContent = 'Enviando...';
+            status.style.display = 'block';
+            status.style.color = 'var(--gray)';
+            status.textContent = 'Enviando mensaje...';
+            
+            // Preparar datos para EmailJS
+            const templateParams = {
+                nombre: document.getElementById('nombre').value,
+                email: document.getElementById('email').value,
+                empresa: document.getElementById('empresa').value || 'No especificada',
+                telefono: document.getElementById('telefono').value || 'No especificado',
+                campeonato: document.getElementById('campeonato-seleccionado').value || 'No seleccionado',
+                mensaje: document.getElementById('mensaje').value
+            };
+            
+            // Enviar usando EmailJS
+            emailjs.send('default_service', 'template_k9o1gpt', templateParams)
+                .then(function(response) {
+                    // Éxito - ocultar formulario, mostrar mensaje de confirmación
+                    form.style.display = 'none';
+                    mensajeGracias.style.display = 'block';
+                    status.style.display = 'none';
+                }, function(error) {
+                    // Error
+                    status.style.color = '#ff6b6b';
+                    status.innerHTML = 'Error al enviar. Por favor, contacta directamente:<br><strong>elitejsr59@gmail.com</strong>';
+                    btn.disabled = false;
+                    btn.textContent = 'Enviar Mensaje';
+                });
         }
     </script>
 </body>

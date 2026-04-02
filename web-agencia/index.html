@@ -131,7 +131,7 @@
 <body>
     <header>
         <div class="logo"><span class="elite">ELITE</span> <span class="jsr">JSR</span></div>
-        <nav><ul><li><a href="#inicio">Inicio</a></li><li><a href="#pilotos">Pilotos</a></li><li><a href="#patrocinios">Patrocinio</a></li><li><a href="#contacto">Contacto</a></li></ul></nav>
+        <nav><ul><li><a href="#inicio">Inicio</a></li><li><a href="#pilotos">Pilotos</a></li><li><a href="#patrocinadores">Patrocinadores</a></li><li><a href="#patrocinios">Patrocinio</a></li><li><a href="#contacto">Contacto</a></li></ul></nav>
     </header>
 
     <section class="hero" id="inicio">
@@ -197,6 +197,67 @@
                     <li>🏆 Campeón España Offshore GP1 Atmósfera (2022)</li>
                 </ul>
                 <a href="#" class="piloto-btn" onclick="event.stopPropagation(); openModal('inaki')">HISTORIA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTROS PATROCINADORES -->
+    <section class="patrocinadores" id="patrocinadores" style="background: var(--dark); padding: 100px 50px; border-top: 1px solid rgba(0, 212, 255, 0.2); border-bottom: 1px solid rgba(0, 212, 255, 0.2);">
+        <div class="container" style="max-width: 1400px; margin: 0 auto;">
+            <h2 class="section-title" style="margin-bottom: 20px;">💎 NUESTROS <span style="color: var(--neon); text-shadow: 0 0 40px rgba(0, 212, 255, 0.8);">PATROCINADORES</span> 💎</h2>
+            <p class="section-subtitle" style="margin-bottom: 60px; font-size: 1.2rem;">Empresas que confían en ELITE JSR</p>
+            
+            <!-- Grid de Logos -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 80px; align-items: center; justify-items: center;">
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 15px; padding: 30px; width: 100%; height: 120px; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='var(--neon)'; this.style.boxShadow='0 0 30px rgba(0,212,255,0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(0,212,255,0.3)'; this.style.boxShadow='none';">
+                    <span style="font-family: 'Orbitron', sans-serif; color: var(--gray); font-size: 0.9rem;">TU MARCA AQUÍ</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 15px; padding: 30px; width: 100%; height: 120px; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='var(--neon)'; this.style.boxShadow='0 0 30px rgba(0,212,255,0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(0,212,255,0.3)'; this.style.boxShadow='none';">
+                    <span style="font-family: 'Orbitron', sans-serif; color: var(--gray); font-size: 0.9rem;">TU MARCA AQUÍ</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 15px; padding: 30px; width: 100%; height: 120px; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='var(--neon)'; this.style.boxShadow='0 0 30px rgba(0,212,255,0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(0,212,255,0.3)'; this.style.boxShadow='none';">
+                    <span style="font-family: 'Orbitron', sans-serif; color: var(--gray); font-size: 0.9rem;">TU MARCA AQUÍ</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 15px; padding: 30px; width: 100%; height: 120px; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='var(--neon)'; this.style.boxShadow='0 0 30px rgba(0,212,255,0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(0,212,255,0.3)'; this.style.boxShadow='none';">
+                    <span style="font-family: 'Orbitron', sans-serif; color: var(--gray); font-size: 0.9rem;">TU MARCA AQUÍ</span>
+                </div>
+            </div>
+            
+            <!-- Estadísticas de Impacto -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 80px;">
+                <div style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 40px; text-align: center; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--neon)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(0,212,255,0.2)'; this.style.transform='translateY(0)';">
+                    <div style="font-family: 'Orbitron', sans-serif; font-size: 3rem; color: var(--neon); text-shadow: 0 0 20px rgba(0, 212, 255, 0.5); margin-bottom: 10px;">15+</div>
+                    <div style="color: var(--gray); font-size: 1.1rem;">Empresas Confían</div>
+                </div>
+                <div style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 40px; text-align: center; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--neon)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(0,212,255,0.2)'; this.style.transform='translateY(0)';">
+                    <div style="font-family: 'Orbitron', sans-serif; font-size: 3rem; color: var(--neon); text-shadow: 0 0 20px rgba(0, 212, 255, 0.5); margin-bottom: 10px;">50K+</div>
+                    <div style="color: var(--gray); font-size: 1.1rem;">Visualizaciones/Mes</div>
+                </div>
+                <div style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 40px; text-align: center; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--neon)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(0,212,255,0.2)'; this.style.transform='translateY(0)';">
+                    <div style="font-family: 'Orbitron', sans-serif; font-size: 3rem; color: var(--neon); text-shadow: 0 0 20px rgba(0, 212, 255, 0.5); margin-bottom: 10px;">3</div>
+                    <div style="color: var(--gray); font-size: 1.1rem;">Países</div>
+                </div>
+                <div style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 40px; text-align: center; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--neon)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(0,212,255,0.2)'; this.style.transform='translateY(0)';">
+                    <div style="font-family: 'Orbitron', sans-serif; font-size: 3rem; color: var(--neon); text-shadow: 0 0 20px rgba(0, 212, 255, 0.5); margin-bottom: 10px;">98%</div>
+                    <div style="color: var(--gray); font-size: 1.1rem;">Renovación Patrocinios</div>
+                </div>
+            </div>
+            
+            <!-- Testimonio Destacado -->
+            <div style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 0, 0, 0.8)); border: 1px solid var(--neon); border-radius: 25px; padding: 50px; margin-bottom: 60px; position: relative; box-shadow: 0 0 60px rgba(0, 212, 255, 0.2);">
+                <div style="font-size: 4rem; color: var(--neon); position: absolute; top: 20px; left: 30px; opacity: 0.3;">"</div>
+                <p style="font-size: 1.3rem; color: var(--light); line-height: 1.8; margin: 20px 0; font-style: italic; text-align: center;">"Apostar por ELITE JSR fue la mejor decisión de marketing que tomamos este año. No solo ganamos visibilidad, nos asociamos a una marca de excelencia y pasión que nuestros clientes valoran enormemente."</p>
+                <div style="text-align: center; margin-top: 30px;">
+                    <div style="font-family: 'Orbitron', sans-serif; color: var(--neon); font-size: 1.1rem;">— Director de Marketing</div>
+                    <div style="color: var(--gray); font-size: 0.9rem; margin-top: 5px;">Empresa Patrocinadora</div>
+                </div>
+            </div>
+            
+            <!-- CTA Final -->
+            <div style="text-align: center; padding: 40px; background: rgba(0, 212, 255, 0.03); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 20px;">
+                <h3 style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: var(--light); margin-bottom: 20px;">Únete a Ellos</h3>
+                <p style="color: var(--gray); margin-bottom: 30px; font-size: 1.1rem;">Tu empresa junto a las mejores marcas del deporte</p>
+                <a href="#patrocinios" style="display: inline-block; padding: 20px 60px; background: transparent; color: var(--neon); text-decoration: none; font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 3px; border-radius: 50px; border: 2px solid var(--neon); transition: all 0.3s;" onmouseover="this.style.background='var(--neon)'; this.style.color='var(--black)'; this.style.boxShadow='0 0 40px rgba(0, 212, 255, 0.6)';" onmouseout="this.style.background='transparent'; this.style.color='var(--neon)'; this.style.boxShadow='none';">Ver Programas de Patrocinio</a>
             </div>
         </div>
     </section>
@@ -523,7 +584,8 @@
         </div>
     </section>
 
-    <section class="contacto" id="contacto" style="padding: 100px 50px; background: var(--black);">
+    <section class="contacto" id="contacto" style="background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url('images/contacto-bg.jpg') center/cover no-repeat fixed; padding: 100px 50px; position: relative; border-top: 1px solid rgba(0, 212, 255, 0.1);">
+        <div style="position: relative; z-index: 1;">
         <h2 class="section-title">CONTACTO <span>ELITE JSR</span></h2>
         <p class="section-subtitle">HABLEMOS DE TU PRÓXIMO PATROCINIO</p>
         
@@ -567,6 +629,8 @@
                 <h3 style="font-family: 'Orbitron', sans-serif; color: var(--neon); margin-bottom: 15px;">¡MENSAJE ENVIADO!</h3>
                 <p style="color: var(--gray);">Gracias por contactarnos. Te responderemos en menos de 24 horas.</p>
             </div>
+            </div>
+        </div>
         </div>
     </section>
 

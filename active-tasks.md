@@ -1,52 +1,80 @@
-# ACTIVE TASKS — Proyectos en Curso
+# ACTIVE TASKS — Actualizado 2026-04-05
 
-**Last Updated:** 2026-03-26 00:46
+**Última auditoría:** 2026-04-05 07:42  
+**Sistema:** L7 God Mode + Hybrid Labs L2
+
+---
 
 ## 🔥 ALTA PRIORIDAD
 
-### 1. Web ELITE JSR — Optimización Post-Deploy
-**Estado:** ✅ Online (Netlify)
-**URL:** https://euphonious-pixie-e28440.netlify.app
-**Next:** Analytics + SEO + Instagram
-**Deadline:** 2026-03-30
+### 1. IAN-TRABA-62 — Nueva Web Piloto
+**Estado:** 🆕 Nuevo cliente
+**Carpeta:** `clients/IAN-TRABA-62/web/assets/` (imágenes listas)
+**Imágenes:** galeria/, hero/, moto/, perfil/, podiums/
+**Brief:** `clients/template-client/BRIEF.md` (referencia)
+**Pendiente:** Evaluar brief, iniciar desarrollo
+**Deadline:** Por definir
 **Bloqueos:** Ninguno
 
-### 2. Agents C-Level — Implementación Hybrid Labs DNA
-**Estado:** En progreso (1/6 completado)
-**Completados:** TITAN-OS, JORGE CARRASCO, OMEN X
-**Pendientes:** CANVAS, BRAND, PIXEL, NEXUS, SCRIBE
-**Deadline:** 2026-03-28
-**Bloqueos:** Ninguno
+### 2. ELITE JSR — Mantenimiento Post-Deploy
+**Estado:** ✅ COMPLETADA (versión ORO, 2026-04-02)
+**URL:** https://landercortazarromero.github.io/elite-jsr/
+**Repo:** GitHub Pages (auto-deploy activo)
+**Dominio propio:** elitejsr.com (pendiente conexión)
+**Pendiente:**
+- [ ] Conectar elitejsr.com → Netlify/GitHub Pages
+- [ ] Google Analytics
+- [ ] Instagram ELITE JSR
+- [ ] SEO (meta tags, sitemap)
+- [ ] Dossiers Andoni (#11) y Aitzol (#41)
+**Deadline:** -
 
-### 3. Skills Críticas — Instalación
-**Estado:** Pendiente
-**Prioridad:** things-mac → obsidian → model-usage
-**Deadline:** 2026-03-27
-**Bloqueos:** Ninguno
+### 3. Sistema — Actualización OpenClaw
+**Estado:** 🔄 En curso
+**Actualización:** 2026.3.24 → 2026.4.2
+**Pendiente:** Reiniciar gateway post-update
+**Deadline:** Inmediato
 
 ---
 
 ## 📋 MEDIA PRIORIDAD
 
-### 4. Estructura Clients — ELITE-JSR
-**Estado:** No iniciado
-**Tareas:** ACTIVE-PROJECT.md, DECISIONS-LOG.md, CANVAS-MEMORY.md
-**Deadline:** 2026-03-29
+### 4. Plantilla Client — Estructura
+**Estado:** ✅ Template lista
+**Ubicación:** `clients/template-client/`
+**Contenido:** assets/, design/, previews/, BRIEF.md
+**Uso:** Referencia para nuevos clientes
 
-### 5. Dashboard Métricas — ROI Tracking
-**Estado:** No iniciado
-**Tareas:** Definir KPIs, implementar tracking
-**Deadline:** 2026-04-01
-
----
-
-## ✅ COMPLETADOS RECIENTES
-
-- ✅ Web ELITE JSR desplegada (2026-03-24)
-- ✅ OMEN X implementado con cron jobs (2026-03-26)
-- ✅ Modelo cambiado a minimax-m2.7:cloud (2026-03-26)
-- ✅ OpenClaw actualizado a 2026.3.24
+### 5. Sistema de Memoria — Anti-Frágil v2
+**Estado:** ✅ Reparado 2026-04-05
+**Cron Jobs activos:**
+- Daily Memory Audit (23:00 Madrid)
+- System Health Check (cada 6h)
+**Backups:** Directorio `backups/` creado
+**Pendiente:** Verificar que funcionen correctamente
 
 ---
 
-*Sistema L7+ God Mode — Máxima Eficiencia*
+## ✅ COMPLETADOS
+
+- ✅ Web ELITE JSR online (2026-03-24)
+- ✅ Versión ORO aprobada por Lander (2026-04-02)
+- ✅ Auditoría sistema completa (2026-04-05)
+- ✅ Cron jobs críticos creados (2/2)
+- ✅ Daily memory archivos reparados
+- ✅ OpenClaw actualizado → 2026.4.2
+- ✅ Backups sistema operativo
+
+---
+
+## 📊 MÉTRICAS
+
+| Proyecto | Estado | Prioridad |
+|----------|--------|----------|
+| ELITE JSR | ✅ Completo | Mantenimiento |
+| IAN-TRABA-62 | 🆕 Nuevo | Alta |
+| Sistema | ✅ OK | Operativo |
+
+---
+
+*Actualizado por TITAN-OS — 2026-04-05 07:51*

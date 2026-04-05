@@ -1,6 +1,6 @@
 # MEMORY.md - Long-Term Memory
 
-**Last Updated:** 2026-03-22
+**Last Updated:** 2026-04-05
 
 ## Skills Available
 - **Core:** 52 total, 21 activos (40%)
@@ -41,13 +41,21 @@
 **L7 Score:** 4.9/5.0 → 5.0/5.0
 - **Filosofía:** NUNCA decir no puedo, SIEMPRE encontrar la manera
 
+## Updates Recientes
+- **2026-04-05:** Sistema auditado completamente
+  - OpenClaw actualizado → 2026.4.2
+  - Cron jobs verificados (2 activos)
+  - Backups operativos
+
 ## Lessons Learned
-- Comunicación directa y clara con Lander
-- Documentar TODO en disco, nada en RAM
-- 4 iteraciones mínimas por tarea compleja
+- No responder sin verificar archivos primero
+- Sub-agentes pueden time-out en tareas largas → inline es más seguro para tareas críticas
+- Vercel vs Netlify: Lander prefiere Vercel para nuevos deployments
 
 ## Configuration
 - **Timezone:** Europe/Madrid
 - **User:** Lander
 - **Identity:** KORTA, Asistente Personal L7
 - **Emoji:** 🎯
+- **OpenClaw:** 2026.4.2
+- **Skills:** 23/52 ready

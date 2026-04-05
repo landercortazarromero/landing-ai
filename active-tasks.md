@@ -7,12 +7,16 @@
 
 ## 🔥 ALTA PRIORIDAD
 
-### 1. IAN-TRABA-62 — Nueva Web Piloto
-**Estado:** 🆕 Nuevo cliente
-**Carpeta:** `clients/IAN-TRABA-62/web/assets/` (imágenes listas)
-**Imágenes:** galeria/, hero/, moto/, perfil/, podiums/
-**Brief:** `clients/template-client/BRIEF.md` (referencia)
-**Pendiente:** Evaluar brief, iniciar desarrollo
+### 1. IAN-TRABA-62 — Web Piloto ONLINE
+**Estado:** ✅ REPLICADA (2026-04-05)
+**URL:** https://ian-traba-62.netlify.app
+**Estructura:** Exactamente como cortazar59.com (✅)
+**Carpeta:** `clients/IAN-TRABA-62/web/`
+**Imágenes:** ✅ Todas configuradas (podiums, galeria, perfil, hero)
+**Pendiente:**
+- [ ] Email real de Ian
+- [ ] WhatsApp real
+- [ ] Historia personalizada "El Heredero"
 **Deadline:** Por definir
 **Bloqueos:** Ninguno
 

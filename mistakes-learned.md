@@ -1,49 +1,35 @@
-# MISTAKES LEARNED — Errores y Soluciones
+# ERRORS & SOLUTIONS
 
-**Last Updated:** 2026-03-26
-
-## 2026-03-26
-
-### Error: Modelo incorrecto instalado
-**Situación:** Se instaló minimax-m2.5 en lugar de minimax-m2.7
-**Impacto:** Configuración incompleta, requería corrección
-**Solución:** Verificar versión exacta antes de instalar. Siempre confirmar: `ollama list | grep modelo`
-**Prevención:** Script de verificación post-instalación
-
-### Error: Cron job duplicado
-**Situación:** openclaw-backup.sh aparecía 2 veces en crontab
-**Impacto:** Backup redundante, recursos desperdiciados
-**Solución:** `crontab -l | sort | uniq | crontab -`
-**Prevención:** Script de validación de cron jobs
-
-### Error: Memory gap — active-tasks.md no existía
-**Situación:** No había tracking de proyectos en curso
-**Impacto:** Pérdida de contexto entre sesiones
-**Solución:** Crear active-tasks.md con estructura priorizada
-**Prevención:** Crear automáticamente si no existe al inicio
+**Last Updated:** 2026-04-05
 
 ---
 
-## 2026-03-24
+## 🚨 ERROR: Modelo dando respuestas falsas
 
-### Error: Deploy web requería autenticación manual
-**Situación:** Netlify requería intervención del usuario para subir archivos
-**Impacto:** No 100% autónomo
-**Solución:** Configurar deploy vía CLI con token o usar Netlify Drop
-**Prevención:** Implementar webhook auto-deploy para futuros cambios
+**Fecha:** 2026-04-05  
+**Gravedad:** CRÍTICO  
+**Descripción:** El modelo (minimax-m2.7:cloud) dio respuestas incorrectas al inicio de sesión, diciendo "No tengo acceso a los archivos fuente" cuando SÍ tenía acceso.
+
+**Archivos afectados:** Ninguno (solo fue respuesta incorrecta)
+
+**Causa raíz:** El modelo no hizo verificación de archivos antes de responder. Asumió que no tenía acceso sin verificar.
+
+**Solución aplicada:**
+- Siempre ejecutar `exec` con `ls` o `find` para verificar existencia de archivos ANTES de responder
+- Nunca asumir que no existe algo sin verificar primero
+- Si hay duda, verificar con múltiples comandos
+
+**Prevención:**
+- Protocolo: "Verificar primero, responder después"
+- Antes de cualquier afirmación sobre archivos/sistema, usar exec para confirmar
+- NO confiar en suposiciones del modelo
 
 ---
 
-## Patrones Detectados
+## 📝 LEARNING
 
-**Patrón:** Configuración incompleta antes de declarar "listo"
-**Impacto:** Re-trabajo, correcciones posteriores
-**Solución:** Checklist de verificación obligatoria
-
-**Patrón:** Skills instaladas pero no documentadas en MEMORY.md
-**Impacto:** Desconocimiento de capacidades disponibles
-**Solución:** Actualizar MEMORY.md inmediatamente después de instalar skill
+- **Accuracy > Speed:** Verificar antes de responder
+- **Text > Memory:** Consultar archivos reales, no asumir
+- **Self-Correction:** Si detecto que di información incorrecta, corregir inmediatamente
 
 ---
-
-*Sistema Anti-Frágil — Documentar para No Repetir*

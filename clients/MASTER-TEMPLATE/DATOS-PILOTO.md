@@ -1,42 +1,4 @@
-# 🌐 PLANTILLA MAESTRA — Web de Piloto Jetski
-
-**Estado:** LISTA PARA RELLENAR  
-**Basada en:** Cortazar59 optimizada  
-**Fecha:** 2026-04-06
-
----
-
-## 📋 INSTRUCCIONES DE USO
-
-1. Copiar esta carpeta y renombrar a `[NOMBRE]-[DORSAL]`
-2. Rellenar TODOS los campos en DATOS-PILOTO.md
-3. Copiar fotos a `web/images/`
-4. Ejecutar `./BUILD.sh`
-5. Web lista en Vercel
-
----
-
-## 📁 ESTRUCTURA DE CARPETAS
-
-```
-PILOTO-XX/
-├── web/
-│   ├── index.html          ← No editar manualmente
-│   └── images/
-│       ├── hero.jpg         ← 1 foto (fondo hero)
-│       ├── profile.jpg      ← 1 foto (perfil sobre mí)
-│       ├── podium1.jpg      ← hasta 9 fotos
-│       ├── podium2.jpg      ← ...
-│       ├── galeria1.jpg     ← hasta 10 fotos
-│       ├── galeria2.jpg     ← ...
-│       └── ... más fotos
-├── DATOS-PILOTO.md         ← RELLENAR AQUÍ
-└── BUILD.sh               ← No editar
-```
-
----
-
-## 🔧 CAMPOS A RELLENAR
+🔧 CAMPOS A RELLENAR
 
 ### SECCIÓN 1: DATOS BÁSICOS
 ```markdown
@@ -126,23 +88,3 @@ COLOR_NEON_DARK:     [texto negro]
 COLOR_NEON_LIGHT:    [fondo blanco donde no haya foto]
 ```
 
----
-
-## ✅ CHECKLIST FINAL
-
-- [ ] Todos los campos de DATOS-PILOTO.md rellenados
-- [ ] Fotos copiadas a web/images/
-- [ ] Archivo BUILD.sh ejecutado
-- [ ] Web probada localmente
-- [ ] Deploy en Vercel completado
-- [ ] URL compartida al cliente
-
----
-
-## 📝 NOTAS TÉCNICAS
-
-- Máximo 9 fotos de podiums
-- Máximo 10 fotos de galería
-- Palmarés: años ilimitados, 1-4 títulos por año
-- Colores: si no se especifican, usa azul neón (#00d4ff)
-- WhatsApp: el número debe tener formato 34XXXXXXXXX

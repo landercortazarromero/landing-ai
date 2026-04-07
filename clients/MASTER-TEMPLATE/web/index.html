@@ -173,6 +173,47 @@
             opacity: 0.9;
         }
         
+
+        .hero-title-top {
+            font-family: "Orbitron", sans-serif;
+            font-size: 1rem;
+            letter-spacing: 5px;
+            color: var(--neon);
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .hero-name .neon {
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+        
+        .hero-btn {
+            padding: 15px 40px;
+            border: 2px solid var(--neon);
+            border-radius: 50px;
+            color: var(--light);
+            text-decoration: none;
+            font-family: "Orbitron", sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            background: rgba(0, 212, 255, 0.1);
+        }
+        
+        .hero-btn:hover {
+            background: var(--neon);
+            color: var(--black);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+        }
+
         .scroll-indicator {
             position: absolute;
             bottom: 30px;
@@ -537,8 +578,8 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <span class="name">Ian Traba</span>
-            <span class="number">#62</span>
+            <span class="name">TRABA</span>
+            <span class="number"> JR62</span>
         </div>
         <nav>
             <ul>
@@ -556,10 +597,13 @@
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-name">Ian</div>
-            <div class="hero-surname">Traba</div>
-            <div class="hero-subtitle">GP3 - Basque Riders</div>
+            <div class="hero-title-top">PILOTO PROFESIONAL - BASQUE RIDERS</div>
+            <div class="hero-name">IAN <span class="neon">62</span> TRABA</div>
             <div class="hero-quote">"Esto no es un deporte, es mi estilo de vida"</div>
+            <div class="hero-buttons">
+                <a href="#palmares" class="hero-btn">VER PALMARÉS</a>
+                <a href="#contacto" class="hero-btn">CONTACTO</a>
+            </div>
         </div>
         <div class="scroll-indicator">
             <span></span>
@@ -802,7 +846,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-logo">
-            Ian Traba <span>#62</span>
+            TRABA <span>JR62</span>
         </div>
         <p class="copyright">© 2025 Ian Traba Arce | Todos los derechos reservados</p>
     </footer>

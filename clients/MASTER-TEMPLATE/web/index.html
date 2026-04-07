@@ -211,6 +211,16 @@
             transition: color 0.3s;
         }
         
+        .footer-left {
+            width: 100px;
+        }
+        
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .footer-links a:hover {
             color: var(--neon);
         }
@@ -312,17 +322,23 @@
         </div>
         <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">MI HISTORIA</h2>
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="color: var(--light); font-size: 1.4rem; line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
-                Desde que tengo memoria, las motos de agua han sido parte de mi vida. Mi padre siempre las tuvo y fue él quien me animó a empezar en 2020. Lo que nació como una pasión familiar, se convirtió en mi forma de vida.
+            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
+                Bilbaino de nacimiento, rider de corazón. Desde que tengo uso de razón, las motos de agua han sido mi universo. Mi padre siempre tuvo motos de agua — yo me crie entre el ruido del motor y el olor del mar. En 2020, cuando me propuso subirse conmigo por primera vez, no sabía que eso iba a cambiar mi vida para siempre.
             </p>
-            <p style="color: var(--light); font-size: 1.4rem; line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
-                Pero no todo ha sido fácil. Una lesión me ha mantenido meses en la oscuridad, días difíciles donde la desmotivación golpea fuerte. En esos momentos, mi padre siempre ha sido mi ancla — el que me levanta cuando caigo.
+            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
+                Lo que empezó como una aventura con mi padre, se convirtió en mi identidad. Cada fin de semana en el agua, cada entrenamiento, cada caída — todo me hacía más fuerte. Y los resultados llegaron: títulos, podios, respeto en el paddock. Pero nada me preparó para lo que vendría después.
             </p>
-            <p style="color: var(--light); font-size: 1.4rem; line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
-                Ahora estoy en la recta final. Sé que volveré más fuerte. Cada entrenamiento me acerca al nivel que me merezco.
+            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
+                Una lesión. Meses en tierra. Días donde miraba el agua desde la orilla y no podía salir. Días donde la cabeza me decía que lo deje, que para qué seguir. Días oscuros, de esos que te prueban el alma.
             </p>
-            <p style="color: var(--neon); font-size: 1.6rem; line-height: 1.8; font-weight: 600;">
-                Esto no es un deporte. Es mi estilo de vida. Y lo que me hace feliz.
+            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
+                Pero entonces aparecía mi padre. Siempre. El que me llama cuando no quiero entrenar, el que me recuerda quién soy, el que me dice que yo soy capaz de cosas increíbles aunque yo no lo vea. Mi ancla en la tormenta.
+            </p>
+            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
+                Ahora estoy en la recta final. La lesión no se ha ido, pero mi mentalidad es más fuerte que nunca. Cada brazada, cada vuelta en el agua, cada gota de sudor me acerca al piloto que sé que puedo ser.
+            </p>
+            <p style="color: var(--neon); font-size: 1.5rem; line-height: 2; font-weight: 700; text-shadow: 0 0 20px rgba(0,212,255,0.5);">
+                Esto no es un deporte. Es mi estilo de vida.
             </p>
         </div>
     </section>
@@ -351,24 +367,64 @@
     </section>
     
     <!-- Galeria -->
-    <section id="galeria" style="padding: 100px 50px; background: var(--dark); min-height: 60vh;">
+    <section id="galeria" style="padding: 100px 50px; background: var(--dark);">
         <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">GALERÍA</h2>
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; max-width: 1000px; margin: 0 auto;">
-            <div style="aspect-ratio: 1; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">Imagen 1</div>
-            <div style="aspect-ratio: 1; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">Imagen 2</div>
-            <div style="aspect-ratio: 1; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">Imagen 3</div>
-            <div style="aspect-ratio: 1; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">Imagen 4</div>
+        
+        <!-- Podiums -->
+        <h3 style="font-family: Orbitron; font-size: 1.5rem; color: var(--light); text-align: center; margin-bottom: 30px;">🏆 PODIUMS 🏆</h3>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 1200px; margin: 0 auto 60px auto;">
+            <img src="images/podium1.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 1">
+            <img src="images/podium2.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 2">
+            <img src="images/podium3.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 3">
+            <img src="images/podium4.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 4">
+            <img src="images/podium5.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 5">
+            <img src="images/podium6.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 6">
+            <img src="images/podium7.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 7">
+            <img src="images/podium8.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 8">
+            <img src="images/podium9.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 9">
+        </div>
+        
+        <!-- Accion -->
+        <h3 style="font-family: Orbitron; font-size: 1.5rem; color: var(--light); text-align: center; margin-bottom: 30px;">🚀 ACCIÓN 🚀</h3>
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; max-width: 1200px; margin: 0 auto;">
+            <img src="images/accion1.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 1">
+            <img src="images/accion2.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 2">
+            <img src="images/accion3.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 3">
+            <img src="images/accion4.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 4">
+            <img src="images/accion5.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 5">
+            <img src="images/accion6.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 6">
+            <img src="images/accion7.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 7">
+            <img src="images/accion8.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 8">
+            <img src="images/accion9.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 9">
+            <img src="images/accion10.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 10">
         </div>
     </section>
     
     <!-- Contacto -->
-    <section id="contacto" style="padding: 100px 50px; background: var(--black); min-height: 60vh;">
-        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">CONTACTO</h2>
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            <p style="margin-bottom: 30px; color: var(--gray);">¿Quieres contactar con Ian Traba?</p>
-            <p style="margin-bottom: 15px;"><strong>Email:</strong> trabaian62@gmail.com</p>
-            <p style="margin-bottom: 15px;"><strong>Instagram:</strong> @iantraba_62</p>
-            <p><strong>Ubicación:</strong> Bilbao</p>
+    <section id="contacto" style="padding: 100px 50px; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); text-align: center;">
+        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); margin-bottom: 20px;">¿LISTO PARA CONTACTAR?</h2>
+        <p style="color: var(--gray); font-size: 1.2rem; max-width: 600px; margin: 0 auto 50px auto; line-height: 1.8;">
+            ¿Quieres formar parte de mi proyecto? ¿Buscas un piloto comprometido, con resultados y que dé la cara? Hablamos.
+        </p>
+        
+        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 50px;">
+            <a href="mailto:trabaian62@gmail.com" style="display: flex; align-items: center; gap: 10px; padding: 20px 30px; background: rgba(0,212,255,0.1); border: 2px solid var(--neon); border-radius: 50px; text-decoration: none; transition: all 0.3s;">
+                <span style="font-size: 1.5rem;">📧</span>
+                <span style="color: var(--light); font-family: Orbitron; font-weight: 600;">Email</span>
+            </a>
+            <a href="https://instagram.com/iantraba_62" target="_blank" style="display: flex; align-items: center; gap: 10px; padding: 20px 30px; background: rgba(0,212,255,0.1); border: 2px solid var(--neon); border-radius: 50px; text-decoration: none; transition: all 0.3s;">
+                <span style="font-size: 1.5rem;">📸</span>
+                <span style="color: var(--light); font-family: Orbitron; font-weight: 600;">Instagram</span>
+            </a>
+            <a href="https://wa.me/34647325346?text=Hola%20Ian%2C%20acabo%20de%20ver%20tu%20web%20y%20me%20ha%20impresionado.%20Quiero%20hablar%20contigo%20sobre%20una%20colaboraci%C3%B3n." target="_blank" style="display: flex; align-items: center; gap: 10px; padding: 20px 30px; background: #25D366; border: 2px solid #25D366; border-radius: 50px; text-decoration: none; transition: all 0.3s;">
+                <span style="font-size: 1.5rem;">💬</span>
+                <span style="color: white; font-family: Orbitron; font-weight: 600;">WhatsApp</span>
+            </a>
+        </div>
+        
+        <div style="margin-top: 50px;">
+            <p style="color: var(--neon); font-family: Orbitron; font-size: 1.3rem; margin-bottom: 10px;">IAN TRABA</p>
+            <p style="color: var(--gray);">📍 Bilbao, España</p>
         </div>
     </section>
 

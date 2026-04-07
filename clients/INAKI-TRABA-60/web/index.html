@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAN TRABA JR62 | Piloto Profesional Jetski</title>
+    <meta name="description" content="Ian Traba #62 - Piloto profesional de Jetski GP3. Descubre su palmarés y trayectoria.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --neon: #00d4ff;
+            --neon-dark: #0099cc;
+            --neon-light: #66e0ff;
+            --black: #000000;
+            --dark: #0a0a0a;
+            --darker: #050505;
+            --light: #ffffff;
+            --gray: #888888;
+            --gray-dark: #444444;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--black);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+        }
+        
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+        
+        .logo .name { color: var(--light); }
+        .logo .number { 
+            color: var(--neon); 
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+        }
+        
+        .menu-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .menu-btn span {
+            width: 25px;
+            height: 2px;
+            background: var(--light);
+        }
+        
+        /* Hero */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 80px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/hero.jpg') center/cover no-repeat;
+            filter: brightness(0.5);
+        }
+        
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, transparent 60%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+        
+        .hero-top {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: 5px;
+        }
+        
+        .hero-title .first {
+            color: var(--light);
+        }
+        
+        .hero-title .number {
+            color: var(--neon);
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+        }
+        
+        .hero-title .last {
+            color: var(--light);
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .hero-stat {
+            text-align: left;
+        }
+        
+        .hero-stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .hero-stat-label {
+            font-size: 0.75rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .hero-quote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--light);
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-top: 30px;
+            padding-left: 20px;
+            border-left: 3px solid var(--neon);
+        }
+        
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+            z-index: 1000;
+        }
+        
+        .footer-logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+        
+        .footer-logo span {
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        .footer-left {
+            width: 100px;
+        }
+        
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links a:hover {
+            color: var(--neon);
+        }
+        
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--neon);
+        }
+        
+        @media (max-width: 768px) {
+            nav ul { gap: 15px; }
+            nav a { font-size: 0.7rem; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3rem; }
+            .hero-stats { flex-wrap: wrap; gap: 20px; }
+            .hero-stat-value { font-size: 1.8rem; }
+            header, footer { padding: 15px 20px; }
+            .hero { padding: 0 30px; }
+            .footer-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Countdown Overlay -->
+    <div id="preview-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10000; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div style="text-align: center; background: rgba(0,0,0,0.9); padding: 50px; border-radius: 20px; border: 2px solid var(--neon); max-width: 500px;">
+            <p style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon); letter-spacing: 3px; margin-bottom: 20px;">⚠️ VISTA PREVIA</p>
+            <p style="color: var(--light); font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6;">Esta web es una vista previa.<br>Expira en <span style="color: var(--neon); font-weight: bold;">5 minutos</span>.</p>
+            <button onclick="startPreview()" style="padding: 15px 50px; background: var(--neon); border: none; border-radius: 50px; color: black; font-family: Orbitron; font-weight: 700; cursor: pointer; font-size: 1rem;">ENTRAR</button>
+        </div>
+    </div>
+    
+    <script>
+    let timeLeft = 300;
+    let interval;
+    
+    function startPreview() {
+        document.getElementById('preview-overlay').style.display = 'none';
+        interval = setInterval(function() {
+            timeLeft--;
+            let mins = Math.floor(timeLeft / 60);
+            let secs = timeLeft % 60;
+            document.getElementById('timer').textContent = mins + ':' + (secs < 10 ? '0' : '') + secs;
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                document.body.innerHTML = '<div style="height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; background: black; color: white; font-family: Orbitron;"><h1 style="color: #ff4444;">VISTA PREVIA EXPIRADA</h1><p style="color: gray; margin-top: 20px;">Solicita una nueva.demo</p></div>';
+            }
+        }, 1000);
+    }
+    </script>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="name">TRABA</span><span class="number"> JR62</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">SOBRE MÍ</a></li>
+                <li><a href="#palmares">PALMARÉS</a></li>
+                <li><a href="#galeria">GALERÍA</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-top">
+                <div class="hero-title">
+                    <div class="first">IAN</div>
+                    <div class="number">62</div>
+                    <div class="last">TRABA</div>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">7</div>
+                    <div class="hero-stat-label">Títulos</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">15+</div>
+                    <div class="hero-stat-label">Años</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">17</div>
+                    <div class="hero-stat-label">Podiums</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">17</div>
+                    <div class="hero-stat-label">Victorias</div>
+                </div>
+            </div>
+            
+            <div class="hero-quote">
+                "Esto no es un deporte, es mi estilo de vida"
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Sobre Mi -->
+    <section id="sobre-mi" style="padding: 100px 50px; background: var(--dark);">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <img src="images/profile.jpg" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid var(--neon); box-shadow: 0 0 40px rgba(0,212,255,0.3);" alt="Ian Traba">
+        </div>
+        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">MI Todo empezó con mi hermano mayor. Él siempre fue más rápido, más fuerte, más seguro. Yo lo seguía a todas partes, queriendo ser como él.
+
+Un problema con la vista me apartó durante tres meses. Tres meses sin competir, sin entrenar, sin ser yo mismo. Pensé que mi carrera había terminado antes de empezar.
+
+Fue mi hermano quien me tendió la mano. Me dejó su bicicleta para que pudiera salir con él, para que no perdiera el ritmo. Ese gesto lo cambió todo.
+
+Me di cuenta de que si se quiere de verdad cualquier cosa se puede conseguir. Que las barreras no existen si el corazón está puesto.
+
+Hoy compito porque compartir este hobby con mi hijo es lo más grande que he vivido. Cada metro recorrido es un regalo. Cada victoria, un homenaje a los que creyeron cuando yo mismo dejé de hacerlo.</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
+                Bilbaino de nacimiento, rider de corazón. Desde que tengo uso de razón, las motos de agua han sido mi universo. Mi padre siempre tuvo motos de agua — yo me crie entre el ruido del motor y el olor del mar. En 2020, cuando me propuso subirse conmigo por primera vez, no sabía que eso iba a cambiar mi vida para siempre.
+            </p>
+            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
+                Lo que empezó como una aventura con mi padre, se convirtió en mi identidad. Cada fin de semana en el agua, cada entrenamiento, cada caída — todo me hacía más fuerte. Y los resultados llegaron: títulos, podios, respeto en el paddock. Pero nada me preparó para lo que vendría después.
+            </p>
+            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
+                Una lesión. Meses en tierra. Días donde miraba el agua desde la orilla y no podía salir. Días donde la cabeza me decía que lo deje, que para qué seguir. Días oscuros, de esos que te prueban el alma.
+            </p>
+            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
+                Pero entonces aparecía mi padre. Siempre. El que me llama cuando no quiero entrenar, el que me recuerda quién soy, el que me dice que yo soy capaz de cosas increíbles aunque yo no lo vea. Mi ancla en la tormenta.
+            </p>
+            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
+                Ahora estoy en la recta final. La lesión no se ha ido, pero mi mentalidad es más fuerte que nunca. Cada brazada, cada vuelta en el agua, cada gota de sudor me acerca al piloto que sé que puedo ser.
+            </p>
+            <p style="color: var(--neon); font-size: 1.5rem; line-height: 2; font-weight: 700; text-shadow: 0 0 20px rgba(0,212,255,0.5);">
+                Esto no es un deporte. Es mi estilo de vida.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Palmares -->
+    <section id="palmares" style="padding: 100px 50px; background: var(--black); min-height: 60vh;">
+        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">PALMARÉS</h2>
+        <div style="max-width: 600px; margin: 0 auto;">
+            <div style="margin-bottom: 30px; padding: 20px; border-left: 3px solid var(--neon);">
+                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">2025</div>
+                <div style="font-size: 1.1rem;">🏆 Campeón del Mundo</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón España Rallyjet y Offshore</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón Euskadi</div>
+            </div>
+            <div style="margin-bottom: 30px; padding: 20px; border-left: 3px solid var(--neon);">
+                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">2024</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón España</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón Euskadi</div>
+            </div>
+            <div style="padding: 20px; border-left: 3px solid var(--neon);">
+                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">2023</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón España</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón Europeo</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Galeria -->
+    <section id="galeria" style="padding: 100px 50px; background: var(--dark);">
+        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">GALERÍA</h2>
+        
+        <!-- Podiums -->
+        <h3 style="font-family: Orbitron; font-size: 1.5rem; color: var(--light); text-align: center; margin-bottom: 30px;">🏆 PODIUMS 🏆</h3>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 1200px; margin: 0 auto 60px auto;">
+            <img src="images/podium1.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 1">
+            <img src="images/podium2.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 2">
+            <img src="images/podium3.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 3">
+            <img src="images/podium4.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 4">
+            <img src="images/podium5.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 5">
+            <img src="images/podium6.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 6">
+            <img src="images/podium7.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 7">
+            <img src="images/podium8.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 8">
+            <img src="images/podium9.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 9">
+        </div>
+        
+        <!-- Accion -->
+        <h3 style="font-family: Orbitron; font-size: 1.5rem; color: var(--light); text-align: center; margin-bottom: 30px;">🚀 ACCIÓN 🚀</h3>
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; max-width: 1200px; margin: 0 auto;">
+            <img src="images/accion1.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 1">
+            <img src="images/accion2.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 2">
+            <img src="images/accion3.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 3">
+            <img src="images/accion4.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 4">
+            <img src="images/accion5.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 5">
+            <img src="images/accion6.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 6">
+            <img src="images/accion7.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 7">
+            <img src="images/accion8.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 8">
+            <img src="images/accion9.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 9">
+            <img src="images/accion10.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 10">
+        </div>
+    </section>
+    
+    <!-- Contacto -->
+    <section id="contacto" style="padding: 100px 50px; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); text-align: center;">
+        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); margin-bottom: 20px;">¿LISTO PARA CONTACTAR?</h2>
+        <p style="color: var(--gray); font-size: 1.2rem; max-width: 600px; margin: 0 auto 50px auto; line-height: 1.8;">
+            ¿Quieres formar parte de mi proyecto? ¿Buscas un piloto comprometido, con resultados y que dé la cara? Hablamos.
+        </p>
+        
+        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 50px;">
+            <a href="mailto:trabaian62@gmail.com" style="display: flex; align-items: center; gap: 10px; padding: 20px 30px; background: rgba(0,212,255,0.1); border: 2px solid var(--neon); border-radius: 50px; text-decoration: none; transition: all 0.3s;">
+                <span style="font-size: 1.5rem;">📧</span>
+                <span style="color: var(--light); font-family: Orbitron; font-weight: 600;">Email</span>
+            </a>
+            <a href="https://instagram.com/iantraba_62" target="_blank" style="display: flex; align-items: center; gap: 10px; padding: 20px 30px; background: rgba(0,212,255,0.1); border: 2px solid var(--neon); border-radius: 50px; text-decoration: none; transition: all 0.3s;">
+                <span style="font-size: 1.5rem;">📸</span>
+                <span style="color: var(--light); font-family: Orbitron; font-weight: 600;">Instagram</span>
+            </a>
+            <a href="https://wa.me/34647325346?text=Hola%20Ian%2C%20acabo%20de%20ver%20tu%20web%20y%20me%20ha%20impresionado.%20Quiero%20hablar%20contigo%20sobre%20una%20colaboraci%C3%B3n." target="_blank" style="display: flex; align-items: center; gap: 10px; padding: 20px 30px; background: #25D366; border: 2px solid #25D366; border-radius: 50px; text-decoration: none; transition: all 0.3s;">
+                <span style="font-size: 1.5rem;">💬</span>
+                <span style="color: white; font-family: Orbitron; font-weight: 600;">WhatsApp</span>
+            </a>
+        </div>
+        
+        <div style="margin-top: 50px;">
+            <p style="color: var(--neon); font-family: Orbitron; font-size: 1.3rem; margin-bottom: 10px;">IAN TRABA</p>
+            <p style="color: var(--gray);">📍 Bilbao, España</p>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            TRABA <span>JR62</span>
+        </div>
+        <div class="footer-links">
+            <a href="#sobre-mi">SOBRE MÍ</a>
+            <a href="#palmares">PALMARÉS</a>
+            <a href="#contacto">CONTACTO</a>
+        </div>
+    </footer>
+</body>
+</html>

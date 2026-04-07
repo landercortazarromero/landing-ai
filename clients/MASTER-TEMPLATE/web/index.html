@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ian Traba 62 | Piloto Profesional Jetski</title>
+    <title>IAN TRABA JR62 | Piloto Profesional Jetski</title>
     <meta name="description" content="Ian Traba #62 - Piloto profesional de Jetski GP3. Descubre su palmarés y trayectoria.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,28 +31,6 @@
             background: var(--black);
             color: var(--light);
             overflow-x: hidden;
-            line-height: 1.6;
-        }
-        
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        
-        @keyframes neonPulse {
-            0%, 100% { 
-                text-shadow: 0 0 20px rgba(0, 212, 255, 0.5),
-                             0 0 40px rgba(0, 212, 255, 0.3);
-            }
-            50% { 
-                text-shadow: 0 0 30px rgba(0, 212, 255, 0.8),
-                             0 0 60px rgba(0, 212, 255, 0.5);
-            }
         }
         
         /* Header */
@@ -60,30 +38,184 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 50px;
+            padding: 25px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
-            animation: slideUp 0.8s ease-out;
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, transparent 100%);
         }
         
         .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+        
+        .logo .name { color: var(--light); }
+        .logo .number { 
+            color: var(--neon); 
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+        }
+        
+        .menu-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .menu-btn span {
+            width: 25px;
+            height: 2px;
+            background: var(--light);
+        }
+        
+        /* Hero */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 80px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/hero.jpg') center/cover no-repeat;
+            filter: brightness(0.5);
+        }
+        
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, transparent 60%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+        
+        .hero-top {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: 5px;
+        }
+        
+        .hero-title .first {
+            color: var(--light);
+        }
+        
+        .hero-title .number {
+            color: var(--neon);
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+        }
+        
+        .hero-title .last {
+            color: var(--light);
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .hero-stat {
+            text-align: left;
+        }
+        
+        .hero-stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .hero-stat-label {
+            font-size: 0.75rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .hero-quote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--light);
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-top: 30px;
+            padding-left: 20px;
+            border-left: 3px solid var(--neon);
+        }
+        
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+            z-index: 1000;
+        }
+        
+        .footer-logo {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.5rem;
             font-weight: 900;
             letter-spacing: 2px;
         }
         
-        .logo .name { color: var(--light); }
-        .logo .number { 
-            color: var(--neon); 
-            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        .footer-logo span {
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
         }
         
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--neon);
+        }
+        
+
         nav ul {
             display: flex;
             list-style: none;
@@ -94,483 +226,28 @@
             color: var(--light);
             text-decoration: none;
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            transition: all 0.3s;
-        }
-        
-        nav a:hover { color: var(--neon); }
-        
-        /* Hero */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('images/hero.jpg') center/cover no-repeat;
-            filter: brightness(0.4);
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            animation: slideUp 1s ease-out;
-        }
-        
-        .hero-name {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 6rem;
-            font-weight: 900;
-            letter-spacing: 10px;
-            color: var(--light);
-            text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
-            animation: neonPulse 3s infinite;
-        }
-        
-        .hero-surname {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 4rem;
-            font-weight: 400;
-            letter-spacing: 15px;
-            color: var(--neon);
-            margin-top: -10px;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--gray);
-            margin-top: 20px;
-            letter-spacing: 3px;
-        }
-        
-        .hero-quote {
-            font-size: 1.5rem;
-            font-style: italic;
-            color: var(--light);
-            margin-top: 40px;
-            max-width: 600px;
-            opacity: 0.9;
-        }
-        
-
-        .hero-title-top {
-            font-family: "Orbitron", sans-serif;
-            font-size: 1rem;
-            letter-spacing: 5px;
-            color: var(--neon);
-            margin-bottom: 20px;
-            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-        }
-        
-        .hero-name .neon {
-            color: var(--neon);
-            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 30px;
-            margin-top: 40px;
-            justify-content: center;
-        }
-        
-        .hero-btn {
-            padding: 15px 40px;
-            border: 2px solid var(--neon);
-            border-radius: 50px;
-            color: var(--light);
-            text-decoration: none;
-            font-family: "Orbitron", sans-serif;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            transition: all 0.3s;
-            background: rgba(0, 212, 255, 0.1);
-        }
-        
-        .hero-btn:hover {
-            background: var(--neon);
-            color: var(--black);
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: float 2s infinite;
-        }
-        
-        .scroll-indicator span {
-            display: block;
-            width: 30px;
-            height: 50px;
-            border: 2px solid var(--neon);
-            border-radius: 20px;
-            position: relative;
-        }
-        
-        .scroll-indicator span::before {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 6px;
-            height: 6px;
-            background: var(--neon);
-            border-radius: 50%;
-            animation: float 1.5s infinite;
-        }
-        
-        /* Stats */
-        .stats {
-            padding: 80px 50px;
-            background: var(--dark);
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 30px;
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            border-radius: 15px;
-            transition: all 0.3s;
-        }
-        
-        .stat-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--neon);
-            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1);
-        }
-        
-        .stat-number {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--neon);
-            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--gray);
-            margin-top: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        /* About */
-        .about {
-            padding: 100px 50px;
-            background: var(--black);
-        }
-        
-        .section-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 50px;
-            color: var(--neon);
-            text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
-        }
-        
-        .about-container {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 50px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        .profile-image {
-            position: relative;
-        }
-        
-        .profile-image img {
-            width: 100%;
-            border-radius: 20px;
-            border: 2px solid var(--neon);
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
-        }
-        
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-        
-        .info-item {
-            padding: 15px;
-            background: rgba(255,255,255,0.03);
-            border-left: 3px solid var(--neon);
-            border-radius: 0 10px 10px 0;
-        }
-        
-        .info-label {
-            font-size: 0.75rem;
-            color: var(--gray);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .info-value {
-            font-size: 1.1rem;
-            color: var(--light);
-            font-weight: 600;
-        }
-        
-        .story-section {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: rgba(255,255,255,0.02);
-            border-radius: 15px;
-        }
-        
-        .story-section h4 {
-            margin-bottom: 15px;
-        }
-        
-        .story-section p {
-            color: var(--gray);
-            line-height: 1.8;
-        }
-        
-        /* Palmares */
-        .palmares {
-            padding: 100px 50px;
-            background: var(--dark);
-        }
-        
-        .palmares-timeline {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
-            padding: 25px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 15px;
-            border: 1px solid rgba(0, 212, 255, 0.1);
-            transition: all 0.3s;
-        }
-        
-        .timeline-item:hover {
-            border-color: var(--neon);
-            transform: translateX(10px);
-        }
-        
-        .timeline-year {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--neon);
-            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-        }
-        
-        .timeline-content {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .timeline-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--light);
-        }
-        
-        .timeline-competition {
-            font-size: 0.9rem;
-            color: var(--gray);
-        }
-        
-        /* Gallery */
-        .gallery {
-            padding: 100px 50px;
-            background: var(--black);
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .gallery-item {
-            aspect-ratio: 1;
-            overflow: hidden;
-            border-radius: 15px;
-            border: 2px solid rgba(0, 212, 255, 0.2);
-            transition: all 0.3s;
-        }
-        
-        .gallery-item:hover {
-            border-color: var(--neon);
-            transform: scale(1.05);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* Contact */
-        .contact {
-            padding: 100px 50px;
-            background: var(--dark);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .contact-item {
-            text-align: center;
-            padding: 40px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            border-radius: 20px;
-            transition: all 0.3s;
-        }
-        
-        .contact-item:hover {
-            border-color: var(--neon);
-            transform: translateY(-5px);
-        }
-        
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .contact-label {
             font-size: 0.8rem;
-            color: var(--gray);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-        
-        .contact-value {
-            font-size: 1.2rem;
-            color: var(--light);
-            font-weight: 600;
-        }
-        
-        .contact-value a {
-            color: var(--light);
-            text-decoration: none;
+            letter-spacing: 1px;
             transition: color 0.3s;
         }
         
-        .contact-value a:hover {
+        nav a:hover {
             color: var(--neon);
         }
         
-        /* Footer */
-        footer {
-            padding: 40px 50px;
-            background: var(--darker);
-            text-align: center;
-            border-top: 1px solid rgba(0, 212, 255, 0.2);
+        @media (max-width: 768px) {
+            nav ul { gap: 15px; }
+            nav a { font-size: 0.7rem; }
         }
-        
-        .footer-logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 900;
-            margin-bottom: 20px;
-        }
-        
-        .footer-logo span {
-            color: var(--neon);
-        }
-        
-        .copyright {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-        
-        /* WhatsApp Float */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 5px 30px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            transition: all 0.3s;
-        }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.6);
-        }
-        
-        .whatsapp-float img {
-            width: 35px;
-            height: 35px;
-        }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-name { font-size: 3rem; }
-            .hero-surname { font-size: 2rem; letter-spacing: 8px; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .about-container { grid-template-columns: 1fr; }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            .contact-grid { grid-template-columns: 1fr; }
-            header { padding: 15px 20px; }
-            nav ul { gap: 15px; }
-            nav a { font-size: 0.75rem; }
+            .hero-title { font-size: 3rem; }
+            .hero-stats { flex-wrap: wrap; gap: 20px; }
+            .hero-stat-value { font-size: 1.8rem; }
+            header, footer { padding: 15px 20px; }
+            .hero { padding: 0 30px; }
+            .footer-links { display: none; }
         }
     </style>
 </head>
@@ -578,12 +255,10 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <span class="name">TRABA</span>
-            <span class="number"> JR62</span>
+            <span class="name">TRABA</span><span class="number"> JR62</span>
         </div>
         <nav>
             <ul>
-                <li><a href="#inicio">INICIO</a></li>
                 <li><a href="#sobre-mi">SOBRE MÍ</a></li>
                 <li><a href="#palmares">PALMARÉS</a></li>
                 <li><a href="#galeria">GALERÍA</a></li>
@@ -593,267 +268,121 @@
     </header>
     
     <!-- Hero -->
-    <section class="hero" id="inicio">
+    <section class="hero">
         <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-title-top">PILOTO PROFESIONAL - BASQUE RIDERS</div>
-            <div class="hero-name">IAN <span class="neon">62</span> TRABA</div>
-            <div class="hero-quote">"Esto no es un deporte, es mi estilo de vida"</div>
-            <div class="hero-buttons">
-                <a href="#palmares" class="hero-btn">VER PALMARÉS</a>
-                <a href="#contacto" class="hero-btn">CONTACTO</a>
+            <div class="hero-top">
+                <div class="hero-title">
+                    <div class="first">IAN</div>
+                    <div class="number">62</div>
+                    <div class="last">TRABA</div>
+                </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </section>
-    
-    <!-- Stats -->
-    <section class="stats">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">4</div>
-                <div class="stat-label">Títulos</div>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">4</div>
+                    <div class="hero-stat-label">Títulos</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">5</div>
+                    <div class="hero-stat-label">Años</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">18</div>
+                    <div class="hero-stat-label">Podiums</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">20+</div>
+                    <div class="hero-stat-label">Victorias</div>
+                </div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">5</div>
-                <div class="stat-label">Años Exp.</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">18</div>
-                <div class="stat-label">Podiums</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">20+</div>
-                <div class="stat-label">Victorias</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Medallas</div>
+            
+            <div class="hero-quote">
+                "Esto no es un deporte, es mi estilo de vida"
             </div>
         </div>
     </section>
     
-    <!-- About -->
-    <section class="about" id="sobre-mi">
-        <h2 class="section-title">SOBRE MÍ</h2>
-        <div class="about-container">
-            <div class="profile-image">
-                <img src="images/profile.jpg" alt="Ian Traba Arce">
-            </div>
-            <div class="about-content">
-                <div class="info-grid">
-                    <div class="info-item">
-                        <div class="info-label">Nombre</div>
-                        <div class="info-value">Ian Traba Arce</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Fecha Nac.</div>
-                        <div class="info-value">11/02/2005</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Nacionalidad</div>
-                        <div class="info-value">Española</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Ciudad</div>
-                        <div class="info-value">Bilbao</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Categoría</div>
-                        <div class="info-value">GP3</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Equipo</div>
-                        <div class="info-value">Basque Riders</div>
-                    </div>
-                </div>
-                
-                <div class="story-section">
-                    <h4>EL ORIGEN</h4>
-                    <p>Empecé en 2020 cuando me animó mi padre a comenzar en este deporte. Lo llevo viviendo desde pequeño con mi padre que siempre ha tenido motos de agua, y fue él quien me animó.</p>
-                </div>
-                
-                <div class="story-section">
-                    <h4>EL PROBLEMA</h4>
-                    <p>La lesión en la que sigo aunque ya estoy en la recta final. Han sido meses complicados en los que te desmoralizas, pero siempre hay que tirar para adelante.</p>
-                </div>
-                
-                <div class="story-section">
-                    <h4>EL APOYO</h4>
-                    <p>Mi padre siempre, el que más me anima y más me ayuda en ese sentido para que no me venga abajo nunca.</p>
-                </div>
-                
-                <div class="story-section">
-                    <h4>LA SUPERACIÓN</h4>
-                    <p>Estoy en ello, pero sé que volveré más fuerte y entrenaré mucho para estar al máximo nivel.</p>
-                </div>
-                
-                <div class="story-section">
-                    <h4>MI PROMESA</h4>
-                    <p>Porque veo que se me da bien y me gusta, es lo que me hace feliz.</p>
-                </div>
-            </div>
+
+    <!-- Sobre Mi -->
+    <section id="sobre-mi" style="padding: 100px 50px; background: var(--dark);">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <img src="images/profile.jpg" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid var(--neon); box-shadow: 0 0 40px rgba(0,212,255,0.3);" alt="Ian Traba">
+        </div>
+        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">MI HISTORIA</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="color: var(--light); font-size: 1.4rem; line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
+                Desde que tengo memoria, las motos de agua han sido parte de mi vida. Mi padre siempre las tuvo y fue él quien me animó a empezar en 2020. Lo que nació como una pasión familiar, se convirtió en mi forma de vida.
+            </p>
+            <p style="color: var(--light); font-size: 1.4rem; line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
+                Pero no todo ha sido fácil. Una lesión me ha mantenido meses en la oscuridad, días difíciles donde la desmotivación golpea fuerte. En esos momentos, mi padre siempre ha sido mi ancla — el que me levanta cuando caigo.
+            </p>
+            <p style="color: var(--light); font-size: 1.4rem; line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
+                Ahora estoy en la recta final. Sé que volveré más fuerte. Cada entrenamiento me acerca al nivel que me merezco.
+            </p>
+            <p style="color: var(--neon); font-size: 1.6rem; line-height: 1.8; font-weight: 600;">
+                Esto no es un deporte. Es mi estilo de vida. Y lo que me hace feliz.
+            </p>
         </div>
     </section>
     
     <!-- Palmares -->
-    <section class="palmares" id="palmares">
-        <h2 class="section-title">PALMARÉS</h2>
-        <div class="palmares-timeline">
-            
-                <div class="timeline-item">
-                    <div class="timeline-year">2025</div>
-                    
-                    <div class="timeline-content">
-                        <div class="timeline-title">🏆 Campeón del Mundo</div>
-                        <div class="timeline-competition">GP3</div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-title">🥇 Campeón España Rallyjet y Offshore</div>
-                        <div class="timeline-competition">GP3</div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-title">🥇 Campeón Euskadi</div>
-                        <div class="timeline-competition">GP3</div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2024</div>
-                    
-                    <div class="timeline-content">
-                        <div class="timeline-title">🥇 Campeón España</div>
-                        <div class="timeline-competition">GP3</div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-title">🥇 Campeón Euskadi</div>
-                        <div class="timeline-competition">GP3</div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2023</div>
-                    
-                    <div class="timeline-content">
-                        <div class="timeline-title">🥇 Campeón España</div>
-                        <div class="timeline-competition">GP3</div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-title">🥇 Campeón Europeo</div>
-                        <div class="timeline-competition">GP3</div>
-                    </div>
-                </div>
-        </div>
-    </section>
-    
-    <!-- Gallery Podiums -->
-    <section class="gallery" id="podiums">
-        <h2 class="section-title">PODIUMS</h2>
-        <div class="gallery-grid">
-            
-                <div class="gallery-item">
-                    <img src="images/podium1.jpg" alt="Podium 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/podium2.jpg" alt="Podium 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/podium3.jpg" alt="Podium 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/podium4.jpg" alt="Podium 4">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/podium5.jpg" alt="Podium 5">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/podium6.jpg" alt="Podium 6">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/podium7.jpg" alt="Podium 7">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/podium8.jpg" alt="Podium 8">
-                </div>
-        </div>
-    </section>
-    
-    <!-- Gallery General -->
-    <section class="gallery" id="galeria">
-        <h2 class="section-title">GALERÍA</h2>
-        <div class="gallery-grid">
-            
-                <div class="gallery-item">
-                    <img src="images/galeria1.jpg" alt="Galería 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/galeria2.jpg" alt="Galería 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/galeria3.jpg" alt="Galería 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/galeria4.jpg" alt="Galería 4">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/galeria5.jpg" alt="Galería 5">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/galeria6.jpg" alt="Galería 6">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/galeria7.jpg" alt="Galería 7">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/galeria8.jpg" alt="Galería 8">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/galeria9.jpg" alt="Galería 9">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/galeria10.jpg" alt="Galería 10">
-                </div>
-        </div>
-    </section>
-    
-    <!-- Contact -->
-    <section class="contact" id="contacto">
-        <h2 class="section-title">CONTACTO</h2>
-        <div class="contact-grid">
-            <div class="contact-item">
-                <div class="contact-icon">📧</div>
-                <div class="contact-label">Email</div>
-                <div class="contact-value">
-                    <a href="mailto:trabaian62@gmail.com">trabaian62@gmail.com</a>
-                </div>
+    <section id="palmares" style="padding: 100px 50px; background: var(--black); min-height: 60vh;">
+        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">PALMARÉS</h2>
+        <div style="max-width: 600px; margin: 0 auto;">
+            <div style="margin-bottom: 30px; padding: 20px; border-left: 3px solid var(--neon);">
+                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">2025</div>
+                <div style="font-size: 1.1rem;">🏆 Campeón del Mundo</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón España Rallyjet y Offshore</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón Euskadi</div>
             </div>
-            <div class="contact-item">
-                <div class="contact-icon">📸</div>
-                <div class="contact-label">Instagram</div>
-                <div class="contact-value">
-                    <a href="https://instagram.com/@iantraba_62" target="_blank">@iantraba_62</a>
-                </div>
+            <div style="margin-bottom: 30px; padding: 20px; border-left: 3px solid var(--neon);">
+                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">2024</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón España</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón Euskadi</div>
             </div>
-            <div class="contact-item">
-                <div class="contact-icon">📍</div>
-                <div class="contact-label">Ubicación</div>
-                <div class="contact-value">Bilbao</div>
+            <div style="padding: 20px; border-left: 3px solid var(--neon);">
+                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">2023</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón España</div>
+                <div style="font-size: 1.1rem;">🥇 Campeón Europeo</div>
             </div>
         </div>
     </section>
     
+    <!-- Galeria -->
+    <section id="galeria" style="padding: 100px 50px; background: var(--dark); min-height: 60vh;">
+        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">GALERÍA</h2>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; max-width: 1000px; margin: 0 auto;">
+            <div style="aspect-ratio: 1; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">Imagen 1</div>
+            <div style="aspect-ratio: 1; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">Imagen 2</div>
+            <div style="aspect-ratio: 1; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">Imagen 3</div>
+            <div style="aspect-ratio: 1; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">Imagen 4</div>
+        </div>
+    </section>
+    
+    <!-- Contacto -->
+    <section id="contacto" style="padding: 100px 50px; background: var(--black); min-height: 60vh;">
+        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">CONTACTO</h2>
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <p style="margin-bottom: 30px; color: var(--gray);">¿Quieres contactar con Ian Traba?</p>
+            <p style="margin-bottom: 15px;"><strong>Email:</strong> trabaian62@gmail.com</p>
+            <p style="margin-bottom: 15px;"><strong>Instagram:</strong> @iantraba_62</p>
+            <p><strong>Ubicación:</strong> Bilbao</p>
+        </div>
+    </section>
+
+
     <!-- Footer -->
     <footer>
         <div class="footer-logo">
             TRABA <span>JR62</span>
         </div>
-        <p class="copyright">© 2025 Ian Traba Arce | Todos los derechos reservados</p>
+        <div class="footer-links">
+            <a href="#sobre-mi">SOBRE MÍ</a>
+            <a href="#palmares">PALMARÉS</a>
+            <a href="#contacto">CONTACTO</a>
+        </div>
     </footer>
-    
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/34647325346?text=Hola%20Ian%2C%20vi%20tu%20pagina%20deportiva%20y%20quiero%20apoyarte" class="whatsapp-float" target="_blank" title="Contáctame por WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
 </body>
 </html>

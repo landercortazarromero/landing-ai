@@ -1,2 +1,5 @@
 clients/IAN-TRABA-62/
 .vercel
+
+# Local Netlify folder
+.netlify

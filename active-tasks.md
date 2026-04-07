@@ -8,17 +8,17 @@
 ## 🔥 ALTA PRIORIDAD
 
 ### 1. IAN-TRABA-62 — Web Piloto ONLINE
-**Estado:** ✅ REPLICADA (2026-04-05)
-**URL:** https://ian-traba-62.netlify.app
-**Estructura:** Exactamente como cortazar59.com (✅)
-**Carpeta:** `clients/IAN-TRABA-62/web/`
-**Imágenes:** ✅ Todas configuradas (podiums, galeria, perfil, hero)
-**Pendiente:**
-- [ ] Email real de Ian
-- [ ] WhatsApp real
-- [ ] Historia personalizada "El Heredero"
-**Deadline:** Por definir
-**Bloqueos:** Ninguno
+**Estado:** ✅ NUEVA ESTRUCTURA (2026-04-07)
+**URL:** https://ian-traba-62.vercel.app
+**Estructura:** Simplificada (hero page + navegación)
+**Carpeta:** `clients/MASTER-TEMPLATE/web/`
+**Modificaciones aplicadas:**
+- [x] TRABA JR62 (header + footer)
+- [x] IAN (blanco) 62 (azul neón) TRABA (blanco)
+- [x] Stats: 4 Títulos, 5 Años, 18 Podiums, 20+ Victorias
+- [x] Frase hero: "Esto no es un deporte, es mi estilo de vida"
+- [x] Navegación: SOBRE MÍ | PALMARÉS | GALERÍA | CONTACTO
+**Pendiente:** Secciones completas (scroll to anchor)
 
 ### 2. ELITE JSR — Mantenimiento Post-Deploy
 **Estado:** ✅ COMPLETADA (versión ORO, 2026-04-02)

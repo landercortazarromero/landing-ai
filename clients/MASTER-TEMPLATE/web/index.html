@@ -262,6 +262,34 @@
     </style>
 </head>
 <body>
+    <!-- Countdown Overlay -->
+    <div id="preview-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10000; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div style="text-align: center; background: rgba(0,0,0,0.9); padding: 50px; border-radius: 20px; border: 2px solid var(--neon); max-width: 500px;">
+            <p style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon); letter-spacing: 3px; margin-bottom: 20px;">⚠️ VISTA PREVIA</p>
+            <p style="color: var(--light); font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6;">Esta web es una vista previa.<br>Expira en <span style="color: var(--neon); font-weight: bold;">5 minutos</span>.</p>
+            <button onclick="startPreview()" style="padding: 15px 50px; background: var(--neon); border: none; border-radius: 50px; color: black; font-family: Orbitron; font-weight: 700; cursor: pointer; font-size: 1rem;">ENTRAR</button>
+        </div>
+    </div>
+    
+    <script>
+    let timeLeft = 300;
+    let interval;
+    
+    function startPreview() {
+        document.getElementById('preview-overlay').style.display = 'none';
+        interval = setInterval(function() {
+            timeLeft--;
+            let mins = Math.floor(timeLeft / 60);
+            let secs = timeLeft % 60;
+            document.getElementById('timer').textContent = mins + ':' + (secs < 10 ? '0' : '') + secs;
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                document.body.innerHTML = '<div style="height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; background: black; color: white; font-family: Orbitron;"><h1 style="color: #ff4444;">VISTA PREVIA EXPIRADA</h1><p style="color: gray; margin-top: 20px;">Solicita una nueva.demo</p></div>';
+            }
+        }, 1000);
+    }
+    </script>
+
     <!-- Header -->
     <header>
         <div class="logo">

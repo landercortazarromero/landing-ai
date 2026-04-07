@@ -1,0 +1,42 @@
+{
+  "pilot": {
+    "nombre": "NOMBRE_COMPLETO",
+    "nombreCorto": "NOMBRE_SOLO",
+    "dorsal": "NUMERO",
+    "frase": "FRASE_HERO",
+    "colorNeon": "#CODIGO_HEX",
+    "email": "email@ejemplo.com",
+    "instagram": "@usuario",
+    "whatsapp": "+34600000000",
+    "ciudad": "CIUDAD"
+  },
+  "stats": {
+    "titulos": "NUMERO",
+    "anios": "NUMERO+",
+    "podiums": "NUMERO+",
+    "victorias": "NUMERO+"
+  },
+  "historia": {
+    "parrafo1": "Cómo empezó todo (origen, familia)",
+    "parrafo2": "El problema/dificultad que enfrentó",
+    "parrafo3": "Quién o qué le ayudó a superarlo",
+    "parrafo4": "Qué aprendió/cómo creció",
+    "parrafo5": "Por qué compite hoy (motivación)"
+  },
+  "palmares": [
+    { "titulo": "NOMBRE_Torneo", "categoria": "CATEGORIA", "anyo": "AAAA" }
+  ],
+  "fotos": {
+    "hero": "path/a/hero.jpg",
+    "perfil": "path/a/perfil.jpg",
+    "podiums": [
+      "path/podium1.jpg",
+      "path/podium2.jpg"
+    ],
+    "accion": [
+      "path/accion1.jpg",
+      "path/accion2.jpg"
+    ]
+  },
+  "notas": "anything_extra"
+}

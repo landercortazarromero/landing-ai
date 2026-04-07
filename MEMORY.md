@@ -41,6 +41,12 @@
 **L7 Score:** 4.9/5.0 → 5.0/5.0
 - **Filosofía:** NUNCA decir no puedo, SIEMPRE encontrar la manera
 
+## CRITICAL ISSUE: Data Mixing (2026-04-07)
+**Problema:** Cada nuevo piloto hereda datos del piloto anterior
+**Causa raíz:** MASTER-TEMPLATE no tiene 100% placeholders
+**Solución requerida:** Rebuild completo del template con {{PLACEHOLDER}} en TODOS los campos
+**Estado:** Pendiente implementar
+
 ## Updates Recientes
 - **2026-04-05:** Sistema auditado completamente
   - OpenClaw actualizado → 2026.4.2
@@ -51,6 +57,8 @@
 - No responder sin verificar archivos primero
 - Sub-agentes pueden time-out en tareas largas → inline es más seguro para tareas críticas
 - Vercel vs Netlify: Lander prefiere Vercel para nuevos deployments
+- MASTER-TEMPLATE debe tener 100% placeholders para evitar data mixing entre pilotos
+- Tareas críticas hacer inline, no delegar a sub-agentes (evita timeouts)
 
 ## Configuration
 - **Timezone:** Europe/Madrid

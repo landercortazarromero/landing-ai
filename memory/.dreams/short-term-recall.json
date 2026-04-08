@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-08T08:17:39.275Z",
+  "updatedAt": "2026-04-08T10:25:46.405Z",
   "entries": {
     "memory:memory/2026-03-23.md:1:32": {
       "key": "memory:memory/2026-03-23.md:1:32",
@@ -40,14 +40,15 @@
       "endLine": 38,
       "source": "memory",
       "snippet": "# Session 2026-04-07 ## Ian Traba Web Project - COMPLETED ✅ **URL:** https://ian-traba-62.vercel.app - Rebuild completo desde MASTER-TEMPLATE - Estructura: Hero + Stats + Footer (simple, clean) - Preview protection system operativo ## Iñaki Traba Web - ❌ NOT COMPLETED (TIMEOUT) **Session timed out while building** - Datos recibidos todos (TRABA60, dorsal 60, stats, palmarés, fotos) - Web NO construida - Pendiente: rebuild desde template limpio ## CRITICAL ISSUE: Data Mixing - UNRESOLVED ⚠️ - Iñaki web getting mixed with Ian data - MASTER-TEMPLATE needs complete rebuild with 100% placeholders - This is the 3rd time this happens - Lander very frustrated ## Decisions Taken - Verde neón (#00",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
-      "totalScore": 0.7923052788842873,
+      "totalScore": 1.4670340567783458,
       "maxScore": 0.7923052788842873,
       "firstRecalledAt": "2026-04-08T08:17:39.275Z",
-      "lastRecalledAt": "2026-04-08T08:17:39.275Z",
+      "lastRecalledAt": "2026-04-08T10:25:46.405Z",
       "queryHashes": [
-        "a5fb0db8cad1"
+        "a5fb0db8cad1",
+        "0cf89af68e6c"
       ],
       "recallDays": [
         "2026-04-08"
@@ -61,6 +62,36 @@
         "project",
         "completed",
         "url"
+      ]
+    },
+    "memory:memory/2026-03-25.md:1:29": {
+      "key": "memory:memory/2026-03-25.md:1:29",
+      "path": "memory/2026-03-25.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "## Sesión Noche - 2026-03-25 **Hora:** 23:52 Madrid ### Tareas Completadas 1. **Agente Jorge Carrasco Mode** - CREADO - Ubicación: `~/.openclaw/workspace/agents/jorge-carrasco-mode/system.md` - Tipo: Agente de autoconocimiento profundo - Filosofía: Directo, sin filtros, revelador - Metodología: 3 capas + shadow work + estoicismo moderno 2. **Cron Job** - ACTIVADO - Días: Lunes a viernes - Hora: 08:00 AM (hora España) - Script: `/Users/landercortazarromero/bin/openclaw-jorge-carrasco.sh` - Acción: Envía mensaje de activación a Telegram 3. **Web ELITE JSR** - CONFIRMADA ONLINE - URL: https://euphonious-pixie-e28440.netlify.app - Estado: Funcionando correctam",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.7589799611673123,
+      "maxScore": 0.7589799611673123,
+      "firstRecalledAt": "2026-04-08T10:25:46.405Z",
+      "lastRecalledAt": "2026-04-08T10:25:46.405Z",
+      "queryHashes": [
+        "0cf89af68e6c"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "sesión",
+        "noche",
+        "hora",
+        "madrid",
+        "tareas",
+        "completadas",
+        "agente",
+        "jorge"
       ]
     }
   }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{NOMBRE}} {{APELLIDO}} {{DORSAL}} | Piloto Profesional Jetski</title>
-    <meta name="description" content="{{NOMBRE}} {{APELLIDO}} #{{DORSAL}} - Piloto profesional de Jetski GP3. Descubre su palmarés y trayectoria.">
+    <title>{{NOMBRE}} {{APELLIDO}} #{{DORSAL}} | Piloto Profesional Jetski</title>
+    <meta name="description" content="{{NOMBRE}} {{APELLIDO}} #{{DORSAL}} - Piloto profesional de Jetski {{CATEGORIA}}. Descubre su palmarés y trayectoria.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -56,7 +56,7 @@
         .logo .name { color: var(--light); }
         .logo .number { 
             color: var(--neon); 
-            text-shadow: 0 0 20px rgba({{RGB_R}}, {{RGB_G}}, {{RGB_B}}, 0.8);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
         }
         
         .menu-btn {
@@ -130,7 +130,7 @@
         
         .hero-title .number {
             color: var(--neon);
-            text-shadow: 0 0 30px rgba({{RGB_R}}, {{RGB_G}}, {{RGB_B}}, 0.8);
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
         }
         
         .hero-title .last {
@@ -152,7 +152,7 @@
             font-size: 2.5rem;
             font-weight: 900;
             color: var(--neon);
-            text-shadow: 0 0 20px rgba({{RGB_R}}, {{RGB_G}}, {{RGB_B}}, 0.5);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
         }
         
         .hero-stat-label {
@@ -195,7 +195,7 @@
         
         .footer-logo span {
             color: var(--neon);
-            text-shadow: 0 0 20px rgba({{RGB_R}}, {{RGB_G}}, {{RGB_B}}, 0.8);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
         }
         
         .footer-links {
@@ -319,19 +319,19 @@
             
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="hero-stat-value">4</div>
+                    <div class="hero-stat-value">{{STATS_TITULOS}}</div>
                     <div class="hero-stat-label">Títulos</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-value">5</div>
+                    <div class="hero-stat-value">{{STATS_ANOS}}</div>
                     <div class="hero-stat-label">Años</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-value">18</div>
+                    <div class="hero-stat-value">{{STATS_PODIUMS}}</div>
                     <div class="hero-stat-label">Podiums</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-value">20+</div>
+                    <div class="hero-stat-value">{{STATS_VICTORIAS}}</div>
                     <div class="hero-stat-label">Victorias</div>
                 </div>
             </div>
@@ -346,27 +346,27 @@
     <!-- Sobre Mi -->
     <section id="sobre-mi" style="padding: 100px 50px; background: var(--dark);">
         <div style="text-align: center; margin-bottom: 40px;">
-            <img src="images/profile.jpg" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid var(--neon); box-shadow: 0 0 40px rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="{{NOMBRE}} {{APELLIDO}}">
+            <img src="images/profile.jpg" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid var(--neon); box-shadow: 0 0 40px rgba(0,212,255,0.3);" alt="{{NOMBRE}} {{APELLIDO}}">
         </div>
         <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">MI HISTORIA</h2>
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
             <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
-                Bilbaino de nacimiento, rider de corazón. Desde que tengo uso de razón, las motos de agua han sido mi universo. Mi padre siempre tuvo motos de agua — yo me crie entre el ruido del motor y el olor del mar. En 2020, cuando me propuso subirse conmigo por primera vez, no sabía que eso iba a cambiar mi vida para siempre.
+                {{HISTORIA_PARRAFO_1}}
             </p>
             <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
-                Lo que empezó como una aventura con mi padre, se convirtió en mi identidad. Cada fin de semana en el agua, cada entrenamiento, cada caída — todo me hacía más fuerte. Y los resultados llegaron: títulos, podios, respeto en el paddock. Pero nada me preparó para lo que vendría después.
+                {{HISTORIA_PARRAFO_2}}
             </p>
             <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
-                Una lesión. Meses en tierra. Días donde miraba el agua desde la orilla y no podía salir. Días donde la cabeza me decía que lo deje, que para qué seguir. Días oscuros, de esos que te prueban el alma.
+                {{HISTORIA_PARRAFO_3}}
             </p>
             <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
-                Pero entonces aparecía mi padre. Siempre. El que me llama cuando no quiero entrenar, el que me recuerda quién soy, el que me dice que yo soy capaz de cosas increíbles aunque yo no lo vea. Mi ancla en la tormenta.
+                {{HISTORIA_PARRAFO_4}}
             </p>
             <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
-                Ahora estoy en la recta final. La lesión no se ha ido, pero mi mentalidad es más fuerte que nunca. Cada brazada, cada vuelta en el agua, cada gota de sudor me acerca al piloto que sé que puedo ser.
+                {{HISTORIA_PARRAFO_5}}
             </p>
-            <p style="color: var(--neon); font-size: 1.5rem; line-height: 2; font-weight: 700; text-shadow: 0 0 20px rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.5);">
-                Esto no es un deporte. Es mi estilo de vida.
+            <p style="color: var(--neon); font-size: 1.5rem; line-height: 2; font-weight: 700; text-shadow: 0 0 20px rgba(0,212,255,0.5);">
+                {{QUOTE_MotivACIONAL}}
             </p>
         </div>
     </section>
@@ -376,20 +376,20 @@
         <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">PALMARÉS</h2>
         <div style="max-width: 600px; margin: 0 auto;">
             <div style="margin-bottom: 30px; padding: 20px; border-left: 3px solid var(--neon);">
-                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">2025</div>
-                <div style="font-size: 1.1rem;">🏆 Campeón del Mundo</div>
-                <div style="font-size: 1.1rem;">🥇 Campeón España Rallyjet y Offshore</div>
-                <div style="font-size: 1.1rem;">🥇 Campeón Euskadi</div>
+                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">{{PALMARES_2025_TITULO}}</div>
+                <div style="font-size: 1.1rem;">{{PALMARES_2025_LOGRO_1}}</div>
+                <div style="font-size: 1.1rem;">{{PALMARES_2025_LOGRO_2}}</div>
+                <div style="font-size: 1.1rem;">{{PALMARES_2025_LOGRO_3}}</div>
             </div>
             <div style="margin-bottom: 30px; padding: 20px; border-left: 3px solid var(--neon);">
-                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">2024</div>
-                <div style="font-size: 1.1rem;">🥇 Campeón España</div>
-                <div style="font-size: 1.1rem;">🥇 Campeón Euskadi</div>
+                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">{{PALMARES_2024_TITULO}}</div>
+                <div style="font-size: 1.1rem;">{{PALMARES_2024_LOGRO_1}}</div>
+                <div style="font-size: 1.1rem;">{{PALMARES_2024_LOGRO_2}}</div>
             </div>
             <div style="padding: 20px; border-left: 3px solid var(--neon);">
-                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">2023</div>
-                <div style="font-size: 1.1rem;">🥇 Campeón España</div>
-                <div style="font-size: 1.1rem;">🥇 Campeón Europeo</div>
+                <div style="font-family: Orbitron; font-size: 1.5rem; color: var(--neon);">{{PALMARES_2023_TITULO}}</div>
+                <div style="font-size: 1.1rem;">{{PALMARES_2023_LOGRO_1}}</div>
+                <div style="font-size: 1.1rem;">{{PALMARES_2023_LOGRO_2}}</div>
             </div>
         </div>
     </section>
@@ -401,30 +401,30 @@
         <!-- Podiums -->
         <h3 style="font-family: Orbitron; font-size: 1.5rem; color: var(--light); text-align: center; margin-bottom: 30px;">🏆 PODIUMS 🏆</h3>
         <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 1200px; margin: 0 auto 60px auto;">
-            <img src="images/podium1.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Podium 1">
-            <img src="images/podium2.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Podium 2">
-            <img src="images/podium3.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Podium 3">
-            <img src="images/podium4.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Podium 4">
-            <img src="images/podium5.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Podium 5">
-            <img src="images/podium6.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Podium 6">
-            <img src="images/podium7.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Podium 7">
-            <img src="images/podium8.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Podium 8">
-            <img src="images/podium9.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Podium 9">
+            <img src="images/podium1.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 1">
+            <img src="images/podium2.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 2">
+            <img src="images/podium3.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 3">
+            <img src="images/podium4.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 4">
+            <img src="images/podium5.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 5">
+            <img src="images/podium6.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 6">
+            <img src="images/podium7.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 7">
+            <img src="images/podium8.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 8">
+            <img src="images/podium9.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Podium 9">
         </div>
         
         <!-- Accion -->
         <h3 style="font-family: Orbitron; font-size: 1.5rem; color: var(--light); text-align: center; margin-bottom: 30px;">🚀 ACCIÓN 🚀</h3>
         <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; max-width: 1200px; margin: 0 auto;">
-            <img src="images/accion1.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Accion 1">
-            <img src="images/accion2.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Accion 2">
-            <img src="images/accion3.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Accion 3">
-            <img src="images/accion4.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Accion 4">
-            <img src="images/accion5.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Accion 5">
-            <img src="images/accion6.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Accion 6">
-            <img src="images/accion7.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Accion 7">
-            <img src="images/accion8.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Accion 8">
-            <img src="images/accion9.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Accion 9">
-            <img src="images/accion10.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba({{RGB_R}},{{RGB_G}},{{RGB_B}},0.3);" alt="Accion 10">
+            <img src="images/accion1.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 1">
+            <img src="images/accion2.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 2">
+            <img src="images/accion3.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 3">
+            <img src="images/accion4.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 4">
+            <img src="images/accion5.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 5">
+            <img src="images/accion6.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 6">
+            <img src="images/accion7.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 7">
+            <img src="images/accion8.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 8">
+            <img src="images/accion9.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 9">
+            <img src="images/accion10.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,212,255,0.3);" alt="Accion 10">
         </div>
     </section>
     
@@ -432,7 +432,7 @@
     <section id="contacto" style="padding: 100px 50px; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); text-align: center;">
         <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); margin-bottom: 20px;">¿LISTO PARA CONTACTAR?</h2>
         <p style="color: var(--gray); font-size: 1.2rem; max-width: 600px; margin: 0 auto 50px auto; line-height: 1.8;">
-            ¿Quieres formar parte de mi proyecto? ¿Buscas un piloto comprometido, con resultados y que dé la cara? Hablamos.
+            {{CONTACTO_DESCRIPCION}}
         </p>
         
         <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 50px;">
@@ -444,7 +444,7 @@
                 <span style="font-size: 1.5rem;">📸</span>
                 <span style="color: var(--light); font-family: Orbitron; font-weight: 600;">Instagram</span>
             </a>
-            <a href="https://wa.me/{{WHATSAPP}}?text={{WHATSAPP_MESSAGE}}%20y%20me%20ha%20impresionado.%20Quiero%20hablar%20contigo%20sobre%20una%20colaboraci%C3%B3n." target="_blank" style="display: flex; align-items: center; gap: 10px; padding: 20px 30px; background: #25D366; border: 2px solid #25D366; border-radius: 50px; text-decoration: none; transition: all 0.3s;">
+            <a href="https://wa.me/{{WHATSAPP}}?text=Hola%20{{NOMBRE}}%2C%20acabo%20de%20ver%20tu%20web%20y%20me%20ha%20impresionado.%20Quiero%20hablar%20contigo%20sobre%20una%20colaboraci%C3%B3n." target="_blank" style="display: flex; align-items: center; gap: 10px; padding: 20px 30px; background: #25D366; border: 2px solid #25D366; border-radius: 50px; text-decoration: none; transition: all 0.3s;">
                 <span style="font-size: 1.5rem;">💬</span>
                 <span style="color: white; font-family: Orbitron; font-weight: 600;">WhatsApp</span>
             </a>
@@ -452,7 +452,7 @@
         
         <div style="margin-top: 50px;">
             <p style="color: var(--neon); font-family: Orbitron; font-size: 1.3rem; margin-bottom: 10px;">{{NOMBRE}} {{APELLIDO}}</p>
-            <p style="color: var(--gray);">📍 {{CIUDAD}}, España</p>
+            <p style="color: var(--gray);">📍 {{UBICACION}}</p>
         </div>
     </section>
 

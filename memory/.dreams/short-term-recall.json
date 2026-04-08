@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-08T06:20:37.690Z",
+  "entries": {
+    "memory:memory/2026-03-23.md:1:32": {
+      "key": "memory:memory/2026-03-23.md:1:32",
+      "path": "memory/2026-03-23.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# Memory Log - 2026-03-23 ## Sesión: Mañana - Subir Web ELITE JSR **Estado:** En progreso **Hora:** 06:47 UTC (07:47 Madrid) ### Tarea Principal Subir web ELITE JSR a internet (gratuito/permanente) ### Progreso - ✅ Dominio elitejsr.com comprado (Namecheap, pedido #197753102) - ✅ Cuenta GitHub creada: landercortazarromero - ✅ Repositorio GitHub creado: elite-jsr - ⏳ Pendiente: Subir archivos a hosting gratuito ### Bloqueo Actual Lander quiere que yo haga todo autónomamente, pero GitHub requiere token de autenticación personal. Explicando opciones: 1. Netlify Drop (más fácil, sin token) 2. GitHub Pages con token 3. Subida manual ### Decisiones - Lander insiste en método gratuito - Rechaz",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.7384983001733241,
+      "maxScore": 0.7384983001733241,
+      "firstRecalledAt": "2026-04-08T06:20:37.690Z",
+      "lastRecalledAt": "2026-04-08T06:20:37.690Z",
+      "queryHashes": [
+        "c39023f0b2b1"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "gratuito/permanente",
+        "elitejsr.com",
+        "elite-jsr",
+        "log",
+        "sesión",
+        "mañana",
+        "subir",
+        "web"
+      ]
+    }
+  }
+}

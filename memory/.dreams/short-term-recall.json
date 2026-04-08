@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-08T06:20:37.690Z",
+  "updatedAt": "2026-04-08T08:17:39.275Z",
   "entries": {
     "memory:memory/2026-03-23.md:1:32": {
       "key": "memory:memory/2026-03-23.md:1:32",
@@ -9,14 +9,15 @@
       "endLine": 32,
       "source": "memory",
       "snippet": "# Memory Log - 2026-03-23 ## Sesión: Mañana - Subir Web ELITE JSR **Estado:** En progreso **Hora:** 06:47 UTC (07:47 Madrid) ### Tarea Principal Subir web ELITE JSR a internet (gratuito/permanente) ### Progreso - ✅ Dominio elitejsr.com comprado (Namecheap, pedido #197753102) - ✅ Cuenta GitHub creada: landercortazarromero - ✅ Repositorio GitHub creado: elite-jsr - ⏳ Pendiente: Subir archivos a hosting gratuito ### Bloqueo Actual Lander quiere que yo haga todo autónomamente, pero GitHub requiere token de autenticación personal. Explicando opciones: 1. Netlify Drop (más fácil, sin token) 2. GitHub Pages con token 3. Subida manual ### Decisiones - Lander insiste en método gratuito - Rechaz",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
-      "totalScore": 0.7384983001733241,
+      "totalScore": 1.4261258168228323,
       "maxScore": 0.7384983001733241,
       "firstRecalledAt": "2026-04-08T06:20:37.690Z",
-      "lastRecalledAt": "2026-04-08T06:20:37.690Z",
+      "lastRecalledAt": "2026-04-08T08:17:39.275Z",
       "queryHashes": [
-        "c39023f0b2b1"
+        "c39023f0b2b1",
+        "a5fb0db8cad1"
       ],
       "recallDays": [
         "2026-04-08"
@@ -30,6 +31,36 @@
         "mañana",
         "subir",
         "web"
+      ]
+    },
+    "memory:memory/2026-04-07.md:1:38": {
+      "key": "memory:memory/2026-04-07.md:1:38",
+      "path": "memory/2026-04-07.md",
+      "startLine": 1,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "# Session 2026-04-07 ## Ian Traba Web Project - COMPLETED ✅ **URL:** https://ian-traba-62.vercel.app - Rebuild completo desde MASTER-TEMPLATE - Estructura: Hero + Stats + Footer (simple, clean) - Preview protection system operativo ## Iñaki Traba Web - ❌ NOT COMPLETED (TIMEOUT) **Session timed out while building** - Datos recibidos todos (TRABA60, dorsal 60, stats, palmarés, fotos) - Web NO construida - Pendiente: rebuild desde template limpio ## CRITICAL ISSUE: Data Mixing - UNRESOLVED ⚠️ - Iñaki web getting mixed with Ian data - MASTER-TEMPLATE needs complete rebuild with 100% placeholders - This is the 3rd time this happens - Lander very frustrated ## Decisions Taken - Verde neón (#00",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.7923052788842873,
+      "maxScore": 0.7923052788842873,
+      "firstRecalledAt": "2026-04-08T08:17:39.275Z",
+      "lastRecalledAt": "2026-04-08T08:17:39.275Z",
+      "queryHashes": [
+        "a5fb0db8cad1"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "ian-traba-62.vercel.app",
+        "master-template",
+        "ian",
+        "traba",
+        "web",
+        "project",
+        "completed",
+        "url"
       ]
     }
   }

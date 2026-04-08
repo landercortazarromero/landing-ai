@@ -41,17 +41,36 @@
 **L7 Score:** 4.9/5.0 → 5.0/5.0
 - **Filosofía:** NUNCA decir no puedo, SIEMPRE encontrar la manera
 
-## CRITICAL ISSUE: Data Mixing (2026-04-07)
+## CRITICAL ISSUE: Data Mixing (2026-04-07) — **RESUELTO 2026-04-08** ✅
 **Problema:** Cada nuevo piloto hereda datos del piloto anterior
 **Causa raíz:** MASTER-TEMPLATE no tiene 100% placeholders
-**Solución requerida:** Rebuild completo del template con {{PLACEHOLDER}} en TODOS los campos
-**Estado:** Pendiente implementar
+**Solución implementada:** 
+- ✅ Nuevo TEMPLATE-MASTER.html con 100% placeholders ({{NOMBRE}}, {{APELLIDO}}, etc.)
+- ✅ Script `pilot-generator.sh` v2.0 con Anti-Data-Mixing Protocol
+- ✅ Verificación automática: grep por nombres previos (ian|iñaki|traba|lander)
+- ✅ Procedimiento documentado paso a paso
+
+**Procedimiento para nuevos pilotos:**
+```bash
+# Uso del generador
+~/.openclaw/workspace/scripts/pilot-generator.sh \
+  -n ANDONI -a SANCHEZ -d 11 -c "#ff0055" \
+  -e "piloto@email.com" -i "andoni11"
+
+# Añadir fotos y deploy
+cd ~/.openclaw/workspace/clients/andoni-sanchez-11/web
+# Copiar fotos a images/
+vercel --yes --prod
+```
+
+**Template seguro:** `/clients/MASTER-TEMPLATE/web/TEMPLATE-MASTER.html`
+**Script:** `/scripts/pilot-generator.sh`
 
 ## Updates Recientes
-- **2026-04-05:** Sistema auditado completamente
-  - OpenClaw actualizado → 2026.4.2
-  - Cron jobs verificados (2 activos)
-  - Backups operativos
+- **2026-04-08:** Data Mixing RESUELTO — TEMPLATE-MASTER v2.0 + pilot-generator.sh
+  - Placeholders 100% en TEMPLATE-MASTER.html
+  - Script generador con verificación anti-mixing
+  - Procedimiento documentado y probado
 
 ## Lessons Learned
 - No responder sin verificar archivos primero

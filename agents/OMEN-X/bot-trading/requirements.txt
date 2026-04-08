@@ -1,0 +1,10 @@
+# OMEN X v1.0 - Dependencies
+ccxt>=4.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+python-telegram-bot>=20.0
+schedule>=1.2.0
+python-dotenv>=1.0.0
+flask>=3.0.0
+ta-lib>=0.4.28
+ta>=0.11.0

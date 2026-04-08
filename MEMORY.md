@@ -23,9 +23,12 @@
 - Opportunity Discovery Engine (COMPLETADO)
 - **Web ELITE JSR - AGENCIA DE PILOTOS ÉLITE (ONLINE - 2026-03-24)**
 - **OMEN X Trading Bot (TESTNET - 2026-04-08)**
-  - URL: Testnet Binance Futures
-  - Capital: €1,000 virtual
-  - Estrategia: EMA Scalping + RSI (1m-15m)
+  - Location: `agents/OMEN-X/bot-trading/`
+  - Capital: €1,000 virtual (testnet)
+  - Exchange: Binance Futures Testnet
+  - Estrategia: Portfolio con 3 estrategias (EMA + MACD + Bollinger)
+  - Risk: 1.5% por trade, -5% drawdown max diario
+  - Dashboard web + Telegram alerts
   - Duración testnet: 7 días
   - URL: https://euphonious-pixie-e28440.netlify.app
   - Hosting: Netlify (gratis, permanente)

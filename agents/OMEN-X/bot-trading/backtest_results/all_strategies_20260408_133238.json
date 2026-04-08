@@ -1,0 +1,29 @@
+{
+  "strategy": "ALL_STRATEGIES",
+  "period": "180 days",
+  "initial_capital": 1000,
+  "metrics": {
+    "EMA": {
+      "error": "No trades executed"
+    },
+    "MACD": {
+      "total_trades": 33,
+      "wins": 12,
+      "losses": 21,
+      "win_rate": 36.36363636363637,
+      "total_pnl": -226.26601983759878,
+      "total_pnl_pct": -22.62660198375988,
+      "profit_factor": 0.598782402051028,
+      "max_drawdown": 28.980048552872802,
+      "avg_trade_pnl": -6.8565460556848095,
+      "best_trade": 32.77345129600408,
+      "worst_trade": -61.5599309527268,
+      "avg_duration_bars": 15.393939393939394,
+      "sharpe_ratio": -1.4790964486525882
+    },
+    "BOLL": {
+      "error": "No trades executed"
+    }
+  },
+  "trades": []
+}

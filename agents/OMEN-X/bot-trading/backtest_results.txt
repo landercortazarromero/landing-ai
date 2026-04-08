@@ -1,2 +1,160 @@
 /Users/landercortazarromero/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
   warnings.warn(
+
+╔══════════════════════════════════════════════════════════════╗
+║     OMEN X - BACKTEST HISTÓRICO 180 DÍAS                   ║
+║     Estrategias: EMA + MACD + Bollinger                    ║
+╚══════════════════════════════════════════════════════════════╝
+    
+📥 Descargando datos BTC/USDT:USDT 5m (180 días)...
+   1000 velas descargadas...   2000 velas descargadas...   3000 velas descargadas...   4000 velas descargadas...   5000 velas descargadas...   6000 velas descargadas...   7000 velas descargadas...   8000 velas descargadas...   9000 velas descargadas...   10000 velas descargadas...   11000 velas descargadas...   12000 velas descargadas...   13000 velas descargadas...   14000 velas descargadas...   15000 velas descargadas...   16000 velas descargadas...   17000 velas descargadas...   18000 velas descargadas...   19000 velas descargadas...   20000 velas descargadas...   21000 velas descargadas...   22000 velas descargadas...   23000 velas descargadas...   24000 velas descargadas...   25000 velas descargadas...   26000 velas descargadas...   27000 velas descargadas...   28000 velas descargadas...   29000 velas descargadas...   30000 velas descargadas...   31000 velas descargadas...   32000 velas descargadas...   33000 velas descargadas...   34000 velas descargadas...   35000 velas descargadas...   36000 velas descargadas...   37000 velas descargadas...   38000 velas descargadas...   39000 velas descargadas...   40000 velas descargadas...   41000 velas descargadas...   42000 velas descargadas...   43000 velas descargadas...   44000 velas descargadas...   45000 velas descargadas...   46000 velas descargadas...   47000 velas descargadas...   48000 velas descargadas...   49000 velas descargadas...   50000 velas descargadas...   51000 velas descargadas...   51840 velas descargadas...
+✅ Total: 51840 velas
+
+============================================================
+
+🔄 Ejecutando backtest: EMA
+
+╔══════════════════════════════════════════════════════════════╗
+║           OMEN X BACKTEST REPORT - EMA Scalping                  
+╚══════════════════════════════════════════════════════════════╝
+
+📊 RESULTADO: 🔴 NEGATIVO
+   P&L Total: +0.00€ (+0.00%)
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📈 MÉTRICAS DE TRADING:
+
+   Trades Totales:    0
+   Wins:              0
+   Losses:            0
+   Win Rate:          0.0%
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💰 GESTIÓN DE RIESGO:
+
+   Profit Factor:      0.00
+   Max Drawdown:       0.00%
+   Mejor Trade:        +0.00€
+   Peor Trade:        0.00€
+   Media Trade:       +0.00€
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📉 ANÁLISIS DE CARTERA:
+
+   Capital Inicial:   1000.00€
+   Capital Final:     1000.00€
+   Sharpe Ratio:      0.00
+   Duración Media:    0.0 velas (5min)
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏰ PERÍODO DE ANÁLISIS: 180 días (≈ 6 meses)
+
+═══════════════════════════════════════════════════════════════
+
+
+============================================================
+
+🔄 Ejecutando backtest: MACD
+
+╔══════════════════════════════════════════════════════════════╗
+║           OMEN X BACKTEST REPORT - MACD Scalping                  
+╚══════════════════════════════════════════════════════════════╝
+
+📊 RESULTADO: 🔴 NEGATIVO
+   P&L Total: -226.27€ (-22.63%)
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📈 MÉTRICAS DE TRADING:
+
+   Trades Totales:    33
+   Wins:              12
+   Losses:            21
+   Win Rate:          36.4%
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💰 GESTIÓN DE RIESGO:
+
+   Profit Factor:      0.60
+   Max Drawdown:       28.98%
+   Mejor Trade:        +32.77€
+   Peor Trade:        -61.56€
+   Media Trade:       -6.86€
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📉 ANÁLISIS DE CARTERA:
+
+   Capital Inicial:   1000.00€
+   Capital Final:     773.73€
+   Sharpe Ratio:      -1.48
+   Duración Media:    15.4 velas (5min)
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏰ PERÍODO DE ANÁLISIS: 180 días (≈ 6 meses)
+
+═══════════════════════════════════════════════════════════════
+
+
+============================================================
+
+🔄 Ejecutando backtest: BOLL
+
+╔══════════════════════════════════════════════════════════════╗
+║           OMEN X BACKTEST REPORT - Bollinger Scalping                  
+╚══════════════════════════════════════════════════════════════╝
+
+📊 RESULTADO: 🔴 NEGATIVO
+   P&L Total: +0.00€ (+0.00%)
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📈 MÉTRICAS DE TRADING:
+
+   Trades Totales:    0
+   Wins:              0
+   Losses:            0
+   Win Rate:          0.0%
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💰 GESTIÓN DE RIESGO:
+
+   Profit Factor:      0.00
+   Max Drawdown:       0.00%
+   Mejor Trade:        +0.00€
+   Peor Trade:        0.00€
+   Media Trade:       +0.00€
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📉 ANÁLISIS DE CARTERA:
+
+   Capital Inicial:   1000.00€
+   Capital Final:     1000.00€
+   Sharpe Ratio:      0.00
+   Duración Media:    0.0 velas (5min)
+   
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏰ PERÍODO DE ANÁLISIS: 180 días (≈ 6 meses)
+
+═══════════════════════════════════════════════════════════════
+
+
+╔══════════════════════════════════════════════════════════════╗
+║              COMPARATIVA DE ESTRATEGIAS                     ║
+╚══════════════════════════════════════════════════════════════╝
+
+Estrategia    │  Trades  │  Win%  │  P&L €   │  P&L %   │  PF
+──────────────┼──────────┼────────┼──────────┼──────────┼───────
+EMA           │        0 │   0.0% │    +0.00 │   +0.00% │ 0.00
+MACD          │       33 │  36.4% │  -226.27 │  -22.63% │ 0.60
+BOLL          │        0 │   0.0% │    +0.00 │   +0.00% │ 0.00
+💾 Resultados guardados: /Users/landercortazarromero/.openclaw/workspace/agents/OMEN-X/bot-trading/backtest_results/all_strategies_20260408_133238.json

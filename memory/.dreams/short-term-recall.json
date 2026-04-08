@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-08T10:25:46.405Z",
+  "updatedAt": "2026-04-08T11:03:53.061Z",
   "entries": {
     "memory:memory/2026-03-23.md:1:32": {
       "key": "memory:memory/2026-03-23.md:1:32",
@@ -71,14 +71,15 @@
       "endLine": 29,
       "source": "memory",
       "snippet": "## Sesión Noche - 2026-03-25 **Hora:** 23:52 Madrid ### Tareas Completadas 1. **Agente Jorge Carrasco Mode** - CREADO - Ubicación: `~/.openclaw/workspace/agents/jorge-carrasco-mode/system.md` - Tipo: Agente de autoconocimiento profundo - Filosofía: Directo, sin filtros, revelador - Metodología: 3 capas + shadow work + estoicismo moderno 2. **Cron Job** - ACTIVADO - Días: Lunes a viernes - Hora: 08:00 AM (hora España) - Script: `/Users/landercortazarromero/bin/openclaw-jorge-carrasco.sh` - Acción: Envía mensaje de activación a Telegram 3. **Web ELITE JSR** - CONFIRMADA ONLINE - URL: https://euphonious-pixie-e28440.netlify.app - Estado: Funcionando correctam",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
-      "totalScore": 0.7589799611673123,
+      "totalScore": 1.4931352206589164,
       "maxScore": 0.7589799611673123,
       "firstRecalledAt": "2026-04-08T10:25:46.405Z",
-      "lastRecalledAt": "2026-04-08T10:25:46.405Z",
+      "lastRecalledAt": "2026-04-08T11:03:53.061Z",
       "queryHashes": [
-        "0cf89af68e6c"
+        "0cf89af68e6c",
+        "61eca7b20a66"
       ],
       "recallDays": [
         "2026-04-08"
@@ -92,6 +93,66 @@
         "completadas",
         "agente",
         "jorge"
+      ]
+    },
+    "memory:memory/2026-04-05.md:1:51": {
+      "key": "memory:memory/2026-04-05.md:1:51",
+      "path": "memory/2026-04-05.md",
+      "startLine": 1,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "# 2026-04-05 — EVENING AUDIT COMPLETO **Hora:** 23:02 (Europe/Madrid) **Estado:** ✅ SISTEMA AL MÁXIMO RENDIMIENTO --- ## ✅ LOG DE HOY ### Sistemas: - ✅ OpenClaw actualizado → 2026.4.2 - ✅ Vercel login completado - ✅ Git repo configurado (sin remote push activo) - ✅ Backups automáticos operativos ### Proyectos: - ✅ **IAN-TRABA-62 web** — Replicada estructura cortazar59.com - URL: https://ian-traba-62.netlify.app - Stats: 5 títulos, 5 años, 15+ nacionales, 8+ europeas, 3 mundiales - Palmarés actualizado para GP3 - 8 podios + 10 galería de fotos - Deploy via Netlify (✅ Production live) ### Protocolos configurados: - ✅ Evening Audit (23:00 diario) - ✅ Health Check (cada 6h) - ✅",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.713033962789417,
+      "maxScore": 0.713033962789417,
+      "firstRecalledAt": "2026-04-08T11:03:53.061Z",
+      "lastRecalledAt": "2026-04-08T11:03:53.061Z",
+      "queryHashes": [
+        "61eca7b20a66"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "backup",
+        "backups",
+        "europe/madrid",
+        "2026.4.2",
+        "ian-traba-62",
+        "cortazar59.com",
+        "ian-traba-62.netlify.app",
+        "evening"
+      ]
+    },
+    "memory:memory/2026-03-28.md:1:33": {
+      "key": "memory:memory/2026-03-28.md:1:33",
+      "path": "memory/2026-03-28.md",
+      "startLine": 1,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "## 2026-03-28 - Implementación Storytelling Impacto **Hora:** 08:30-08:39 **Estado:** ✅ Completado ### Cambios Implementados **OPCIÓN 3: Storytelling Impacto** aplicada a la web: **EXTRAS A MEDIDA** → Cambiado a **\"TU MARCA, SU HISTORIA DE ÉXITO\"** - 🎯 Patrocinio Técnico: \"No es publicidad intrusiva, es visibilidad real...\" - 🎬 Contenido Que Conecta: \"Emoción que vende...\" - 🏆 Experiencias VIP: \"Relaciones que construyen negocios...\" - 🤝 Activaciones B2B: \"Oportunidades de negocio reales...\" **¿POR QUÉ PATROCINAR?** → Cambiado a **\"¿QUÉ OBTIENES REALMENTE?\"** - 💎 Diferenciación Auténtica: \"No eres otra marca más, eres parte de su victoria\" - ❤️ Lealtad Emocional: \"Lo hacen con p",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.7107619314770481,
+      "maxScore": 0.7107619314770481,
+      "firstRecalledAt": "2026-04-08T11:03:53.061Z",
+      "lastRecalledAt": "2026-04-08T11:03:53.061Z",
+      "queryHashes": [
+        "61eca7b20a66"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "30-08",
+        "implementación",
+        "storytelling",
+        "impacto",
+        "hora",
+        "estado",
+        "completado",
+        "cambios"
       ]
     }
   }

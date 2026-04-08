@@ -4,7 +4,12 @@ Complemento a EMA para confirmación de momentum
 """
 
 import pandas as pd
-import talib
+try:
+    import talib
+    HAS_TALIB = True
+except ImportError:
+    import ta
+    HAS_TALIB = False
 from typing import Dict, Tuple, Optional
 
 class MACDScalpingStrategy:

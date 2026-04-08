@@ -6,7 +6,12 @@ Entradas rápidas en dirección de la tendencia
 import pandas as pd
 import numpy as np
 from typing import Dict, Optional, Tuple
-import talib
+try:
+    import talib
+    HAS_TALIB = True
+except ImportError:
+    import ta
+    HAS_TALIB = False
 
 class EMAScalpingStrategy:
     """
@@ -27,17 +32,25 @@ class EMAScalpingStrategy:
     def calculate_indicators(self, df: pd.DataFrame) -> pd.DataFrame:
         """Calcula todos los indicadores"""
         # EMAs
-        df["ema_fast"] = talib.EMA(df["close"], timeperiod=self.ema_fast)
-        df["ema_slow"] = talib.EMA(df["close"], timeperiod=self.ema_slow)
-        
-        # RSI
-        df["rsi"] = talib.RSI(df["close"], timeperiod=self.rsi_period)
+        if HAS_TALIB:
+            df["ema_fast"] = talib.EMA(df["close"], timeperiod=self.ema_fast)
+            df["ema_slow"] = talib.EMA(df["close"], timeperiod=self.ema_slow)
+            df["rsi"] = talib.RSI(df["close"], timeperiod=self.rsi_period)
+        else:
+            from ta.trend import EMAIndicator, RSIIndicator
+            df["ema_fast"] = EMAIndicator(df["close"], window=self.ema_fast).ema_indicator()
+            df["ema_slow"] = EMAIndicator(df["close"], window=self.ema_slow).ema_indicator()
+            df["rsi"] = RSIIndicator(df["close"], window=self.rsi_period).rsi()
         
         # Volumen medio
         df["volume_sma"] = df["volume"].rolling(window=20).mean()
         
         # ATR para stops
-        df["atr"] = talib.ATR(df["high"], df["low"], df["close"], timeperiod=14)
+        if HAS_TALIB:
+            df["atr"] = talib.ATR(df["high"], df["low"], df["close"], timeperiod=14)
+        else:
+            from ta.volatility import ATRIndicator
+            df["atr"] = ATRIndicator(df["high"], df["low"], df["close"], window=14).atr()
         
         return df
     

@@ -4,7 +4,12 @@ Para mercados en rango o con rotura de volatilidad
 """
 
 import pandas as pd
-import talib
+try:
+    import talib
+    HAS_TALIB = True
+except ImportError:
+    import ta
+    HAS_TALIB = False
 import numpy as np
 from typing import Dict, Tuple, Optional
 

@@ -75,6 +75,7 @@ vercel --yes --prod
 **Script:** `/scripts/pilot-generator.sh`
 
 ## Updates Recientes
+- **2026-04-09:** IAN-TRABA-62 COMPLETADO — Responsive móvil optimizado, todo guardado como oro
 - **2026-04-08:** Data Mixing RESUELTO — TEMPLATE-MASTER v2.0 + pilot-generator.sh
   - Placeholders 100% en TEMPLATE-MASTER.html
   - Script generador con verificación anti-mixing
@@ -86,6 +87,10 @@ vercel --yes --prod
 - Vercel vs Netlify: Lander prefiere Vercel para nuevos deployments
 - MASTER-TEMPLATE debe tener 100% placeholders para evitar data mixing entre pilotos
 - Tareas críticas hacer inline, no delegar a sub-agentes (evita timeouts)
+- **Folders mezclados:** La carpeta images/ de Ian tenía fotos de Iñaki → procedimiento: limpiar folder antes de añadir fotos nuevas
+- **Cache navegador:**Tras deploy, si no se ve cambio, es cache. Indicar Ctrl+Shift+R
+- **Orden correcta:** Copiar fotos escritorio → images/ → actualizar HTML → deploy
+- **Responsive móvil:** Mejorar siempre para clientes (Ian mejorado, mejor aceptación)
 
 ## Configuration
 - **Timezone:** Europe/Madrid

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-09T03:51:08.571Z",
+  "updatedAt": "2026-04-09T05:19:55.498Z",
   "entries": {
     "memory:memory/2026-03-23.md:1:32": {
       "key": "memory:memory/2026-03-23.md:1:32",
@@ -9,18 +9,20 @@
       "endLine": 32,
       "source": "memory",
       "snippet": "# Memory Log - 2026-03-23 ## Sesión: Mañana - Subir Web ELITE JSR **Estado:** En progreso **Hora:** 06:47 UTC (07:47 Madrid) ### Tarea Principal Subir web ELITE JSR a internet (gratuito/permanente) ### Progreso - ✅ Dominio elitejsr.com comprado (Namecheap, pedido #197753102) - ✅ Cuenta GitHub creada: landercortazarromero - ✅ Repositorio GitHub creado: elite-jsr - ⏳ Pendiente: Subir archivos a hosting gratuito ### Bloqueo Actual Lander quiere que yo haga todo autónomamente, pero GitHub requiere token de autenticación personal. Explicando opciones: 1. Netlify Drop (más fácil, sin token) 2. GitHub Pages con token 3. Subida manual ### Decisiones - Lander insiste en método gratuito - Rechaz",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
-      "totalScore": 1.4261258168228323,
+      "totalScore": 2.1244686184133954,
       "maxScore": 0.7384983001733241,
       "firstRecalledAt": "2026-04-08T06:20:37.690Z",
-      "lastRecalledAt": "2026-04-08T08:17:39.275Z",
+      "lastRecalledAt": "2026-04-09T05:19:55.498Z",
       "queryHashes": [
         "c39023f0b2b1",
-        "a5fb0db8cad1"
+        "a5fb0db8cad1",
+        "1de3e8ff0b92"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-09"
       ],
       "conceptTags": [
         "gratuito/permanente",
@@ -71,18 +73,20 @@
       "endLine": 29,
       "source": "memory",
       "snippet": "## Sesión Noche - 2026-03-25 **Hora:** 23:52 Madrid ### Tareas Completadas 1. **Agente Jorge Carrasco Mode** - CREADO - Ubicación: `~/.openclaw/workspace/agents/jorge-carrasco-mode/system.md` - Tipo: Agente de autoconocimiento profundo - Filosofía: Directo, sin filtros, revelador - Metodología: 3 capas + shadow work + estoicismo moderno 2. **Cron Job** - ACTIVADO - Días: Lunes a viernes - Hora: 08:00 AM (hora España) - Script: `/Users/landercortazarromero/bin/openclaw-jorge-carrasco.sh` - Acción: Envía mensaje de activación a Telegram 3. **Web ELITE JSR** - CONFIRMADA ONLINE - URL: https://euphonious-pixie-e28440.netlify.app - Estado: Funcionando correctam",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
-      "totalScore": 1.4931352206589164,
+      "totalScore": 2.104351062066819,
       "maxScore": 0.7589799611673123,
       "firstRecalledAt": "2026-04-08T10:25:46.405Z",
-      "lastRecalledAt": "2026-04-08T11:03:53.061Z",
+      "lastRecalledAt": "2026-04-09T05:19:55.498Z",
       "queryHashes": [
         "0cf89af68e6c",
-        "61eca7b20a66"
+        "61eca7b20a66",
+        "1de3e8ff0b92"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-09"
       ],
       "conceptTags": [
         "sesión",
@@ -132,17 +136,19 @@
       "endLine": 33,
       "source": "memory",
       "snippet": "## 2026-03-28 - Implementación Storytelling Impacto **Hora:** 08:30-08:39 **Estado:** ✅ Completado ### Cambios Implementados **OPCIÓN 3: Storytelling Impacto** aplicada a la web: **EXTRAS A MEDIDA** → Cambiado a **\"TU MARCA, SU HISTORIA DE ÉXITO\"** - 🎯 Patrocinio Técnico: \"No es publicidad intrusiva, es visibilidad real...\" - 🎬 Contenido Que Conecta: \"Emoción que vende...\" - 🏆 Experiencias VIP: \"Relaciones que construyen negocios...\" - 🤝 Activaciones B2B: \"Oportunidades de negocio reales...\" **¿POR QUÉ PATROCINAR?** → Cambiado a **\"¿QUÉ OBTIENES REALMENTE?\"** - 💎 Diferenciación Auténtica: \"No eres otra marca más, eres parte de su victoria\" - ❤️ Lealtad Emocional: \"Lo hacen con p",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
-      "totalScore": 0.7107619314770481,
+      "totalScore": 1.2939088143921682,
       "maxScore": 0.7107619314770481,
       "firstRecalledAt": "2026-04-08T11:03:53.061Z",
-      "lastRecalledAt": "2026-04-08T11:03:53.061Z",
+      "lastRecalledAt": "2026-04-09T05:19:55.498Z",
       "queryHashes": [
-        "61eca7b20a66"
+        "61eca7b20a66",
+        "1de3e8ff0b92"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-09"
       ],
       "conceptTags": [
         "30-08",
@@ -184,6 +190,36 @@
         "log",
         "evening",
         "execution"
+      ]
+    },
+    "memory:memory/2026-04-06.md:1:29": {
+      "key": "memory:memory/2026-04-06.md:1:29",
+      "path": "memory/2026-04-06.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "# 2026-04-06 — MORNING CHECK **Hora:** 05:02 (Europe/Madrid) **Heartbeat:** Morning check complete ## 📊 SISTEMA OK | Componente | Estado | |-----------|--------| | Git | ⚠️ Pending commit (IAN web replication) | | Skills | ✅ 20/50 ready | | Cron Jobs | ✅ Activos | | Memory | ✅ Al día | ## 🎯 PROYECTOS ACTIVOS 1. **IAN-TRABA-62** — ✅ Web replicada y online (ian-traba-62.netlify.app) 2. **ELITE JSR** — ✅ Mantenimiento 3. **CORTAZAR59.com** — ✅ Online ## 📝 NOTES - Web Ian replicada con estructura exacta cortazar59.com - Vercel login completado - Pendiente: confirmar datos contacto Ian (email, WhatsApp) --- *Morning check — 2026-04-06*",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.6372896285753837,
+      "maxScore": 0.6372896285753837,
+      "firstRecalledAt": "2026-04-09T05:19:55.498Z",
+      "lastRecalledAt": "2026-04-09T05:19:55.498Z",
+      "queryHashes": [
+        "1de3e8ff0b92"
+      ],
+      "recallDays": [
+        "2026-04-09"
+      ],
+      "conceptTags": [
+        "europe/madrid",
+        "20/50",
+        "ian-traba-62",
+        "ian-traba-62.netlify.app",
+        "cortazar59.com",
+        "morning",
+        "check",
+        "hora"
       ]
     }
   }

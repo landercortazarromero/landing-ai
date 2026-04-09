@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-08T11:03:53.061Z",
+  "updatedAt": "2026-04-09T03:51:08.571Z",
   "entries": {
     "memory:memory/2026-03-23.md:1:32": {
       "key": "memory:memory/2026-03-23.md:1:32",
@@ -153,6 +153,37 @@
         "estado",
         "completado",
         "cambios"
+      ]
+    },
+    "memory:memory/2026-03-22.md:1:34": {
+      "key": "memory:memory/2026-03-22.md:1:34",
+      "path": "memory/2026-03-22.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# Memory Log - 2026-03-22 ## Session: Evening Execution ### Tasks Executed 1. ✅ C-Level Team Architecture - Documento creado con roles CEO, CTO, COO, CFO 2. ✅ War Room Coordination - Sistema de comando unificado creado 3. ✅ Opportunity Discovery Engine - Motor de oportunidades con scoring ### Files Created - ~/.openclaw/workspace/c-level-team.md (2598 bytes) - ~/.openclaw/workspace/war-room.md (3247 bytes) - ~/.openclaw/workspace/opportunity-engine.md (3659 bytes) ### Key Decisions - Codex no disponible → Ejecución directa vía write - Top 5 oportunidades identificadas con scores - 40/52 skills sin instalar → Prioridad: apple-reminders, spotify-player, notion ### Tasks Ejecutados (Batch",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 1.3018582517515878,
+      "maxScore": 0.6509291258757939,
+      "firstRecalledAt": "2026-04-09T03:50:52.983Z",
+      "lastRecalledAt": "2026-04-09T03:51:08.571Z",
+      "queryHashes": [
+        "c993e460dece",
+        "274c1babba41"
+      ],
+      "recallDays": [
+        "2026-04-09"
+      ],
+      "conceptTags": [
+        "c-level",
+        "openclaw/workspace/war-room.md",
+        "40/52",
+        "apple-reminders",
+        "spotify-player",
+        "log",
+        "evening",
+        "execution"
       ]
     }
   }

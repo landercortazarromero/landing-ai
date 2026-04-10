@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-09T05:19:55.498Z",
+  "updatedAt": "2026-04-10T07:10:27.626Z",
   "entries": {
     "memory:memory/2026-03-23.md:1:32": {
       "key": "memory:memory/2026-03-23.md:1:32",
@@ -9,20 +9,23 @@
       "endLine": 32,
       "source": "memory",
       "snippet": "# Memory Log - 2026-03-23 ## Sesión: Mañana - Subir Web ELITE JSR **Estado:** En progreso **Hora:** 06:47 UTC (07:47 Madrid) ### Tarea Principal Subir web ELITE JSR a internet (gratuito/permanente) ### Progreso - ✅ Dominio elitejsr.com comprado (Namecheap, pedido #197753102) - ✅ Cuenta GitHub creada: landercortazarromero - ✅ Repositorio GitHub creado: elite-jsr - ⏳ Pendiente: Subir archivos a hosting gratuito ### Bloqueo Actual Lander quiere que yo haga todo autónomamente, pero GitHub requiere token de autenticación personal. Explicando opciones: 1. Netlify Drop (más fácil, sin token) 2. GitHub Pages con token 3. Subida manual ### Decisiones - Lander insiste en método gratuito - Rechaz",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
-      "totalScore": 2.1244686184133954,
-      "maxScore": 0.7384983001733241,
+      "groundedCount": 0,
+      "totalScore": 2.9714568852996512,
+      "maxScore": 0.8469882668862558,
       "firstRecalledAt": "2026-04-08T06:20:37.690Z",
-      "lastRecalledAt": "2026-04-09T05:19:55.498Z",
+      "lastRecalledAt": "2026-04-10T07:10:27.626Z",
       "queryHashes": [
         "c39023f0b2b1",
         "a5fb0db8cad1",
-        "1de3e8ff0b92"
+        "1de3e8ff0b92",
+        "4913e7dfd6c4"
       ],
       "recallDays": [
         "2026-04-08",
-        "2026-04-09"
+        "2026-04-09",
+        "2026-04-10"
       ],
       "conceptTags": [
         "gratuito/permanente",
@@ -44,6 +47,7 @@
       "snippet": "# Session 2026-04-07 ## Ian Traba Web Project - COMPLETED ✅ **URL:** https://ian-traba-62.vercel.app - Rebuild completo desde MASTER-TEMPLATE - Estructura: Hero + Stats + Footer (simple, clean) - Preview protection system operativo ## Iñaki Traba Web - ❌ NOT COMPLETED (TIMEOUT) **Session timed out while building** - Datos recibidos todos (TRABA60, dorsal 60, stats, palmarés, fotos) - Web NO construida - Pendiente: rebuild desde template limpio ## CRITICAL ISSUE: Data Mixing - UNRESOLVED ⚠️ - Iñaki web getting mixed with Ian data - MASTER-TEMPLATE needs complete rebuild with 100% placeholders - This is the 3rd time this happens - Lander very frustrated ## Decisions Taken - Verde neón (#00",
       "recallCount": 2,
       "dailyCount": 0,
+      "groundedCount": 0,
       "totalScore": 1.4670340567783458,
       "maxScore": 0.7923052788842873,
       "firstRecalledAt": "2026-04-08T08:17:39.275Z",
@@ -75,6 +79,7 @@
       "snippet": "## Sesión Noche - 2026-03-25 **Hora:** 23:52 Madrid ### Tareas Completadas 1. **Agente Jorge Carrasco Mode** - CREADO - Ubicación: `~/.openclaw/workspace/agents/jorge-carrasco-mode/system.md` - Tipo: Agente de autoconocimiento profundo - Filosofía: Directo, sin filtros, revelador - Metodología: 3 capas + shadow work + estoicismo moderno 2. **Cron Job** - ACTIVADO - Días: Lunes a viernes - Hora: 08:00 AM (hora España) - Script: `/Users/landercortazarromero/bin/openclaw-jorge-carrasco.sh` - Acción: Envía mensaje de activación a Telegram 3. **Web ELITE JSR** - CONFIRMADA ONLINE - URL: https://euphonious-pixie-e28440.netlify.app - Estado: Funcionando correctam",
       "recallCount": 3,
       "dailyCount": 0,
+      "groundedCount": 0,
       "totalScore": 2.104351062066819,
       "maxScore": 0.7589799611673123,
       "firstRecalledAt": "2026-04-08T10:25:46.405Z",
@@ -108,6 +113,7 @@
       "snippet": "# 2026-04-05 — EVENING AUDIT COMPLETO **Hora:** 23:02 (Europe/Madrid) **Estado:** ✅ SISTEMA AL MÁXIMO RENDIMIENTO --- ## ✅ LOG DE HOY ### Sistemas: - ✅ OpenClaw actualizado → 2026.4.2 - ✅ Vercel login completado - ✅ Git repo configurado (sin remote push activo) - ✅ Backups automáticos operativos ### Proyectos: - ✅ **IAN-TRABA-62 web** — Replicada estructura cortazar59.com - URL: https://ian-traba-62.netlify.app - Stats: 5 títulos, 5 años, 15+ nacionales, 8+ europeas, 3 mundiales - Palmarés actualizado para GP3 - 8 podios + 10 galería de fotos - Deploy via Netlify (✅ Production live) ### Protocolos configurados: - ✅ Evening Audit (23:00 diario) - ✅ Health Check (cada 6h) - ✅",
       "recallCount": 1,
       "dailyCount": 0,
+      "groundedCount": 0,
       "totalScore": 0.713033962789417,
       "maxScore": 0.713033962789417,
       "firstRecalledAt": "2026-04-08T11:03:53.061Z",
@@ -136,19 +142,22 @@
       "endLine": 33,
       "source": "memory",
       "snippet": "## 2026-03-28 - Implementación Storytelling Impacto **Hora:** 08:30-08:39 **Estado:** ✅ Completado ### Cambios Implementados **OPCIÓN 3: Storytelling Impacto** aplicada a la web: **EXTRAS A MEDIDA** → Cambiado a **\"TU MARCA, SU HISTORIA DE ÉXITO\"** - 🎯 Patrocinio Técnico: \"No es publicidad intrusiva, es visibilidad real...\" - 🎬 Contenido Que Conecta: \"Emoción que vende...\" - 🏆 Experiencias VIP: \"Relaciones que construyen negocios...\" - 🤝 Activaciones B2B: \"Oportunidades de negocio reales...\" **¿POR QUÉ PATROCINAR?** → Cambiado a **\"¿QUÉ OBTIENES REALMENTE?\"** - 💎 Diferenciación Auténtica: \"No eres otra marca más, eres parte de su victoria\" - ❤️ Lealtad Emocional: \"Lo hacen con p",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
-      "totalScore": 1.2939088143921682,
+      "groundedCount": 0,
+      "totalScore": 1.9086398669470301,
       "maxScore": 0.7107619314770481,
       "firstRecalledAt": "2026-04-08T11:03:53.061Z",
-      "lastRecalledAt": "2026-04-09T05:19:55.498Z",
+      "lastRecalledAt": "2026-04-10T07:10:27.626Z",
       "queryHashes": [
         "61eca7b20a66",
-        "1de3e8ff0b92"
+        "1de3e8ff0b92",
+        "4913e7dfd6c4"
       ],
       "recallDays": [
         "2026-04-08",
-        "2026-04-09"
+        "2026-04-09",
+        "2026-04-10"
       ],
       "conceptTags": [
         "30-08",
@@ -170,6 +179,7 @@
       "snippet": "# Memory Log - 2026-03-22 ## Session: Evening Execution ### Tasks Executed 1. ✅ C-Level Team Architecture - Documento creado con roles CEO, CTO, COO, CFO 2. ✅ War Room Coordination - Sistema de comando unificado creado 3. ✅ Opportunity Discovery Engine - Motor de oportunidades con scoring ### Files Created - ~/.openclaw/workspace/c-level-team.md (2598 bytes) - ~/.openclaw/workspace/war-room.md (3247 bytes) - ~/.openclaw/workspace/opportunity-engine.md (3659 bytes) ### Key Decisions - Codex no disponible → Ejecución directa vía write - Top 5 oportunidades identificadas con scores - 40/52 skills sin instalar → Prioridad: apple-reminders, spotify-player, notion ### Tasks Ejecutados (Batch",
       "recallCount": 2,
       "dailyCount": 0,
+      "groundedCount": 0,
       "totalScore": 1.3018582517515878,
       "maxScore": 0.6509291258757939,
       "firstRecalledAt": "2026-04-09T03:50:52.983Z",
@@ -201,6 +211,7 @@
       "snippet": "# 2026-04-06 — MORNING CHECK **Hora:** 05:02 (Europe/Madrid) **Heartbeat:** Morning check complete ## 📊 SISTEMA OK | Componente | Estado | |-----------|--------| | Git | ⚠️ Pending commit (IAN web replication) | | Skills | ✅ 20/50 ready | | Cron Jobs | ✅ Activos | | Memory | ✅ Al día | ## 🎯 PROYECTOS ACTIVOS 1. **IAN-TRABA-62** — ✅ Web replicada y online (ian-traba-62.netlify.app) 2. **ELITE JSR** — ✅ Mantenimiento 3. **CORTAZAR59.com** — ✅ Online ## 📝 NOTES - Web Ian replicada con estructura exacta cortazar59.com - Vercel login completado - Pendiente: confirmar datos contacto Ian (email, WhatsApp) --- *Morning check — 2026-04-06*",
       "recallCount": 1,
       "dailyCount": 0,
+      "groundedCount": 0,
       "totalScore": 0.6372896285753837,
       "maxScore": 0.6372896285753837,
       "firstRecalledAt": "2026-04-09T05:19:55.498Z",
@@ -220,6 +231,68 @@
         "morning",
         "check",
         "hora"
+      ]
+    },
+    "memory:memory/2026-03-30.md:1:48": {
+      "key": "memory:memory/2026-03-30.md:1:48",
+      "path": "memory/2026-03-30.md",
+      "startLine": 1,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "# 2026-03-30 - CORTAZAR59.com ONLINE **Hora:** 21:19 (Europe/Madrid) **Estado:** ✅ CORTAZAR59.com funcionando al 100% ## LOGROS DE HOY ### Web Completada: - ✅ CORTAZAR59.com online y operativa - ✅ DNS configurado (GitHub Pages) - ✅ Auto-deploy funcionando (git push → web actualizada en 30s) - ✅ Sección PODIUMS separada - ✅ Contacto optimizado (sin teléfono, con Instagram) - ✅ PALMARÉS sin \"MI\" - ✅ Galería de fotos organizada ### Sistema Establecido: - Flujo: Tú pides → Yo ejecuto → Web actualiza automático - Sin ZIPs, sin complicaciones - GitHub + GitHub Pages funcionando ## Feedback Lander \"Así me gusta, quiero que cada día seas más eficaz con más capacidades y más afilado , llegaremos",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.720202256260788,
+      "maxScore": 0.720202256260788,
+      "firstRecalledAt": "2026-04-10T07:10:27.626Z",
+      "lastRecalledAt": "2026-04-10T07:10:27.626Z",
+      "queryHashes": [
+        "4913e7dfd6c4"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "cortazar59.com",
+        "europe/madrid",
+        "auto-deploy",
+        "cortazar59",
+        "com",
+        "online",
+        "hora",
+        "europe"
+      ]
+    },
+    "memory:memory/2026-03-30.md:40:78": {
+      "key": "memory:memory/2026-03-30.md:40:78",
+      "path": "memory/2026-03-30.md",
+      "startLine": 40,
+      "endLine": 78,
+      "source": "memory",
+      "snippet": "- ✅ Eliminados: Campeón del Mundo, Campeón Internacional, Años Compitiendo ### Mejoras Visuales: - ✅ Frase hero destacada en color neón con glow effect - ✅ Mayor visibilidad de mensaje principal ### Notas Técnicas: - Caché de GitHub Pages tarda 2-5 min en propagar cambios - Solución: hard refresh (Cmd+Shift+R) o modo incógnito - Sistema auto-deploy confirmado y estable ## Actualización Final 22:09 ### Stats Finales (minúsculas): - 🏆 7 Títulos - ⚡ 6 Años de Experiencia - 🇪🇸 20+ carreras nacionales - 🇪🇺 10+ carreras europeas - 🌎 2 carreras mundiales **Confirmado por Lander:** \"Perfecto\" ## Final de Sesión 22:15 ### Web Completada y Aprobada: - ✅ Título: \"Piloto Profesional Jetski\"",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6287412384988946,
+      "maxScore": 0.6287412384988946,
+      "firstRecalledAt": "2026-04-10T07:10:27.626Z",
+      "lastRecalledAt": "2026-04-10T07:10:27.626Z",
+      "queryHashes": [
+        "4913e7dfd6c4"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "2-5",
+        "auto-deploy",
+        "eliminados",
+        "campeón",
+        "mundo",
+        "internacional",
+        "años",
+        "compitiendo"
       ]
     }
   }

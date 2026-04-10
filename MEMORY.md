@@ -94,6 +94,8 @@ vercel --yes --prod
 - Tareas críticas hacer inline, no delegar a sub-agentes (evita timeouts)
 - **Folders mezclados:** La carpeta images/ de Ian tenía fotos de Iñaki → procedimiento: limpiar folder antes de añadir fotos nuevas
 - **Cache navegador:**Tras deploy, si no se ve cambio, es cache. Indicar Ctrl+Shift+R
+- **GitHub push --set-upstream:** New repos need `--set-upstream origin main` on first push
+- **GitHub token in commits:** Secret scanning blocks push if token found in history. Use env vars or always remove from commits.
 - **Orden correcta:** Copiar fotos escritorio → images/ → actualizar HTML → deploy
 - **Responsive móvil:** Mejorar siempre para clientes (Ian mejorado, mejor aceptación)
 

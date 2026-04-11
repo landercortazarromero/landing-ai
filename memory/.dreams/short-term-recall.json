@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-10T07:10:27.626Z",
+  "updatedAt": "2026-04-11T06:38:02.046Z",
   "entries": {
     "memory:memory/2026-03-23.md:1:32": {
       "key": "memory:memory/2026-03-23.md:1:32",
@@ -45,19 +45,21 @@
       "endLine": 38,
       "source": "memory",
       "snippet": "# Session 2026-04-07 ## Ian Traba Web Project - COMPLETED ✅ **URL:** https://ian-traba-62.vercel.app - Rebuild completo desde MASTER-TEMPLATE - Estructura: Hero + Stats + Footer (simple, clean) - Preview protection system operativo ## Iñaki Traba Web - ❌ NOT COMPLETED (TIMEOUT) **Session timed out while building** - Datos recibidos todos (TRABA60, dorsal 60, stats, palmarés, fotos) - Web NO construida - Pendiente: rebuild desde template limpio ## CRITICAL ISSUE: Data Mixing - UNRESOLVED ⚠️ - Iñaki web getting mixed with Ian data - MASTER-TEMPLATE needs complete rebuild with 100% placeholders - This is the 3rd time this happens - Lander very frustrated ## Decisions Taken - Verde neón (#00",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.4670340567783458,
+      "totalScore": 2.1167860755686876,
       "maxScore": 0.7923052788842873,
       "firstRecalledAt": "2026-04-08T08:17:39.275Z",
-      "lastRecalledAt": "2026-04-08T10:25:46.405Z",
+      "lastRecalledAt": "2026-04-11T06:38:02.046Z",
       "queryHashes": [
         "a5fb0db8cad1",
-        "0cf89af68e6c"
+        "0cf89af68e6c",
+        "674724a0ee15"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-11"
       ],
       "conceptTags": [
         "ian-traba-62.vercel.app",
@@ -111,18 +113,20 @@
       "endLine": 51,
       "source": "memory",
       "snippet": "# 2026-04-05 — EVENING AUDIT COMPLETO **Hora:** 23:02 (Europe/Madrid) **Estado:** ✅ SISTEMA AL MÁXIMO RENDIMIENTO --- ## ✅ LOG DE HOY ### Sistemas: - ✅ OpenClaw actualizado → 2026.4.2 - ✅ Vercel login completado - ✅ Git repo configurado (sin remote push activo) - ✅ Backups automáticos operativos ### Proyectos: - ✅ **IAN-TRABA-62 web** — Replicada estructura cortazar59.com - URL: https://ian-traba-62.netlify.app - Stats: 5 títulos, 5 años, 15+ nacionales, 8+ europeas, 3 mundiales - Palmarés actualizado para GP3 - 8 podios + 10 galería de fotos - Deploy via Netlify (✅ Production live) ### Protocolos configurados: - ✅ Evening Audit (23:00 diario) - ✅ Health Check (cada 6h) - ✅",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.713033962789417,
-      "maxScore": 0.713033962789417,
+      "totalScore": 1.4562673247566762,
+      "maxScore": 0.7432333619672593,
       "firstRecalledAt": "2026-04-08T11:03:53.061Z",
-      "lastRecalledAt": "2026-04-08T11:03:53.061Z",
+      "lastRecalledAt": "2026-04-11T06:38:02.046Z",
       "queryHashes": [
-        "61eca7b20a66"
+        "61eca7b20a66",
+        "674724a0ee15"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-11"
       ],
       "conceptTags": [
         "backup",
@@ -209,18 +213,20 @@
       "endLine": 29,
       "source": "memory",
       "snippet": "# 2026-04-06 — MORNING CHECK **Hora:** 05:02 (Europe/Madrid) **Heartbeat:** Morning check complete ## 📊 SISTEMA OK | Componente | Estado | |-----------|--------| | Git | ⚠️ Pending commit (IAN web replication) | | Skills | ✅ 20/50 ready | | Cron Jobs | ✅ Activos | | Memory | ✅ Al día | ## 🎯 PROYECTOS ACTIVOS 1. **IAN-TRABA-62** — ✅ Web replicada y online (ian-traba-62.netlify.app) 2. **ELITE JSR** — ✅ Mantenimiento 3. **CORTAZAR59.com** — ✅ Online ## 📝 NOTES - Web Ian replicada con estructura exacta cortazar59.com - Vercel login completado - Pendiente: confirmar datos contacto Ian (email, WhatsApp) --- *Morning check — 2026-04-06*",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.6372896285753837,
-      "maxScore": 0.6372896285753837,
+      "totalScore": 1.4177968021298335,
+      "maxScore": 0.7805071735544498,
       "firstRecalledAt": "2026-04-09T05:19:55.498Z",
-      "lastRecalledAt": "2026-04-09T05:19:55.498Z",
+      "lastRecalledAt": "2026-04-11T06:38:02.046Z",
       "queryHashes": [
-        "1de3e8ff0b92"
+        "1de3e8ff0b92",
+        "674724a0ee15"
       ],
       "recallDays": [
-        "2026-04-09"
+        "2026-04-09",
+        "2026-04-11"
       ],
       "conceptTags": [
         "europe/madrid",
@@ -240,18 +246,20 @@
       "endLine": 48,
       "source": "memory",
       "snippet": "# 2026-03-30 - CORTAZAR59.com ONLINE **Hora:** 21:19 (Europe/Madrid) **Estado:** ✅ CORTAZAR59.com funcionando al 100% ## LOGROS DE HOY ### Web Completada: - ✅ CORTAZAR59.com online y operativa - ✅ DNS configurado (GitHub Pages) - ✅ Auto-deploy funcionando (git push → web actualizada en 30s) - ✅ Sección PODIUMS separada - ✅ Contacto optimizado (sin teléfono, con Instagram) - ✅ PALMARÉS sin \"MI\" - ✅ Galería de fotos organizada ### Sistema Establecido: - Flujo: Tú pides → Yo ejecuto → Web actualiza automático - Sin ZIPs, sin complicaciones - GitHub + GitHub Pages funcionando ## Feedback Lander \"Así me gusta, quiero que cada día seas más eficaz con más capacidades y más afilado , llegaremos",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.720202256260788,
-      "maxScore": 0.720202256260788,
+      "totalScore": 1.4674305982595515,
+      "maxScore": 0.7472283419987633,
       "firstRecalledAt": "2026-04-10T07:10:27.626Z",
-      "lastRecalledAt": "2026-04-10T07:10:27.626Z",
+      "lastRecalledAt": "2026-04-11T06:38:02.046Z",
       "queryHashes": [
-        "4913e7dfd6c4"
+        "4913e7dfd6c4",
+        "674724a0ee15"
       ],
       "recallDays": [
-        "2026-04-10"
+        "2026-04-10",
+        "2026-04-11"
       ],
       "conceptTags": [
         "cortazar59.com",
@@ -271,18 +279,20 @@
       "endLine": 78,
       "source": "memory",
       "snippet": "- ✅ Eliminados: Campeón del Mundo, Campeón Internacional, Años Compitiendo ### Mejoras Visuales: - ✅ Frase hero destacada en color neón con glow effect - ✅ Mayor visibilidad de mensaje principal ### Notas Técnicas: - Caché de GitHub Pages tarda 2-5 min en propagar cambios - Solución: hard refresh (Cmd+Shift+R) o modo incógnito - Sistema auto-deploy confirmado y estable ## Actualización Final 22:09 ### Stats Finales (minúsculas): - 🏆 7 Títulos - ⚡ 6 Años de Experiencia - 🇪🇸 20+ carreras nacionales - 🇪🇺 10+ carreras europeas - 🌎 2 carreras mundiales **Confirmado por Lander:** \"Perfecto\" ## Final de Sesión 22:15 ### Web Completada y Aprobada: - ✅ Título: \"Piloto Profesional Jetski\"",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.6287412384988946,
-      "maxScore": 0.6287412384988946,
+      "totalScore": 1.263243588727334,
+      "maxScore": 0.6345023502284394,
       "firstRecalledAt": "2026-04-10T07:10:27.626Z",
-      "lastRecalledAt": "2026-04-10T07:10:27.626Z",
+      "lastRecalledAt": "2026-04-11T06:38:02.046Z",
       "queryHashes": [
-        "4913e7dfd6c4"
+        "4913e7dfd6c4",
+        "674724a0ee15"
       ],
       "recallDays": [
-        "2026-04-10"
+        "2026-04-10",
+        "2026-04-11"
       ],
       "conceptTags": [
         "2-5",

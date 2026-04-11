@@ -261,6 +261,17 @@
             #sobre-mi > div { flex-direction: column; align-items: center; }
             #sobre-mi img { width: 220px; height: 280px; }
             #sobre-mi p { font-size: 1.1rem; }
+            #galeria > h3 { font-size: 1.2rem; }
+            #galeria > div:first-of-type { grid-template-columns: repeat(2, 1fr) !important; }
+            #galeria > div:last-of-type { grid-template-columns: repeat(2, 1fr) !important; }
+            #galeria img { min-height: 150px; }
+            #contacto a { padding: 20px 30px; }
+            #contacto a div:first-child { font-size: 1.1rem; }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            #galeria > div:first-of-type { grid-template-columns: repeat(3, 1fr); }
+            #galeria > div:last-of-type { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
 </head>
@@ -422,6 +433,8 @@
             <img src="images/podium3.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Podium 3">
             <img src="images/podium4.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Podium 4">
             <img src="images/podium5.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Podium 5">
+            <img src="images/podium6.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Podium 6">
+            <img src="images/podium7.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Podium 7">
         </div>
         
         <!-- Accion -->
@@ -441,35 +454,45 @@
             <img src="images/accion12.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Accion 12">
             <img src="images/accion13.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Accion 13">
             <img src="images/accion14.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Accion 14">
+            <img src="images/accion15.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Accion 15">
+            <img src="images/accion16.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Accion 16">
+            <img src="images/accion17.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Accion 17">
+            <img src="images/accion18.jpg" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 2px solid rgba(0,255,136,0.3);" alt="Accion 18">
         </div>
     </section>
     
     <!-- Contacto -->
     <section id="contacto" style="padding: 100px 50px; background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%); text-align: center;">
-        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); margin-bottom: 10px;">CONTACTO</h2>
-        <p style="color: var(--gray); font-size: 1rem; max-width: 500px; margin: 0 auto 40px auto;">¿Colaboramos? Escríbeme directamente</p>
+        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); margin-bottom: 50px;">CONTACTO</h2>
         
-        <div style="max-width: 500px; margin: 0 auto;">
-            <a href="mailto:traba60@gmail.com" style="display: flex; align-items: center; justify-content: center; gap: 15px; padding: 25px 40px; background: linear-gradient(135deg, rgba(0,255,136,0.1) 0%, rgba(0,255,136,0.05) 100%); border: 2px solid var(--neon); border-radius: 15px; text-decoration: none; margin-bottom: 30px; transition: all 0.3s; box-shadow: 0 0 30px rgba(0,255,136,0.2);">
-                <span style="font-size: 2rem;">✉️</span>
-                <div style="text-align: left;">
-                    <div style="color: var(--light); font-family: Orbitron; font-weight: 700; font-size: 1.1rem;">traba60@gmail.com</div>
-                    <div style="color: var(--neon); font-size: 0.85rem; margin-top: 3px;">Respondo en menos de 24h</div>
+        <div style="max-width: 600px; margin: 0 auto;">
+            <a href="https://wa.me/34606381602?text=%C2%A1Hola%20I%C3%B1aki!%20%F0%9F%91%8B%0AHe%20visto%20tu%20perfil%20y%20me%20ha%20impresionado%20tu%20trayectoria.%0AMe%20gustar%C3%ADa%20contactarte%20para%20hablar%20sobre%20posibles%20oportunidades%20de%20patrocinio%2Fcolaboraci%C3%B3n.%0A%C2%BFTienes%20un%20momento?" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 20px; padding: 30px 60px; background: linear-gradient(135deg, rgba(0,255,136,0.15) 0%, rgba(0,255,136,0.05) 100%); border: 3px solid var(--neon); border-radius: 20px; text-decoration: none; transition: all 0.4s; box-shadow: 0 0 40px rgba(0,255,136,0.3), inset 0 0 40px rgba(0,255,136,0.1); animation: pulse-glow 2s ease-in-out infinite;">
+                <span style="font-size: 3rem;">📱</span>
+                <div>
+                    <div style="color: var(--light); font-family: Orbitron; font-weight: 700; font-size: 1.4rem;">Hablemos por WhatsApp</div>
+                    <div style="color: var(--neon); font-size: 1rem; margin-top: 8px; opacity: 0.9;">Click para contactar directamente</div>
                 </div>
             </a>
             
-            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <div style="display: flex; align-items: center; gap: 8px;">
-                    <span style="font-size: 1.2rem;">📍</span>
-                    <span style="color: var(--gray); font-size: 0.9rem;">España</span>
+            <div style="display: flex; justify-content: center; gap: 40px; margin-top: 60px; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.3rem;">📍</span>
+                    <span style="color: var(--light); font-size: 1rem;">Basque Country</span>
                 </div>
-                <div style="display: flex; align-items: center; gap: 8px;">
-                    <span style="font-size: 1.2rem;">🏆</span>
-                    <span style="color: var(--gray); font-size: 0.9rem;">Campeón de España</span>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.3rem;">🏆</span>
+                    <span style="color: var(--light); font-size: 1rem;">Campeón de España</span>
                 </div>
             </div>
         </div>
     </section>
+    
+    <style>
+    @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 40px rgba(0,255,136,0.3), inset 0 0 40px rgba(0,255,136,0.1); }
+        50% { box-shadow: 0 0 60px rgba(0,255,136,0.5), inset 0 0 60px rgba(0,255,136,0.2); }
+    }
+    </style>
 
 
     <!-- Footer -->

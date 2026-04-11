@@ -1,22 +1,34 @@
-# ACTIVE TASKS — Actualizado 2026-04-05
+# ACTIVE TASKS — Actualizado 2026-04-11
 
-**Última auditoría:** 2026-04-10 09:04  
+**Última auditoría:** 2026-04-11 22:15  
 **Sistema:** L7 God Mode + Hybrid Labs L2
 
 ---
 
 ## 🔥 ALTA PRIORIDAD
 
-### 1. IAN-TRABA-62 — Web Piloto COMPLETADA ✅
+### 1. INAKI-TRABA-60 — Web Piloto EN PROGRESO 🟡
+**URL:** https://inaki-traba-60.vercel.app
+**Carpeta:** `clients/INAKI-TRABA-60/web-build/`
+**Estado:** MODIFICACIONES EN CURSO
+**Paleta actual:** Verde neón (#00ff88) + Negro
+**Pendiente decisión:** Paleta de colores (probando opciones, Lander decidiendo)
+
+**Modificaciones completadas hoy:**
+- [x] Hero: Nueva foto (fofo hero iñaki traba.jpeg)
+- [x] Sobre Mi: Nueva biography + foto hexagonal izquierda
+- [x] Galería: Limpiada y repoblada (7 podiums + 18 accions)
+- [x] Contacto: Botón WhatsApp con mensaje predefinido
+- [x] Responsive móvil: Galería 2 columnas en móvil
+- [x] Paleta: Probando opciones (revertida a verde original)
+
+**Congelado:** Hero, Sobre Mi, Contacto
+**En revisión:** Paleta de colores
+
+### 2. IAN-TRABA-62 — Web Piloto COMPLETADA ✅
 **URL:** https://ian-traba-62.vercel.app
 **Carpeta:** `clients/IAN-TRABA-62/web/`
 **Estado:** COMPLETADA Y CONGELADA
-**Guardado como ORO:** `index.html.ORO-FINAL-2026-04-09`
-**Modificaciones aplicadas:**
-- [x] Historia personalizada con foto izquierda (rectangular)
-- [x] Palmarés 2025: Campeón Mundo + Europa + España + Euskadi
-- [x] Galería limpia: 11 podiums + 9 accion (fotos correctas de Ian)
-- [x] Responsive móvil optimizado
 **Congelado:** No modificar sin orden explícita de Lander
 
 ### 2. ELITE JSR — Mantenimiento Post-Deploy

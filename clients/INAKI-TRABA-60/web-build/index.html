@@ -258,6 +258,9 @@
             header, footer { padding: 15px 20px; }
             .hero { padding: 0 30px; }
             .footer-links { display: none; }
+            #sobre-mi > div { flex-direction: column; align-items: center; }
+            #sobre-mi img { width: 220px; height: 280px; }
+            #sobre-mi p { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -345,32 +348,34 @@
 
     <!-- Sobre Mi -->
     <section id="sobre-mi" style="padding: 100px 50px; background: var(--dark);">
-        <div style="text-align: center; margin-bottom: 40px;">
-            <img src="images/perfil.jpg" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid var(--neon); box-shadow: 0 0 40px rgba(0,255,136,0.3);" alt="Iñaki Traba">
-        </div>
-        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">MI HISTORIA</h2>
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
-                Crecí viendo la espalda de mi hermano mayor. Él siempre fue el mejor, el más rápido, el que todo lo conseguía. Yo solo quería estar a su altura. Quería que me mirara como igual, no como el pequeño que venía detrás.
-            </p>
-            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
-                Entonces la vista me falló. Tres meses de oscuridad. Tres meses viendo cómo los demás avanzaban mientras yo me quedaba atrás. Pensé que mi carrera había terminado antes de empezar. Que nunca volvería a competir. Que mi hermano seguiría siendo el único de la familia.
-            </p>
-            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
-                Mi hermano apareció un día con su bicicleta. "Toma", dijo. "Sal conmigo. No pares." No era solo una bicicleta. Era su manera de decirme que no me daba por vencido. Que seguía creyendo en mí cuando yo mismo había dejado de hacerlo.
-            </p>
-            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
-                Esa bicicleta me salvó. Me enseñó que el verdadero rival no es quien va delante, sino el miedo que llevas dentro. Que las barreras solo existen si tú las construyes. Y que el apoyo de quienes te quieren puede levantarte cuando las piernas ya no responden.
-            </p>
-            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
-                Hoy compito al lado de mi hijo. Veo su mirada cuando me ve subir al podium y recuerdo la mía mirando a mi hermano. Entiendo que no se trata de ser el mejor. Se trata de mostrarle que los sueños no tienen fecha de caducidad. Que el esfuerzo dignifica. Y que una derrota solo es definitiva si tú decides rendirte.
-            </p>
-            <p style="color: var(--light); font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300;">
-                Cada salida al agua es un homenaje a mi hermano, que me dio su bicicleta y su fe. Cada victoria es un mensaje para mi hijo: "Mira, si yo pude, tú también puedes." Y cada caída es una oportunidad de demostrar que levantarse es lo único que importa.
-            </p>
-            <p style="color: var(--neon); font-size: 1.5rem; line-height: 2; font-weight: 700; text-shadow: 0 0 20px rgba(0,255,136,0.5);">
-                Con esfuerzo y sacrificio se logran resultados. Pero con amor y familia, se logra todo.
-            </p>
+        <h2 style="font-family: Orbitron; font-size: 2.5rem; color: var(--neon); text-align: center; margin-bottom: 50px;">SOBRE MÍ</h2>
+        <div style="max-width: 1100px; margin: 0 auto; display: flex; align-items: flex-start; gap: 60px;">
+            <div style="flex-shrink: 0;">
+                <img src="images/perfil.jpg" style="width: 300px; height: 380px; object-fit: cover; clip-path: polygon(15% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%); border: 4px solid var(--neon); box-shadow: 0 0 40px rgba(0,255,136,0.3);" alt="Iñaki Traba">
+            </div>
+            <div style="flex: 1; text-align: left;">
+                <p style="color: var(--light); font-size: 1.25rem; line-height: 2; margin-bottom: 30px; font-weight: 300;">
+                    Mi historia en este deporte comenzó hace más de 20 años, cuando el destino, o quizá la casualidad, puso en mi camino la primera moto de agua.
+                </p>
+                <p style="color: var(--light); font-size: 1.25rem; line-height: 2; margin-bottom: 30px; font-weight: 300;">
+                    Desde entonces, este recorrido lo he compartido primero con mi hermano y, hoy, con mi hijo.
+                </p>
+                <p style="color: var(--light); font-size: 1.25rem; line-height: 2; margin-bottom: 30px; font-weight: 300;">
+                    Al inicio de mi trayectoria sufrí un problema ocular que me hizo pasar meses en "oscuridad". Mientras la vida seguía, yo sentía que la moto había terminado antes de prácticamente empezar y llegué a pensar que nunca volvería a disfrutarla.
+                </p>
+                <p style="color: var(--light); font-size: 1.25rem; line-height: 2; margin-bottom: 30px; font-weight: 300;">
+                    Un día, mi hermano apareció con una bicicleta. "Toma. Sal conmigo". Ese gesto, más que un simple apoyo, fue un recordatorio de que las mayores barreras suelen ser las que uno mismo construye, y que el respaldo de quienes te quieren pueden levantarte incluso cuando tú no puedes hacerlo.
+                </p>
+                <p style="color: var(--light); font-size: 1.25rem; line-height: 2; margin-bottom: 30px; font-weight: 300;">
+                    Poco después volví con fuerza a la moto, impulsado por ese espíritu competitivo que siempre me ha acompañado.
+                </p>
+                <p style="color: var(--light); font-size: 1.25rem; line-height: 2; margin-bottom: 30px; font-weight: 300;">
+                    En carrera he sido muy competitivo, pero hoy la moto me aporta algo más profundo: equilibrio, satisfacción y una excelente manera de canalizar el estrés. Además, este deporte me ha regalado grandes amigos y momentos que forman parte de mi vida sin olvidar que me hace muy feliz disfrutar del lugar donde más libre me siento junto a mi hijo, que ha heredado la pasión por este deporte y que me hace vibrar con su compañía en el mar y con sus éxitos deportivos.
+                </p>
+                <p style="color: var(--neon); font-size: 1.4rem; line-height: 2; font-weight: 700; text-shadow: 0 0 20px rgba(0,255,136,0.5);">
+                    Con esfuerzo y sacrificio se logran resultados.
+                </p>
+            </div>
         </div>
     </section>
     

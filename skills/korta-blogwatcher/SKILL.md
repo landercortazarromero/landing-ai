@@ -1,46 +1,46 @@
 ---
 name: blogwatcher
-description: Monitor blogs and RSS/Atom feeds for updates using the blogwatcher CLI.
-homepage: https://github.com/Hyaxia/blogwatcher
-metadata: {"clawdbot":{"emoji":"📰","requires":{"bins":["blogwatcher"]},"install":[{"id":"go","kind":"go","module":"github.com/Hyaxia/blogwatcher/cmd/blogwatcher@latest","bins":["blogwatcher"],"label":"Install blogwatcher (go)"}]}}
+description: Monitor blogs and RSS/Atom feeds for updates using the blogwatcher CLI. Optimizado para tracking de contenido.
 ---
 
-# blogwatcher
+# BLOGWATCHER — Elite Feed Monitoring
 
-Track blog and RSS/Atom feed updates with the `blogwatcher` CLI.
+## Quick Commands
 
-Install
-- Go: `go install github.com/Hyaxia/blogwatcher/cmd/blogwatcher@latest`
-
-Quick start
-- `blogwatcher --help`
-
-Common commands
-- Add a blog: `blogwatcher add "My Blog" https://example.com`
-- List blogs: `blogwatcher blogs`
-- Scan for updates: `blogwatcher scan`
-- List articles: `blogwatcher articles`
-- Mark an article read: `blogwatcher read 1`
-- Mark all articles read: `blogwatcher read-all`
-- Remove a blog: `blogwatcher remove "My Blog"`
-
-Example output
-```
-$ blogwatcher blogs
-Tracked blogs (1):
-
-  xkcd
-    URL: https://xkcd.com
-```
-```
-$ blogwatcher scan
-Scanning 1 blog(s)...
-
-  xkcd
-    Source: RSS | Found: 4 | New: 4
-
-Found 4 new article(s) total!
+### Add Feed
+```bash
+blogwatcher add https://example.com/feed
+blogwatcher add https://example.com/rss.xml --name "Blog Name"
 ```
 
-Notes
-- Use `blogwatcher <command> --help` to discover flags and options.
+### List Feeds
+```bash
+blogwatcher list
+blogwatcher list --json
+```
+
+### Check Updates
+```bash
+blogwatcher check
+blogwatcher check --all
+blogwatcher check --feed "Blog Name"
+```
+
+### Remove Feed
+```bash
+blogwatcher remove "Blog Name"
+blogwatcher remove --all
+```
+
+## Config
+```bash
+blogwatcher config --set interval 60  # minutos
+blogwatcher config --set output json
+```
+
+## Usage
+Perfecto para tracking de:
+- Blogs de competidores
+- News feeds
+- Updates de productos
+- Contenido de industria

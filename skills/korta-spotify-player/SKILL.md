@@ -1,34 +1,63 @@
 ---
 name: spotify-player
-description: Terminal Spotify playback/search via spogo (preferred) or spotify_player.
-homepage: https://www.spotify.com
-metadata: {"clawdbot":{"emoji":"🎵","requires":{"anyBins":["spogo","spotify_player"]},"install":[{"id":"brew","kind":"brew","formula":"spogo","tap":"steipete/tap","bins":["spogo"],"label":"Install spogo (brew)"},{"id":"brew","kind":"brew","formula":"spotify_player","bins":["spotify_player"],"label":"Install spotify_player (brew)"}]}}
+description: Terminal Spotify playback/search via spogo (preferred) or spotify_player. Optimizado para control rápido sin UI.
 ---
 
-# spogo / spotify_player
+# SPOTIFY-PLAYER — Elite Terminal Control
 
-Use `spogo` **(preferred)** for Spotify playback/search. Fall back to `spotify_player` if needed.
+## Preferred: spogo
 
-Requirements
-- Spotify Premium account.
-- Either `spogo` or `spotify_player` installed.
+### Playback
+```bash
+spogo play
+spogo pause
+spogo next
+spogo previous
+spogo shuffle
+spogo repeat
+```
 
-spogo setup
-- Import cookies: `spogo auth import --browser chrome`
+### Volume
+```bash
+spogo volume 80
+spogo volume +10
+spogo volume -10
+spogo mute
+```
 
-Common CLI commands
-- Search: `spogo search track "query"`
-- Playback: `spogo play|pause|next|prev`
-- Devices: `spogo device list`, `spogo device set "<name|id>"`
-- Status: `spogo status`
+### Search & Play
+```bash
+spogo search "song name"
+spogo play artist "artist name"
+spogo play album "album name"
+spogo play playlist "playlist name"
+```
 
-spotify_player commands (fallback)
-- Search: `spotify_player search "query"`
-- Playback: `spotify_player playback play|pause|next|previous`
-- Connect device: `spotify_player connect`
-- Like track: `spotify_player like`
+### Queue
+```bash
+spogo queue add "song"
+spogo queue list
+spogo queue clear
+spogo queue shuffle
+```
 
-Notes
-- Config folder: `~/.config/spotify-player` (e.g., `app.toml`).
-- For Spotify Connect integration, set a user `client_id` in config.
-- TUI shortcuts are available via `?` in the app.
+### Status
+```bash
+spogo status
+spogo current
+spogo devices
+```
+
+## Fallback: spotify_player CLI
+```bash
+spotify_player pull
+spotify_player push
+spotify_player toggle
+spotify_player next
+spotify_player previous
+```
+
+## Tips
+- spogo es más rápido y con menos dependencias
+- Requiere Spotify premium para control remoto
+- Verificar que spogo está instalado: `which spogo`

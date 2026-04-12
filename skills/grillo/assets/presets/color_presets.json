@@ -1,0 +1,29 @@
+{
+  "clean_sport": {
+    "name": "Clean Sport",
+    "saturation": 0.85,
+    "contrast": 1.1,
+    "brightness": 1.02,
+    "shadows": 0.95,
+    "highlights": 0.98,
+    "vibe": "Minimalista, deportivo, energ\u00eda limpia"
+  },
+  "warm_community": {
+    "name": "Warm Community",
+    "saturation": 0.9,
+    "contrast": 1.05,
+    "brightness": 1.05,
+    "shadows": 1.0,
+    "highlights": 1.02,
+    "vibe": "C\u00e1lido, cercano, humano"
+  },
+  "dark_athletic": {
+    "name": "Dark Athletic",
+    "saturation": 1.1,
+    "contrast": 1.15,
+    "brightness": 0.95,
+    "shadows": 0.9,
+    "highlights": 0.95,
+    "vibe": "Premium, dram\u00e1tico, aspiracional"
+  }
+}

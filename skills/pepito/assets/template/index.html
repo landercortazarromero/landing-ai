@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}}</title>
+    <meta name="description" content="{{DESCRIPTION}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family={{FONT_PRIMARY}}&family={{FONT_SECONDARY}}&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon: {{NEON_COLOR}};
+            --neon-dark: {{NEON_DARK}};
+            --black: {{BLACK}};
+            --dark: {{DARK}};
+            --light: {{LIGHT}};
+            --gray: {{GRAY}};
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: '{{FONT_SECONDARY}}', sans-serif; background: var(--black); color: var(--light); line-height: 1.6; }
+        h1, h2, h3 { font-family: '{{FONT_PRIMARY}}', sans-serif; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        /* Añadir estilos custom aquí */
+    </style>
+</head>
+<body>
+    <main class="container">
+        {{CONTENT}}
+    </main>
+</body>
+</html>

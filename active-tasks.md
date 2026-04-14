@@ -10,15 +10,15 @@
 
 ### 1. ELITE JSR — Mantenimiento Post-Deploy
 **Estado:** ✅ COMPLETADA (versión ORO, 2026-04-02)
-**URL:** https://landercortazarromero.github.io/elite-jsr/
+**URL:** https://elitejsr.com/
+**URL Backup:** https://landercortazarromero.github.io/elite-jsr/
 **Repo:** GitHub Pages (auto-deploy activo)
-**Dominio propio:** elitejsr.com (pendiente conexión)
+**Dominio propio:** elitejsr.com ✅ CONECTADO
 **Pendiente:**
-- [ ] Conectar elitejsr.com → Netlify/GitHub Pages
 - [ ] Google Analytics
 - [ ] Instagram ELITE JSR
 - [ ] SEO (meta tags, sitemap)
-- [ ] Dossiers Andoni (#11) y Aitzol (#41)
+- [x] Dossiers Andoni (#11) y Aitzol (#41) — ❌ DESCARTADO
 
 ### 2. IAN-TRABA-62 — Web Piloto COMPLETADA ✅
 **URL:** https://ian-traba-62.vercel.app
@@ -49,11 +49,11 @@
 ### 4. Sistema — Mantenimiento Post-Auditoría
 **Estado:** ✅ CORRECCIONES APLICADAS (2026-04-14)
 **Cambios:**
-- [x] Telegram DM: seguridad mejorada (allowlist vacía)
+- [x] Telegram DM: seguridad mejorada (allowlist)
 - [x] Cron jobs: timeouts aumentados + errores reseteados
 - [x] OpenClaw: actualizado a 2026.4.14
 - [x] Plugins: integrity metadata agregado
-- [ ] Telegram: agregar usuarios permitidos
+- [x] Telegram: @cortazar59 agregado a allowlist
 
 ### 5. Plantilla Client — Estructura
 **Estado:** ✅ Template lista
@@ -87,9 +87,12 @@
 
 ## ⚠️ PENDIENTE
 
-1. Agregar usuarios permitidos a Telegram
-2. Conectar dominio elitejsr.com
-3. SEO y Google Analytics para ELITE JSR
+1. ✅ Telegram: @cortazar59 permitido
+2. ✅ Dominio elitejsr.com conectado
+3. Google Analytics (opcional)
+4. Instagram ELITE JSR (opcional)
+5. SEO (opcional)
+6. ❌ Dossiers Andoni y Aitzol — DESCARTADO
 
 ---
 

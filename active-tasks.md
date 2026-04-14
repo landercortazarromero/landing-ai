@@ -15,9 +15,9 @@
 **Repo:** GitHub Pages (auto-deploy activo)
 **Dominio propio:** elitejsr.com ✅ CONECTADO
 **Pendiente:**
-- [ ] Google Analytics
+- [x] Google Analytics (G-WWZRKCS7YE)
 - [ ] Instagram ELITE JSR
-- [ ] SEO (meta tags, sitemap)
+- [x] SEO (meta tags, sitemap, robots.txt)
 - [x] Dossiers Andoni (#11) y Aitzol (#41) — ❌ DESCARTADO
 
 ### 2. IAN-TRABA-62 — Web Piloto COMPLETADA ✅
@@ -89,9 +89,9 @@
 
 1. ✅ Telegram: @cortazar59 permitido
 2. ✅ Dominio elitejsr.com conectado
-3. Google Analytics (opcional)
-4. Instagram ELITE JSR (opcional)
-5. SEO (opcional)
+3. ✅ Google Analytics G-WWZRKCS7YE
+4. ✅ SEO completo
+5. Instagram ELITE JSR (pendiente usuario)
 6. ❌ Dossiers Andoni y Aitzol — DESCARTADO
 
 ---

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-11T06:38:02.046Z",
+  "updatedAt": "2026-04-14T16:01:57.274Z",
   "entries": {
     "memory:memory/2026-03-23.md:1:32": {
       "key": "memory:memory/2026-03-23.md:1:32",
@@ -45,21 +45,23 @@
       "endLine": 38,
       "source": "memory",
       "snippet": "# Session 2026-04-07 ## Ian Traba Web Project - COMPLETED ✅ **URL:** https://ian-traba-62.vercel.app - Rebuild completo desde MASTER-TEMPLATE - Estructura: Hero + Stats + Footer (simple, clean) - Preview protection system operativo ## Iñaki Traba Web - ❌ NOT COMPLETED (TIMEOUT) **Session timed out while building** - Datos recibidos todos (TRABA60, dorsal 60, stats, palmarés, fotos) - Web NO construida - Pendiente: rebuild desde template limpio ## CRITICAL ISSUE: Data Mixing - UNRESOLVED ⚠️ - Iñaki web getting mixed with Ian data - MASTER-TEMPLATE needs complete rebuild with 100% placeholders - This is the 3rd time this happens - Lander very frustrated ## Decisions Taken - Verde neón (#00",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.1167860755686876,
-      "maxScore": 0.7923052788842873,
+      "totalScore": 3.1167860755686876,
+      "maxScore": 1,
       "firstRecalledAt": "2026-04-08T08:17:39.275Z",
-      "lastRecalledAt": "2026-04-11T06:38:02.046Z",
+      "lastRecalledAt": "2026-04-14T16:01:57.274Z",
       "queryHashes": [
         "a5fb0db8cad1",
         "0cf89af68e6c",
-        "674724a0ee15"
+        "674724a0ee15",
+        "ac981ef17871"
       ],
       "recallDays": [
         "2026-04-08",
-        "2026-04-11"
+        "2026-04-11",
+        "2026-04-14"
       ],
       "conceptTags": [
         "ian-traba-62.vercel.app",
@@ -181,19 +183,21 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# Memory Log - 2026-03-22 ## Session: Evening Execution ### Tasks Executed 1. ✅ C-Level Team Architecture - Documento creado con roles CEO, CTO, COO, CFO 2. ✅ War Room Coordination - Sistema de comando unificado creado 3. ✅ Opportunity Discovery Engine - Motor de oportunidades con scoring ### Files Created - ~/.openclaw/workspace/c-level-team.md (2598 bytes) - ~/.openclaw/workspace/war-room.md (3247 bytes) - ~/.openclaw/workspace/opportunity-engine.md (3659 bytes) ### Key Decisions - Codex no disponible → Ejecución directa vía write - Top 5 oportunidades identificadas con scores - 40/52 skills sin instalar → Prioridad: apple-reminders, spotify-player, notion ### Tasks Ejecutados (Batch",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.3018582517515878,
-      "maxScore": 0.6509291258757939,
+      "totalScore": 2.3018582517515878,
+      "maxScore": 1,
       "firstRecalledAt": "2026-04-09T03:50:52.983Z",
-      "lastRecalledAt": "2026-04-09T03:51:08.571Z",
+      "lastRecalledAt": "2026-04-14T16:01:57.274Z",
       "queryHashes": [
         "c993e460dece",
-        "274c1babba41"
+        "274c1babba41",
+        "ac981ef17871"
       ],
       "recallDays": [
-        "2026-04-09"
+        "2026-04-09",
+        "2026-04-14"
       ],
       "conceptTags": [
         "c-level",
@@ -303,6 +307,37 @@
         "internacional",
         "años",
         "compitiendo"
+      ]
+    },
+    "memory:memory/2026-04-09.md:1:62": {
+      "key": "memory:memory/2026-04-09.md:1:62",
+      "path": "memory/2026-04-09.md",
+      "startLine": 1,
+      "endLine": 62,
+      "source": "memory",
+      "snippet": "# MEMORY — 2026-04-09 ## Sesión: Evening Audit (23:00 Madrid) --- ## ✅ TAREAS COMPLETADAS ### 1. IAN-TRABA-62 — Web Piloto COMPLETADA ✅ - **URL:** https://ian-traba-62.vercel.app - **Carpeta:** `clients/IAN-TRABA-62/web/` - **Guardado como ORO:** `index.html.ORO-FINAL-2026-04-09` - **Modificaciones:** - Historia personalizada con foto izquierda - Palmarés 2025: Campeón Mundo + Europa + España + Euskadi - Galería: 11 podiums + 9 accion - Responsive móvil optimizado ### 2. ELITE JSR — Mantenimiento - **URL:** https://landercortazarromero.github.io/elite-jsr/ - **Repo:** GitHub Pages (auto-deploy) - **Pendiente:** dominio elitejsr.com, SEO, dossiers Andoni/Aitzol --- ## 📊 DECISI",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-14T16:01:57.274Z",
+      "lastRecalledAt": "2026-04-14T16:01:57.274Z",
+      "queryHashes": [
+        "ac981ef17871"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "ian-traba-62",
+        "ian-traba-62.vercel.app",
+        "clients/ian-traba-62/web",
+        "index.html.oro-final-2026-04-09",
+        "auto-deploy",
+        "elitejsr.com",
+        "andoni/aitzol",
+        "sesión"
       ]
     }
   }
